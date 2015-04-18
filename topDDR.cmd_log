@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "H:/Desktop/cse260/lab5/topDDR.xst" -ofn "H:/Desktop/cse260/lab5/topDDR.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DDR.ucf -p xc3s500e-fg320-4 topDDR.ngc topDDR.ngd  

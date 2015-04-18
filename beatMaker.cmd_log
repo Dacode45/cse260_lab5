@@ -1,0 +1,2 @@
+vhdtdtfi -prj lab5 -o H:/Desktop/cse260/lab5/beatMaker.vhi -module beatMaker -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work CommonDefs.vhd -lib work beatMaker.vhd 
+vhdtdtfi -prj lab5 -o H:/Desktop/cse260/lab5/beatMaker.vhi -module beatMaker -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work CommonDefs.vhd -lib work beatMaker.vhd 

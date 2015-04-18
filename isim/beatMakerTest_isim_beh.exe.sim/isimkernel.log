@@ -1,0 +1,28 @@
+Command line:
+   beatMakerTest_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  55317
+
+Sat Apr 18 18:02:03 2015
+
+
+ Elaboration Time: 6.58324 sec
+
+ Current Memory Usage: 1479.93 Meg
+
+ Total Signals          : 11
+ Total Nets             : 69
+ Total Signal Drivers   : 7
+ Total Blocks           : 6
+ Total Primitive Blocks : 5
+ Total Processes        : 6
+ Total Traceable Variables  : 26
+ Total Scalar Nets and Variables : 916
+
+ Total Simulation Time: 45.7395 sec
+
+ Current Memory Usage: 1008.03 Meg
+
+Sat Apr 18 18:03:25 2015
+
