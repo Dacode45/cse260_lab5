@@ -51,15 +51,90 @@ begin
 
            -- just a little something to get you started
            -- look in CommonDefs.vhd to see the top & bottom pattern strings that you should display
-	
+		
+		if(pulse_beat = '1') then
+			top_string <= top_string sll 1;
+			bot_string <= bot_string sll 1;
+		end if;
+		
 	   if game_state = st_play then
-                LCD(0)  <= "00111010";  -- colon
-		LCD(40) <= "00111010";	-- colon	
-			
+      LCD(0)  <= "00111010";  -- colon
+		 LCD(6 downto 0) <= top_string(159 downto 153);
 		LCD(7)  <= "00111100"; -- "<"
+		
+		LCD(40) <= "00111010";	-- colon	
+		 LCD(6 downto 0) <= bot_string(159 downto 153);
 		LCD(47) <= "00111100"; -- "<"
 		
-	   end if;
+	   elsif game_state = st_win then
+			
+			LCD(0) <= "3d"; -- equal sign
+			LCD(1) <= "3d"; -- equal sign
+			LCD(2) <= "3d"; -- equal sign
+			
+			
+			LCD(3) <= "79"; -- y
+			LCD(4) <= "6f"; -- o
+			LCD(5) <= "75"; -- u
+			
+			LCD(6) <= "3d"; -- equal sign
+			LCD(7) <= "3d"; -- equal sign
+			LCD(8) <= "3d"; -- equal sign
+			LCD(9) <= "3d"; -- equal sign
+			
+			---bottom row
+			
+			LCD(40) <= "3d"; -- equal sign
+			LCD(41) <= "3d"; -- equal sign
+			LCD(42) <= "3d"; -- equal sign
+			LCD(43) <= "3d"; -- equal sign
+			
+			
+			LCD(44) <= "77"; -- w
+			LCD(45) <= "69"; -- i
+			LCD(46) <= "6e"; -- n
+			
+			LCD(47) <= "3d"; -- equal sign
+			LCD(48) <= "3d"; -- equal sign
+			LCD(49) <= "3d"; -- equal sign
+			
+			
+		elsif game_state = st_lose then
+			
+			LCD(0) <= "2d"; -- dash sign
+			LCD(1) <= "2d"; -- dash sign
+			LCD(2) <= "2d"; -- dash sign
+			
+			
+			LCD(3) <= "79"; -- y
+			LCD(4) <= "6f"; -- o
+			LCD(5) <= "75"; -- u
+			
+			LCD(6) <= "2d"; -- dash sign
+			LCD(7) <= "2d"; -- dash sign
+			LCD(8) <= "2d"; -- dash sign
+			LCD(9) <= "2d"; -- dash sign
+			
+			---bottom row
+			
+			LCD(40) <= "2d"; -- dash sign
+			LCD(41) <= "2d"; -- dash sign
+			LCD(42) <= "2d"; -- dash sign
+			LCD(43) <= "2d"; -- dash sign
+			
+			
+			LCD(44) <= "6c"; -- l
+			LCD(45) <= "6f"; -- o
+			LCD(46) <= "73"; -- s
+			LCD(46) <= "65"; -- e
+			
+			
+			LCD(48) <= "2d"; -- dash sign
+			LCD(49) <= "2d"; -- dash sign
+			
+			
+			
+		end if;
 	
 	   -- always display the score
            LCD(11)<= x"73";	-- s
