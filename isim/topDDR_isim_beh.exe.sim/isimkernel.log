@@ -1,0 +1,28 @@
+Command line:
+   topDDR_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49732
+
+Mon Apr 27 17:10:32 2015
+
+
+ Elaboration Time: 2.02801 sec
+
+ Current Memory Usage: 3060.54 Meg
+
+ Total Signals          : 95
+ Total Nets             : 1201
+ Total Signal Drivers   : 58
+ Total Blocks           : 11
+ Total Primitive Blocks : 10
+ Total Processes        : 26
+ Total Traceable Variables  : 30
+ Total Scalar Nets and Variables : 2170
+
+ Total Simulation Time: 74.9429 sec
+
+ Current Memory Usage: 2745.92 Meg
+
+Mon Apr 27 17:13:44 2015
+

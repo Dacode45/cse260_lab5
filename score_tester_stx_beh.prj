@@ -1,0 +1,3 @@
+vhdl isim_temp "CommonDefs.vhd"
+vhdl isim_temp "scoreKeeper.vhd"
+vhdl isim_temp "score_tester.vhd"

@@ -1,0 +1,3 @@
+vhdl work "CommonDefs.vhd"
+vhdl work "SupportDDR.vhd"
+vhdl work "ULCD_test.vhd"

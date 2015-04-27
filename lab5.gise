@@ -23,6 +23,10 @@
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ULCD_test_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ULCD_test_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="ULCD_test_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ULCD_test_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
@@ -31,15 +35,17 @@
     <file xil_pn:fileType="FILE_VHDL_INSTTEMPLATE" xil_pn:name="beatMaker.vhi"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="beatMaker.xst"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="beatMakerTest.fdo"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="beatMakerTest_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="beatMakerTest_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="beatMakerTest_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="beatMakerTest_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="beatMaker_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="scoreKeeper_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="scoreKeeper_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="score_tester_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="score_tester_stx_beh.prj"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="topDDR.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="topDDR.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="topDDR.lso"/>
@@ -49,10 +55,17 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="topDDR.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="topDDR.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="topDDR.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="topDDR_beh.prj"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="topDDR_envsettings.html"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="topDDR_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="topDDR_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="topDDR_ngdbuild.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="topDDR_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="topDDR_summary.html"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="topDDR_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="topDDR_xst.xrpt"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="updateLCD_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="updateLCD_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
@@ -64,22 +77,24 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1429398108" xil_pn:in_ck="3137340256924769506" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1429398108">
+    <transform xil_pn:end_ts="1430172422" xil_pn:in_ck="-665314845537345573" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1430172422">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="CommonDefs.vhd"/>
       <outfile xil_pn:name="Lcd.vhd"/>
       <outfile xil_pn:name="SupportDDR.vhd"/>
+      <outfile xil_pn:name="ULCD_test.vhd"/>
       <outfile xil_pn:name="beatMaker.vhd"/>
       <outfile xil_pn:name="beatMakerTest.vhd"/>
       <outfile xil_pn:name="scoreKeeper.vhd"/>
+      <outfile xil_pn:name="score_tester.vhd"/>
       <outfile xil_pn:name="topDDR.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1429395545" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-3262180390991848165" xil_pn:start_ts="1429395545">
+    <transform xil_pn:end_ts="1430172431" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-3397737208138646243" xil_pn:start_ts="1430172431">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1429395545" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-4145980319795275491" xil_pn:start_ts="1429395545">
+    <transform xil_pn:end_ts="1430172431" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="856297913660835231" xil_pn:start_ts="1430172431">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -87,33 +102,37 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1429398108" xil_pn:in_ck="3137340256924769506" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1429398108">
+    <transform xil_pn:end_ts="1430172431" xil_pn:in_ck="-665314845537345573" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1430172431">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="CommonDefs.vhd"/>
       <outfile xil_pn:name="Lcd.vhd"/>
       <outfile xil_pn:name="SupportDDR.vhd"/>
+      <outfile xil_pn:name="ULCD_test.vhd"/>
       <outfile xil_pn:name="beatMaker.vhd"/>
       <outfile xil_pn:name="beatMakerTest.vhd"/>
       <outfile xil_pn:name="scoreKeeper.vhd"/>
+      <outfile xil_pn:name="score_tester.vhd"/>
       <outfile xil_pn:name="topDDR.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1429398113" xil_pn:in_ck="3137340256924769506" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7658708929711103999" xil_pn:start_ts="1429398108">
+    <transform xil_pn:end_ts="1430172437" xil_pn:in_ck="-665314845537345573" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3098201092414873406" xil_pn:start_ts="1430172431">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="beatMakerTest_beh.prj"/>
-      <outfile xil_pn:name="beatMakerTest_isim_beh.exe"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="topDDR_beh.prj"/>
+      <outfile xil_pn:name="topDDR_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1429398114" xil_pn:in_ck="7105646773496384962" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3235729372528972044" xil_pn:start_ts="1429398113">
+    <transform xil_pn:end_ts="1430172438" xil_pn:in_ck="8555379335624601023" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3283216313994290799" xil_pn:start_ts="1430172437">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="beatMakerTest_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="topDDR_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1429394994" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1429394994">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -143,40 +162,28 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1429395009" xil_pn:in_ck="1676849383075260390" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="538347939033163734" xil_pn:start_ts="1429394994">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1430074217" xil_pn:in_ck="1676849383075260390" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="538347939033163734" xil_pn:start_ts="1430074206">
+      <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name=".lso"/>
-      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="topDDR.lso"/>
-      <outfile xil_pn:name="topDDR.ngc"/>
-      <outfile xil_pn:name="topDDR.ngr"/>
-      <outfile xil_pn:name="topDDR.prj"/>
-      <outfile xil_pn:name="topDDR.stx"/>
-      <outfile xil_pn:name="topDDR.syr"/>
-      <outfile xil_pn:name="topDDR.xst"/>
-      <outfile xil_pn:name="topDDR_vhdl.prj"/>
-      <outfile xil_pn:name="topDDR_xst.xrpt"/>
-      <outfile xil_pn:name="webtalk_pn.xml"/>
-      <outfile xil_pn:name="xst"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1429395009" xil_pn:in_ck="90580058022" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="6608134429825760729" xil_pn:start_ts="1429395009">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1429395017" xil_pn:in_ck="3662310621781691993" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-4545941998094244071" xil_pn:start_ts="1429395009">
-      <status xil_pn:value="FailedRun"/>
-      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="AbortedRun"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="_ngo"/>
-      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
-      <outfile xil_pn:name="topDDR.bld"/>
-      <outfile xil_pn:name="topDDR_ngdbuild.xrpt"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
   </transforms>
 

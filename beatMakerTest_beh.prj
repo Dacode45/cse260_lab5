@@ -1,3 +1,0 @@
-vhdl work "CommonDefs.vhd"
-vhdl work "beatMaker.vhd"
-vhdl work "beatMakerTest.vhd"

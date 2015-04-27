@@ -1,0 +1,28 @@
+Command line:
+   ULCD_test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  62248
+
+Mon Apr 27 16:53:16 2015
+
+
+ Elaboration Time: 2.27761 sec
+
+ Current Memory Usage: 3058.42 Meg
+
+ Total Signals          : 27
+ Total Nets             : 1036
+ Total Signal Drivers   : 14
+ Total Blocks           : 7
+ Total Primitive Blocks : 6
+ Total Processes        : 6
+ Total Traceable Variables  : 31
+ Total Scalar Nets and Variables : 2006
+
+ Total Simulation Time: 2.34002 sec
+
+ Current Memory Usage: 2429.22 Meg
+
+Mon Apr 27 17:05:39 2015
+

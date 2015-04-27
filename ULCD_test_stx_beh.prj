@@ -1,0 +1,3 @@
+vhdl isim_temp "CommonDefs.vhd"
+vhdl isim_temp "SupportDDR.vhd"
+vhdl isim_temp "ULCD_test.vhd"

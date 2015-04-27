@@ -1,0 +1,6 @@
+vhdl isim_temp "CommonDefs.vhd"
+vhdl isim_temp "SupportDDR.vhd"
+vhdl isim_temp "scoreKeeper.vhd"
+vhdl isim_temp "Lcd.vhd"
+vhdl isim_temp "beatMaker.vhd"
+vhdl isim_temp "topDDR.vhd"
