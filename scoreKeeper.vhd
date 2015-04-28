@@ -74,8 +74,22 @@ begin
 					miss_count <= miss_count - miss_count;
 				else
 					if(hit = '1') then
+						case state is 
+							when l0 => hex_score <= hex_score + 1;
+							when l1 => hex_score <= hex_score + 2;
+							when l2 => hex_score <= hex_score + 3;
+							when l3 => hex_score <= hex_score + 4;
+							when l4 => hex_score <= hex_score + 5;
+							when others => hex_score <= hex_score;
+						end case;
+						
+						if(state = next_state) then
+							hit_count <= hit_count + 1;
+						else
+							hit_count <= hit_count - hit_count;
+						end if;
+						
 						hex_score <= hex_score + 1;
-						hit_count <= hit_count + 1;
 					elsif(miss = '1') then
 						miss_count <= miss_count +1;
 					end if;
@@ -87,10 +101,11 @@ begin
 		
 		state_trans: process(state, hit_count, miss_count)
 		begin
+			next_state <= state;
 			if (miss_count >= x"8") then
 				next_state <= lose;
 			elsif (hit_count >= x"8") then
-				next_state <= state;
+			
 				case state is 
 					when l0 => next_state <= l1;
 					when l1 => next_state <= l2;

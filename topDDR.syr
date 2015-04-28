@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.25 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.26 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: topDDR.prj
 
@@ -104,98 +104,814 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3607 - Unit work/topDDR is now defined in a different file.  It was defined in "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/topDDR.vhd", and is now defined in "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/topDDR.vhd".
-WARNING:HDLParsers:3607 - Unit work/topDDR/topArch is now defined in a different file.  It was defined in "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/topDDR.vhd", and is now defined in "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/topDDR.vhd".
-WARNING:HDLParsers:3607 - Unit work/beatMaker is now defined in a different file.  It was defined in "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/beatMaker.vhd", and is now defined in "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/beatMaker.vhd".
-WARNING:HDLParsers:3607 - Unit work/beatMaker/arch is now defined in a different file.  It was defined in "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/beatMaker.vhd", and is now defined in "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/beatMaker.vhd".
-WARNING:HDLParsers:3607 - Unit work/LCDvhdl is now defined in a different file.  It was defined in "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/Lcd.vhd", and is now defined in "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/Lcd.vhd".
-WARNING:HDLParsers:3607 - Unit work/LCDvhdl/behavior is now defined in a different file.  It was defined in "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/Lcd.vhd", and is now defined in "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/Lcd.vhd".
-WARNING:HDLParsers:3607 - Unit work/scoreKeeper is now defined in a different file.  It was defined in "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/scoreKeeper.vhd", and is now defined in "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/scoreKeeper.vhd".
-WARNING:HDLParsers:3607 - Unit work/scoreKeeper/scoreK is now defined in a different file.  It was defined in "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/scoreKeeper.vhd", and is now defined in "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/scoreKeeper.vhd".
-WARNING:HDLParsers:3607 - Unit work/updateLCD is now defined in a different file.  It was defined in "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd", and is now defined in "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd".
-WARNING:HDLParsers:3607 - Unit work/updateLCD/Behavioral is now defined in a different file.  It was defined in "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd", and is now defined in "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd".
-WARNING:HDLParsers:3607 - Unit work/commonDefs is now defined in a different file.  It was defined in "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/CommonDefs.vhd", and is now defined in "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/CommonDefs.vhd".
-WARNING:HDLParsers:3607 - Unit work/commonDefs is now defined in a different file.  It was defined in "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/CommonDefs.vhd", and is now defined in "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/CommonDefs.vhd".
-Compiling vhdl file "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/CommonDefs.vhd" in Library work.
-Package <commondefs> compiled.
-Package body <commondefs> compiled.
-Compiling vhdl file "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/scoreKeeper.vhd" in Library work.
+Compiling vhdl file "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/CommonDefs.vhd" in Library work.
+Architecture commondefs of Entity commondefs is up to date.
+Compiling vhdl file "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/scoreKeeper.vhd" in Library work.
 Architecture scorek of Entity scorekeeper is up to date.
-Compiling vhdl file "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/beatMaker.vhd" in Library work.
-Entity <beatmaker> compiled.
-Entity <beatmaker> (Architecture <arch>) compiled.
-Compiling vhdl file "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/Lcd.vhd" in Library work.
+Compiling vhdl file "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/Lcd.vhd" in Library work.
 Architecture behavior of Entity lcdvhdl is up to date.
-Compiling vhdl file "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" in Library work.
+Compiling vhdl file "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" in Library work.
 Entity <updatelcd> compiled.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 86. Type of LCD is incompatible with type of top_string.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 90. Type of LCD is incompatible with type of bot_string.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 95. Type of LCD is incompatible with type of 3d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 96. Type of LCD is incompatible with type of 3d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 97. Type of LCD is incompatible with type of 3d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 100. Type of LCD is incompatible with type of 79.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 101. Type of LCD is incompatible with type of 6f.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 102. Type of LCD is incompatible with type of 75.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 104. Type of LCD is incompatible with type of 3d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 105. Type of LCD is incompatible with type of 3d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 106. Type of LCD is incompatible with type of 3d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 107. Type of LCD is incompatible with type of 3d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 111. Type of LCD is incompatible with type of 3d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 112. Type of LCD is incompatible with type of 3d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 113. Type of LCD is incompatible with type of 3d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 114. Type of LCD is incompatible with type of 3d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 117. Type of LCD is incompatible with type of 77.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 118. Type of LCD is incompatible with type of 69.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 119. Type of LCD is incompatible with type of 6e.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 121. Type of LCD is incompatible with type of 3d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 122. Type of LCD is incompatible with type of 3d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 123. Type of LCD is incompatible with type of 3d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 128. Type of LCD is incompatible with type of 2d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 129. Type of LCD is incompatible with type of 2d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 130. Type of LCD is incompatible with type of 2d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 133. Type of LCD is incompatible with type of 79.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 134. Type of LCD is incompatible with type of 6f.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 135. Type of LCD is incompatible with type of 75.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 137. Type of LCD is incompatible with type of 2d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 138. Type of LCD is incompatible with type of 2d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 139. Type of LCD is incompatible with type of 2d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 140. Type of LCD is incompatible with type of 2d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 144. Type of LCD is incompatible with type of 2d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 145. Type of LCD is incompatible with type of 2d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 146. Type of LCD is incompatible with type of 2d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 147. Type of LCD is incompatible with type of 2d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 150. Type of LCD is incompatible with type of 6c.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 151. Type of LCD is incompatible with type of 6f.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 152. Type of LCD is incompatible with type of 73.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 153. Type of LCD is incompatible with type of 65.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 156. Type of LCD is incompatible with type of 2d.
-ERROR:HDLParsers:800 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 157. Type of LCD is incompatible with type of 2d.
-ERROR:HDLParsers:808 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 164. sll can not have such operands in this context.
-ERROR:HDLParsers:808 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 165. sll can not have such operands in this context.
-ERROR:HDLParsers:804 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 170. Size of bot_string is different than size of the target.
-ERROR:HDLParsers:804 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 177. Size of top_string is different than size of the target.
-ERROR:HDLParsers:804 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 185. Size of top_string is different than size of the target.
-ERROR:HDLParsers:804 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 186. Size of bot_string is different than size of the target.
-ERROR:HDLParsers:164 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 201. parse error, unexpected PROCESS, expecting IF
-ERROR:HDLParsers:164 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 223. parse error, unexpected IN
-WARNING:HDLParsers:901 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 223. Label btn is ignored.
-ERROR:HDLParsers:164 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 224. parse error, unexpected TOKOUT
-WARNING:HDLParsers:901 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 224. Label dBtn is ignored.
-ERROR:HDLParsers:3312 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 238. Undefined symbol 'prevBtn'.
-ERROR:HDLParsers:402 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 238. Label 'btn' btn can not be used as a primary name.
-ERROR:HDLParsers:1209 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 239. prevBtn: Undefined symbol (last report in this block)
-ERROR:HDLParsers:402 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 239. Label 'btn' btn can not be used as a primary name.
-ERROR:HDLParsers:3312 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 239. Undefined symbol 'count'.
-ERROR:HDLParsers:1209 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 240. count: Undefined symbol (last report in this block)
-ERROR:HDLParsers:3260 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 241. Object name expected: Label 'dBtn' unexpected.
-ERROR:HDLParsers:402 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 241. Label 'btn' btn can not be used as a primary name.
-ERROR:HDLParsers:164 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 244. parse error, unexpected IF, expecting PROCESS
-ERROR:HDLParsers:3011 - "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 246. End Identifier debArch does not match declaration, Behavioral.
+Entity <updatelcd> (Architecture <behavioral>) compiled.
+Entity <debouncer> compiled.
+Entity <debouncer> (Architecture <debarch>) compiled.
+Compiling vhdl file "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/topDDR.vhd" in Library work.
+Architecture toparch of Entity topddr is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <topDDR> in library <work> (architecture <toparch>).
+
+Analyzing hierarchy for entity <debouncer> in library <work> (architecture <debarch>).
+
+Analyzing hierarchy for entity <scoreKeeper> in library <work> (architecture <scorek>).
+
+Analyzing hierarchy for entity <beatMaker> in library <work> (architecture <arch>).
+
+Analyzing hierarchy for entity <LCDvhdl> in library <work> (architecture <behavior>).
+
+Analyzing hierarchy for entity <updateLCD> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <topDDR> in library <work> (Architecture <toparch>).
+Entity <topDDR> analyzed. Unit <topDDR> generated.
+
+Analyzing Entity <debouncer> in library <work> (Architecture <debarch>).
+Entity <debouncer> analyzed. Unit <debouncer> generated.
+
+Analyzing Entity <scoreKeeper> in library <work> (Architecture <scorek>).
+Entity <scoreKeeper> analyzed. Unit <scoreKeeper> generated.
+
+Analyzing Entity <beatMaker> in library <work> (Architecture <arch>).
+Entity <beatMaker> analyzed. Unit <beatMaker> generated.
+
+Analyzing Entity <LCDvhdl> in library <work> (Architecture <behavior>).
+Entity <LCDvhdl> analyzed. Unit <LCDvhdl> generated.
+
+Analyzing Entity <updateLCD> in library <work> (Architecture <behavioral>).
+Entity <updateLCD> analyzed. Unit <updateLCD> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <debouncer>.
+    Related source file is "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd".
+    Found 2-bit register for signal <dBtn>.
+    Found 20-bit down counter for signal <count>.
+    Found 2-bit comparator not equal for signal <count$cmp_ne0001> created at line 305.
+    Found 2-bit register for signal <prevBtn>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   4 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <debouncer> synthesized.
+
+
+Synthesizing Unit <scoreKeeper>.
+    Related source file is "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/scoreKeeper.vhd".
+WARNING:Xst:737 - Found 7-bit latch for signal <next_state>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Using one-hot encoding for signal <state>.
+WARNING:Xst:737 - Found 5-bit latch for signal <level>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 5-bit comparator greater for signal <bcd_10$cmp_gt0000> created at line 55.
+    Found 5-bit comparator greater for signal <bcd_10$cmp_gt0001> created at line 55.
+    Found 5-bit comparator greater for signal <bcd_10$cmp_gt0002> created at line 55.
+    Found 4-bit adder for signal <bcd_11_8$add0000> created at line 56.
+    Found 4-bit adder for signal <bcd_11_8$add0001> created at line 56.
+    Found 4-bit adder for signal <bcd_11_8$add0002> created at line 56.
+    Found 5-bit comparator greater for signal <bcd_3$cmp_gt0000> created at line 49.
+    Found 5-bit comparator greater for signal <bcd_3$cmp_gt0001> created at line 49.
+    Found 5-bit comparator greater for signal <bcd_3$cmp_gt0002> created at line 49.
+    Found 5-bit comparator greater for signal <bcd_3$cmp_gt0003> created at line 49.
+    Found 5-bit comparator greater for signal <bcd_3$cmp_gt0004> created at line 49.
+    Found 5-bit comparator greater for signal <bcd_3$cmp_gt0005> created at line 49.
+    Found 5-bit comparator greater for signal <bcd_3$cmp_gt0006> created at line 49.
+    Found 5-bit comparator greater for signal <bcd_3$cmp_gt0007> created at line 49.
+    Found 5-bit comparator greater for signal <bcd_3$cmp_gt0008> created at line 49.
+    Found 4-bit adder for signal <bcd_3_0$add0000> created at line 50.
+    Found 4-bit adder for signal <bcd_3_0$add0001> created at line 50.
+    Found 4-bit adder for signal <bcd_3_0$add0002> created at line 50.
+    Found 4-bit adder for signal <bcd_3_0$add0003> created at line 50.
+    Found 4-bit adder for signal <bcd_3_0$add0004> created at line 50.
+    Found 4-bit adder for signal <bcd_3_0$add0005> created at line 50.
+    Found 4-bit adder for signal <bcd_3_0$add0006> created at line 50.
+    Found 4-bit adder for signal <bcd_3_0$add0007> created at line 50.
+    Found 4-bit adder for signal <bcd_3_0$add0008> created at line 50.
+    Found 5-bit comparator greater for signal <bcd_7$cmp_gt0000> created at line 52.
+    Found 5-bit comparator greater for signal <bcd_7$cmp_gt0001> created at line 52.
+    Found 5-bit comparator greater for signal <bcd_7$cmp_gt0002> created at line 52.
+    Found 5-bit comparator greater for signal <bcd_7$cmp_gt0003> created at line 52.
+    Found 5-bit comparator greater for signal <bcd_7$cmp_gt0004> created at line 52.
+    Found 5-bit comparator greater for signal <bcd_7$cmp_gt0005> created at line 52.
+    Found 4-bit adder for signal <bcd_7_4$add0000> created at line 53.
+    Found 4-bit adder for signal <bcd_7_4$add0001> created at line 53.
+    Found 4-bit adder for signal <bcd_7_4$add0002> created at line 53.
+    Found 4-bit adder for signal <bcd_7_4$add0003> created at line 53.
+    Found 4-bit adder for signal <bcd_7_4$add0004> created at line 53.
+    Found 4-bit adder for signal <bcd_7_4$add0005> created at line 53.
+    Found 12-bit up counter for signal <hex_score>.
+    Found 4-bit up counter for signal <hit_count>.
+    Found 7-bit comparator not equal for signal <hit_count$cmp_ne0000> created at line 85.
+    Found 4-bit up counter for signal <miss_count>.
+    Found 4-bit comparator greatequal for signal <next_state$cmp_ge0000> created at line 103.
+    Found 4-bit comparator greatequal for signal <next_state$cmp_ge0001> created at line 102.
+    Found 7-bit register for signal <state>.
+    Summary:
+	inferred   3 Counter(s).
+	inferred   7 D-type flip-flop(s).
+	inferred  18 Adder/Subtractor(s).
+	inferred  21 Comparator(s).
+Unit <scoreKeeper> synthesized.
+
+
+Synthesizing Unit <beatMaker>.
+    Related source file is "//warehouse2/home/ayekedavidr/Desktop/cse260/lab5/beatMaker.vhd".
+    Found 28-bit up counter for signal <counter>.
+    Found 28-bit comparator greatequal for signal <counter$cmp_ge0000> created at line 42.
+    Found 28-bit register for signal <level_length>.
+    Found 28-bit comparator less for signal <pulse_beat$cmp_lt0000> created at line 58.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  28 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <beatMaker> synthesized.
+
+
+Synthesizing Unit <LCDvhdl>.
+    Related source file is "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/Lcd.vhd".
+WARNING:Xst:647 - Input <lcdReg<85:81>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found finite state machine <FSM_0> for signal <init_state>.
+    -----------------------------------------------------------------------
+    | States             | 11                                             |
+    | Transitions        | 21                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 11                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <tx_state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 14                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | done                                           |
+    | Power Up State     | done                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Using one-hot encoding for signal <cur_state>.
+    Found 4x61-bit ROM for signal <prev$mux0001>.
+    Found 1-bit register for signal <advance>.
+    Found 8-bit 81-to-1 multiplexer for signal <Code>.
+    Found 61-bit register for signal <cur_state>.
+    Found 7-bit comparator greater for signal <cur_state$cmp_gt0000> created at line 359.
+    Found 1-bit register for signal <deleted>.
+    Found 20-bit register for signal <i>.
+    Found 20-bit adder for signal <i$share0000> created at line 494.
+    Found 11-bit register for signal <i2>.
+    Found 11-bit adder for signal <i2$share0000> created at line 408.
+    Found 17-bit register for signal <i3>.
+    Found 17-bit adder for signal <i3$addsub0000> created at line 220.
+    Found 1-bit register for signal <init_done>.
+    Found 1-bit register for signal <LCD_E0>.
+    Found 1-bit register for signal <LCD_E1>.
+    Found 1-bit register for signal <offsetAdvance>.
+    Found 32-bit up counter for signal <offsetCounter>.
+    Found 32-bit comparator greater for signal <offsetCounter$cmp_gt0000> created at line 152.
+    Found 7-bit register for signal <place>.
+    Found 7-bit adder for signal <place$addsub0000> created at line 170.
+    Found 7-bit subtractor for signal <place$addsub0001> created at line 249.
+    Found 61-bit register for signal <prev>.
+    Found 32-bit comparator greatequal for signal <prev$cmp_ge0000> created at line 154.
+    Found 32-bit comparator lessequal for signal <prev$cmp_le0000> created at line 162.
+    Found 32-bit comparator less for signal <prev$cmp_lt0000> created at line 154.
+    Found 4-bit register for signal <SF_D0>.
+    Found 4-bit register for signal <SF_D1>.
+    Found 32-bit up counter for signal <timesDeleted>.
+    Found 7-bit comparator lessequal for signal <timesDeleted$cmp_le0000> created at line 359.
+    Summary:
+	inferred   2 Finite State Machine(s).
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred 130 D-type flip-flop(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred   6 Comparator(s).
+	inferred   8 Multiplexer(s).
+Unit <LCDvhdl> synthesized.
+
+
+Synthesizing Unit <updateLCD>.
+    Related source file is "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd".
+WARNING:Xst:1305 - Output <LCD<85:55>> is never assigned. Tied to value 00000000.
+WARNING:Xst:1305 - Output <LCD<51:50>> is never assigned. Tied to value 00000000.
+WARNING:Xst:1305 - Output <LCD<39:16>> is never assigned. Tied to value 00000000.
+WARNING:Xst:1305 - Output <LCD<10>> is never assigned. Tied to value 00000000.
+    Register <LCD<40>> equivalent to <LCD<0>> has been removed
+    Register <LCD<8>> equivalent to <LCD<48>> has been removed
+    Found 1-bit register for signal <hit>.
+    Found 1-bit register for signal <miss>.
+    Found 8-bit adder for signal <LCD<54:52>>.
+    Found 72-bit register for signal <LCD<49:41>>.
+    Found 8-bit register for signal <LCD<9>>.
+    Found 64-bit register for signal <LCD<7:0>>.
+    Found 1-bit register for signal <bot_hit>.
+    Found 160-bit register for signal <bot_string>.
+    Found 1-bit register for signal <btn_hit>.
+    Found 8-bit 4-to-1 multiplexer for signal <LCD_0$mux0000>.
+    Found 8-bit 4-to-1 multiplexer for signal <LCD_1$mux0003>.
+    Found 8-bit 4-to-1 multiplexer for signal <LCD_2$mux0000>.
+    Found 8-bit 4-to-1 multiplexer for signal <LCD_3$mux0000>.
+    Found 8-bit 4-to-1 multiplexer for signal <LCD_4$mux0000>.
+    Found 8-bit 4-to-1 multiplexer for signal <LCD_41$mux0003>.
+    Found 8-bit 4-to-1 multiplexer for signal <LCD_42$mux0000>.
+    Found 8-bit 4-to-1 multiplexer for signal <LCD_43$mux0000>.
+    Found 8-bit 4-to-1 multiplexer for signal <LCD_44$mux0000>.
+    Found 8-bit 4-to-1 multiplexer for signal <LCD_45$mux0000>.
+    Found 8-bit 4-to-1 multiplexer for signal <LCD_46$mux0000>.
+    Found 8-bit 4-to-1 multiplexer for signal <LCD_47$mux0000>.
+    Found 8-bit 4-to-1 multiplexer for signal <LCD_48$mux0000>.
+    Found 8-bit 4-to-1 multiplexer for signal <LCD_49$mux0001>.
+    Found 8-bit 4-to-1 multiplexer for signal <LCD_5$mux0000>.
+    Found 4-bit comparator lessequal for signal <LCD_52$cmp_le0000> created at line 43.
+    Found 4-bit comparator lessequal for signal <LCD_53$cmp_le0000> created at line 43.
+    Found 4-bit comparator lessequal for signal <LCD_54$cmp_le0000> created at line 43.
+    Found 8-bit 4-to-1 multiplexer for signal <LCD_6$mux0000>.
+    Found 8-bit 4-to-1 multiplexer for signal <LCD_7$mux0000>.
+    Found 8-bit 4-to-1 multiplexer for signal <LCD_9$mux0000>.
+    Found 1-bit register for signal <top_hit>.
+    Found 160-bit register for signal <top_string>.
+    Summary:
+	inferred 469 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+	inferred 144 Multiplexer(s).
+Unit <updateLCD> synthesized.
+
+
+Synthesizing Unit <topDDR>.
+    Related source file is "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/topDDR.vhd".
+    Found 2-bit register for signal <prevDB>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <topDDR> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 4x61-bit ROM                                          : 1
+# Adders/Subtractors                                   : 26
+ 11-bit adder                                          : 1
+ 17-bit adder                                          : 1
+ 20-bit adder                                          : 1
+ 4-bit adder                                           : 18
+ 7-bit adder                                           : 1
+ 7-bit subtractor                                      : 1
+ 8-bit adder                                           : 3
+# Counters                                             : 6
+ 12-bit up counter                                     : 1
+ 20-bit down counter                                   : 1
+ 28-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+ 4-bit up counter                                      : 2
+# Registers                                            : 44
+ 1-bit register                                        : 11
+ 11-bit register                                       : 1
+ 160-bit register                                      : 2
+ 17-bit register                                       : 1
+ 2-bit register                                        : 3
+ 20-bit register                                       : 1
+ 28-bit register                                       : 1
+ 4-bit register                                        : 2
+ 61-bit register                                       : 2
+ 7-bit register                                        : 2
+ 8-bit register                                        : 18
+# Latches                                              : 2
+ 5-bit latch                                           : 1
+ 7-bit latch                                           : 1
+# Comparators                                          : 32
+ 2-bit comparator not equal                            : 1
+ 28-bit comparator greatequal                          : 1
+ 28-bit comparator less                                : 1
+ 32-bit comparator greatequal                          : 1
+ 32-bit comparator greater                             : 1
+ 32-bit comparator less                                : 1
+ 32-bit comparator lessequal                           : 1
+ 4-bit comparator greatequal                           : 2
+ 4-bit comparator lessequal                            : 3
+ 5-bit comparator greater                              : 18
+ 7-bit comparator greater                              : 1
+ 7-bit comparator not equal                            : 1
+# Multiplexers                                         : 19
+ 8-bit 4-to-1 multiplexer                              : 18
+ 8-bit 81-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <LCDC/tx_state/FSM> on signal <tx_state[1:7]> with one-hot encoding.
+------------------------
+ State      | Encoding
+------------------------
+ high_setup | 0000100
+ high_hold  | 0000010
+ oneus      | 0001000
+ low_setup  | 0010000
+ low_hold   | 0100000
+ fortyus    | 1000000
+ done       | 0000001
+------------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <LCDC/init_state/FSM> on signal <init_state[1:11]> with one-hot encoding.
+--------------------------
+ State     | Encoding
+--------------------------
+ idle      | 00000000001
+ fifteenms | 00000000010
+ one       | 00000000100
+ two       | 00000001000
+ three     | 00000010000
+ four      | 00000100000
+ five      | 00001000000
+ six       | 00010000000
+ seven     | 00100000000
+ eight     | 01000000000
+ done      | 10000000000
+--------------------------
+INFO:Xst:2261 - The FF/Latch <level_length_0> in Unit <beatM> is equivalent to the following 21 FFs/Latches, which will be removed : <level_length_1> <level_length_2> <level_length_3> <level_length_4> <level_length_5> <level_length_6> <level_length_7> <level_length_8> <level_length_9> <level_length_10> <level_length_11> <level_length_12> <level_length_13> <level_length_14> <level_length_15> <level_length_16> <level_length_17> <level_length_18> <level_length_19> <level_length_26> <level_length_27> 
+WARNING:Xst:1710 - FF/Latch <level_length_0> (without init value) has a constant value of 0 in block <beatM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SF_D1_2> (without init value) has a constant value of 0 in block <LCDC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SF_D1_3> (without init value) has a constant value of 0 in block <LCDC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <level_length<27:26>> (without init value) have a constant value of 0 in block <beatMaker>.
+
+Synthesizing (advanced) Unit <LCDvhdl>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_prev_mux0001> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <LCDvhdl> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 2
+# ROMs                                                 : 1
+ 4x61-bit ROM                                          : 1
+# Adders/Subtractors                                   : 26
+ 11-bit adder                                          : 1
+ 17-bit adder                                          : 1
+ 20-bit adder                                          : 1
+ 3-bit adder                                           : 3
+ 4-bit adder                                           : 15
+ 7-bit adder                                           : 1
+ 7-bit subtractor                                      : 1
+ 8-bit adder                                           : 3
+# Counters                                             : 6
+ 12-bit up counter                                     : 1
+ 20-bit down counter                                   : 1
+ 28-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+ 4-bit up counter                                      : 2
+# Registers                                            : 699
+ Flip-Flops                                            : 699
+# Latches                                              : 2
+ 5-bit latch                                           : 1
+ 7-bit latch                                           : 1
+# Comparators                                          : 32
+ 2-bit comparator not equal                            : 1
+ 28-bit comparator greatequal                          : 1
+ 28-bit comparator less                                : 1
+ 32-bit comparator greatequal                          : 1
+ 32-bit comparator greater                             : 1
+ 32-bit comparator less                                : 1
+ 32-bit comparator lessequal                           : 1
+ 4-bit comparator greatequal                           : 2
+ 4-bit comparator lessequal                            : 3
+ 5-bit comparator greater                              : 18
+ 7-bit comparator greater                              : 1
+ 7-bit comparator not equal                            : 1
+# Multiplexers                                         : 19
+ 8-bit 4-to-1 multiplexer                              : 18
+ 8-bit 81-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <level_length_19> (without init value) has a constant value of 0 in block <beatMaker>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <level_length_18> (without init value) has a constant value of 0 in block <beatMaker>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <level_length_17> (without init value) has a constant value of 0 in block <beatMaker>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <level_length_16> (without init value) has a constant value of 0 in block <beatMaker>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <level_length_15> (without init value) has a constant value of 0 in block <beatMaker>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <level_length_14> (without init value) has a constant value of 0 in block <beatMaker>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <level_length_13> (without init value) has a constant value of 0 in block <beatMaker>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <level_length_12> (without init value) has a constant value of 0 in block <beatMaker>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <level_length_11> (without init value) has a constant value of 0 in block <beatMaker>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <level_length_10> (without init value) has a constant value of 0 in block <beatMaker>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <level_length_9> (without init value) has a constant value of 0 in block <beatMaker>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <level_length_8> (without init value) has a constant value of 0 in block <beatMaker>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <level_length_7> (without init value) has a constant value of 0 in block <beatMaker>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <level_length_6> (without init value) has a constant value of 0 in block <beatMaker>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <level_length_5> (without init value) has a constant value of 0 in block <beatMaker>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <level_length_4> (without init value) has a constant value of 0 in block <beatMaker>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <level_length_3> (without init value) has a constant value of 0 in block <beatMaker>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <level_length_2> (without init value) has a constant value of 0 in block <beatMaker>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <level_length_1> (without init value) has a constant value of 0 in block <beatMaker>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <level_length_0> (without init value) has a constant value of 0 in block <beatMaker>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SF_D1_2> (without init value) has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <SF_D1_3> (without init value) has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <prev_30> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_31> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_32> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_33> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_34> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_35> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_36> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_37> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_38> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_39> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_40> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_41> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_42> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_43> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_44> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_45> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_46> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_47> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_48> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_49> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_50> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_51> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_52> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_53> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_54> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_55> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_57> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_59> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_60> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_0> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_1> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_2> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_3> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_4> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_5> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_6> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_7> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_8> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_9> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_10> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_11> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_12> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_13> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_14> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_15> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_16> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_17> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_18> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_19> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_20> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_21> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_22> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_23> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_24> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_25> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_26> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_27> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_28> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prev_29> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LCD_0_7> (without init value) has a constant value of 0 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_0_6> (without init value) has a constant value of 0 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_0_5> (without init value) has a constant value of 1 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_0_3> (without init value) has a constant value of 1 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_49_7> (without init value) has a constant value of 0 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_49_6> (without init value) has a constant value of 0 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_48_7> (without init value) has a constant value of 0 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_48_6> (without init value) has a constant value of 0 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_48_1> (without init value) has a constant value of 0 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_47_7> (without init value) has a constant value of 0 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_47_5> (without init value) has a constant value of 1 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_47_2> (without init value) has a constant value of 1 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_47_1> (without init value) has a constant value of 0 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_9_7> (without init value) has a constant value of 0 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_9_3> (without init value) has a constant value of 1 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_9_2> (without init value) has a constant value of 1 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_9_1> (without init value) has a constant value of 0 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_7_7> (without init value) has a constant value of 0 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_7_6> (without init value) has a constant value of 0 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_7_5> (without init value) has a constant value of 1 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_7_3> (without init value) has a constant value of 1 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_7_2> (without init value) has a constant value of 1 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_7_1> (without init value) has a constant value of 0 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cur_state_57> has a constant value of 0 in block <LCDvhdl>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <topDDR> ...
+
+Optimizing unit <debouncer> ...
+
+Optimizing unit <beatMaker> ...
+
+Optimizing unit <updateLCD> ...
+WARNING:Xst:1710 - FF/Latch <LCD_48_0> (without init value) has a constant value of 1 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_48_2> (without init value) has a constant value of 1 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_48_3> (without init value) has a constant value of 1 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LCD_48_5> (without init value) has a constant value of 1 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LCD_49_5> (without init value) has a constant value of 1 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LCD_49_5> (without init value) has a constant value of 1 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <scoreKeeper> ...
+WARNING:Xst:1426 - The value init of the FF/Latch next_state_1 hinder the constant cleaning in the block scoreKeeper.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch next_state_1 hinder the constant cleaning in the block scoreKeeper.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch next_state_1 hinder the constant cleaning in the block scoreKeeper.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch next_state_1 hinder the constant cleaning in the block scoreKeeper.
+   You should achieve better results by setting this init to 0.
+
+Optimizing unit <LCDvhdl> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block topDDR, actual ratio is 15.
+FlipFlop scoreK/hex_score_10 has been replicated 1 time(s)
+FlipFlop scoreK/hex_score_11 has been replicated 1 time(s)
+FlipFlop scoreK/hex_score_7 has been replicated 1 time(s)
+FlipFlop scoreK/hex_score_8 has been replicated 1 time(s)
+FlipFlop scoreK/hex_score_9 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <topDDR> :
+	Found 15-bit shift register for signal <ULCD/bot_string_119>.
+	Found 15-bit shift register for signal <ULCD/bot_string_117>.
+	Found 15-bit shift register for signal <ULCD/bot_string_116>.
+	Found 15-bit shift register for signal <ULCD/top_string_119>.
+	Found 15-bit shift register for signal <ULCD/top_string_117>.
+	Found 15-bit shift register for signal <ULCD/top_string_116>.
+Unit <topDDR> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 622
+ Flip-Flops                                            : 622
+# Shift Registers                                      : 6
+ 15-bit shift register                                 : 6
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : topDDR.ngr
+Top Level Output File Name         : topDDR
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 17
+
+Cell Usage :
+# BELS                             : 1690
+#      GND                         : 1
+#      INV                         : 38
+#      LUT1                        : 94
+#      LUT2                        : 62
+#      LUT2_D                      : 4
+#      LUT3                        : 253
+#      LUT3_D                      : 4
+#      LUT3_L                      : 3
+#      LUT4                        : 602
+#      LUT4_D                      : 33
+#      LUT4_L                      : 46
+#      MUXCY                       : 177
+#      MUXF5                       : 163
+#      MUXF6                       : 43
+#      MUXF7                       : 17
+#      MUXF8                       : 9
+#      VCC                         : 1
+#      XORCY                       : 140
+# FlipFlops/Latches                : 674
+#      FD                          : 4
+#      FDC                         : 70
+#      FDCE                        : 13
+#      FDE                         : 228
+#      FDP                         : 2
+#      FDPE                        : 1
+#      FDR                         : 34
+#      FDRE                        : 188
+#      FDS                         : 1
+#      FDSE                        : 121
+#      LD_1                        : 5
+#      LDC                         : 6
+#      LDP                         : 1
+# Shift Registers                  : 6
+#      SRL16E                      : 6
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 16
+#      IBUF                        : 3
+#      OBUF                        : 13
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      741  out of   4656    15%  
+ Number of Slice Flip Flops:            674  out of   9312     7%  
+ Number of 4 input LUTs:               1145  out of   9312    12%  
+    Number used as logic:              1139
+    Number used as Shift registers:       6
+ Number of IOs:                          17
+ Number of bonded IOBs:                  17  out of    232     7%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------+--------------------------+-------+
+Clock Signal                               | Clock buffer(FF name)    | Load  |
+-------------------------------------------+--------------------------+-------+
+mclk                                       | BUFGP                    | 668   |
+scoreK/hit_count_3                         | NONE(scoreK/next_state_6)| 7     |
+scoreK/level_or0000(scoreK/level_or00001:O)| NONE(*)(scoreK/level_4)  | 5     |
+-------------------------------------------+--------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+------------------------------------------+--------------------------+-------+
+Control Signal                            | Buffer(FF name)          | Load  |
+------------------------------------------+--------------------------+-------+
+swt                                       | IBUF                     | 86    |
+scoreK/miss_count_3(scoreK/miss_count_3:Q)| NONE(scoreK/next_state_0)| 7     |
+------------------------------------------+--------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 22.814ns (Maximum Frequency: 43.832MHz)
+   Minimum input arrival time before clock: 5.717ns
+   Maximum output required time after clock: 7.489ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mclk'
+  Clock period: 22.814ns (frequency: 43.832MHz)
+  Total number of paths / destination ports: 71378084 / 1084
+-------------------------------------------------------------------------
+Delay:               22.814ns (Levels of Logic = 20)
+  Source:            scoreK/hex_score_10_1 (FF)
+  Destination:       LCDC/cur_state_41 (FF)
+  Source Clock:      mclk rising
+  Destination Clock: mclk rising
+
+  Data Path: scoreK/hex_score_10_1 to LCDC/cur_state_41
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            13   0.591   1.158  scoreK/hex_score_10_1 (scoreK/hex_score_10_1)
+     LUT4:I0->O            1   0.704   0.000  scoreK/bcd_1_mux0002_F (N686)
+     MUXF5:I0->O           8   0.321   0.761  scoreK/bcd_1_mux0002 (scoreK/Madd_bcd_3_0_add0003_lut<2>)
+     LUT4_D:I3->O         11   0.704   0.968  scoreK/bcd_3_mux00051 (scoreK/N01)
+     LUT3:I2->O            2   0.704   0.482  scoreK/bcd_3_cmp_gt00041_SW1 (N296)
+     LUT4:I2->O            1   0.704   0.000  scoreK/bcd_3_mux00056 (scoreK/bcd_3_mux00053)
+     MUXF5:I1->O           1   0.321   0.000  scoreK/bcd_3_mux0005_f5 (scoreK/bcd_3_mux0005_f5)
+     MUXF6:I0->O          10   0.521   0.882  scoreK/bcd_3_mux0005_f6 (scoreK/Madd_bcd_7_4_add0003_cy<0>)
+     MUXF5:S->O            1   0.739   0.424  scoreK/bcd_6_mux00041_SW2 (N210)
+     LUT4_D:I3->O          9   0.704   0.824  scoreK/bcd_6_mux00041 (scoreK/N21)
+     LUT4:I3->O            5   0.704   0.712  scoreK/bcd_6_mux0004 (scoreK/Madd_bcd_7_4_add0005_lut<3>)
+     LUT2:I1->O            1   0.704   0.424  scoreK/bcd_5_mux0005_SW1_SW2 (N493)
+     LUT4:I3->O            6   0.704   0.673  scoreK/bcd_5_mux0005 (score<6>)
+     LUT4:I3->O            1   0.704   0.000  LCDC/Mmux_Code_1468 (LCDC/Mmux_Code_1468)
+     MUXF5:I1->O           1   0.321   0.000  LCDC/Mmux_Code_13_f5_25 (LCDC/Mmux_Code_13_f526)
+     MUXF6:I0->O           1   0.521   0.424  LCDC/Mmux_Code_11_f6_19 (LCDC/Mmux_Code_11_f620)
+     LUT4:I3->O            1   0.704   0.000  LCDC/Mmux_Code_46 (LCDC/Mmux_Code_46)
+     MUXF5:I0->O          35   0.321   1.438  LCDC/Mmux_Code_2_f5_5 (LCDC/Code<6>)
+     LUT4_L:I0->LO         1   0.704   0.104  LCDC/cur_state_mux0003<19>58 (LCDC/cur_state_mux0003<19>58)
+     LUT4:I3->O            1   0.704   0.424  LCDC/cur_state_mux0003<19>73_SW0 (N355)
+     LUT4:I3->O            1   0.704   0.000  LCDC/cur_state_mux0003<19>191 (LCDC/cur_state_mux0003<19>)
+     FDC:D                     0.308          LCDC/cur_state_41
+    ----------------------------------------
+    Total                     22.814ns (13.116ns logic, 9.698ns route)
+                                       (57.5% logic, 42.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mclk'
+  Total number of paths / destination ports: 592 / 570
+-------------------------------------------------------------------------
+Offset:              5.717ns (Levels of Logic = 3)
+  Source:            swt (PAD)
+  Destination:       ULCD/btn_hit (FF)
+  Destination Clock: mclk rising
+
+  Data Path: swt to ULCD/btn_hit
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           388   1.218   1.410  swt_IBUF (swt_IBUF)
+     LUT3:I2->O            3   0.704   0.706  ULCD/bot_hit_not000121 (ULCD/miss_or0000_inv)
+     LUT4:I0->O            1   0.704   0.420  ULCD/btn_hit_not00011 (ULCD/btn_hit_not0001)
+     FDE:CE                    0.555          ULCD/btn_hit
+    ----------------------------------------
+    Total                      5.717ns (3.181ns logic, 2.536ns route)
+                                       (55.6% logic, 44.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'mclk'
+  Total number of paths / destination ports: 22 / 6
+-------------------------------------------------------------------------
+Offset:              7.489ns (Levels of Logic = 4)
+  Source:            LCDC/cur_state_58 (FF)
+  Destination:       lcd_rs (PAD)
+  Source Clock:      mclk rising
+
+  Data Path: LCDC/cur_state_58 to lcd_rs
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             9   0.591   0.855  LCDC/cur_state_58 (LCDC/cur_state_58)
+     LUT4:I2->O            1   0.704   0.000  LCDC/cur_state_mux0003<0>1171 (LCDC/cur_state_mux0003<0>1171)
+     MUXF5:I0->O           2   0.321   0.622  LCDC/cur_state_mux0003<0>117_f5 (LCDC/cur_state_mux0003<0>117)
+     LUT2:I0->O            1   0.704   0.420  LCDC/cur_state_mux0003<0>133 (lcd_rs_OBUF)
+     OBUF:I->O                 3.272          lcd_rs_OBUF (lcd_rs)
+    ----------------------------------------
+    Total                      7.489ns (5.592ns logic, 1.897ns route)
+                                       (74.7% logic, 25.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 16.44 secs
+ 
 --> 
 
-Total memory usage is 244180 kilobytes
+Total memory usage is 304912 kilobytes
 
-Number of errors   :   61 (   0 filtered)
-Number of warnings :   14 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  126 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
 

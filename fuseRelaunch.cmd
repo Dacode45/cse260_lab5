@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "H:/Desktop/cse260/lab5/topDDR_isim_beh.exe" -prj "H:/Desktop/cse260/lab5/topDDR_beh.prj" "work.topDDR" 
+-intstyle "ise" -incremental -o "H:/Desktop/cse260/lab5/ULCD_test_isim_beh.exe" -prj "H:/Desktop/cse260/lab5/ULCD_test_beh.prj" "work.ULCD_test" 

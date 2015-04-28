@@ -15,11 +15,6 @@ Checking Constraint Associations...
 Done...
 
 Checking expanded design ...
-ERROR:NgdBuild:604 - logical block 'scoreK' with type 'scoreKeeper' could not be
-   resolved. A pin name misspelling can cause this, a missing edif or ngc file,
-   case mismatch between the block name and the edif or ngc file name, or the
-   misspelling of a type name. Symbol 'scoreKeeper' is not supported in target
-   'spartan3e'.
 
 Partition Implementation Status
 -------------------------------
@@ -29,14 +24,13 @@ Partition Implementation Status
 -------------------------------
 
 NGDBUILD Design Results Summary:
-  Number of errors:     1
+  Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 158048 kilobytes
+Total memory usage is 161156 kilobytes
 
-Total REAL time to NGDBUILD completion:  4 sec
+Writing NGD file "topDDR.ngd" ...
+Total REAL time to NGDBUILD completion:  3 sec
 Total CPU time to NGDBUILD completion:   2 sec
-
-One or more errors were found during NGDBUILD.  No NGD file will be written.
 
 Writing NGDBUILD log file "topDDR.bld"...

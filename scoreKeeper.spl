@@ -1,0 +1,10 @@
+[Inputs]
+clk
+reset
+hit
+miss
+[Outputs]
+game_state
+=level[4:0]=
+=score[11:0]=
+[BiDir]

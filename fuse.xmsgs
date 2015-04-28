@@ -5,11 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="960" delta="unknown" >"H:/Desktop/cse260/lab5/SupportDDR.vhd" Line 95: Expression has incompatible type
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="960" delta="unknown" >"H:/Desktop/cse260/lab5/SupportDDR.vhd" Line 103: Expression has incompatible type
-</msg>
-
 </messages>
 

@@ -1,0 +1,5 @@
+set -tmpdir "H:/Desktop/cse260/lab5/xst/projnav.tmp"
+set -xsthdpdir "H:/Desktop/cse260/lab5/xst"
+elaborate
+-ifn scoreKeeper.prj
+-ifmt mixed

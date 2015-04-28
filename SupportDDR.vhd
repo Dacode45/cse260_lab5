@@ -33,8 +33,7 @@ signal top_string: std_logic_vector(159 downto 0) := the_top_string; -- CommonDe
 signal bot_string: std_logic_vector(159 downto 0) := the_bot_string;
 signal top_hit: std_logic := '0';
 signal bot_hit: std_logic := '0';
-signal press: std_logic := '0';
-
+signal btn_hit: std_logic := '0';
   function HexToASCII (data: in std_logic_vector(3 downto 0)) 
 			return std_logic_vector is
 			
@@ -51,70 +50,133 @@ signal press: std_logic := '0';
 
 begin	
 
-	process(hit_top_btn, hit_bot_btn) begin
-		if hit_top_btn = '1' then
-			press <= '1';
-			if top_string(159 downto 154) = x"6f" then
-				LCD(1) <= x"45";
-				top_hit <= '1';
-			else
-				LCD(1) <= x"58";
-				top_hit <= '0';
-			end if;
-		end if;
-		
-		if hit_bot_btn = '1' then
-			press <= '1';
-			if bot_string(159 downto 154) = x"6f" then
-				LCD(41) <= x"45";
-				bot_hit <= '1';
-			else
-				LCD(41) <= x"58";
-				bot_hit <= '0';
-			end if;
-		end if;
-		
-	end process;
-	
-	process(clk) begin
+	process(clk, score, reset, pulse_beat, game_state, hit_top_btn, hit_bot_btn, level) begin
 
            -- just a little something to get you started
            -- look in CommonDefs.vhd to see the top & bottom pattern strings that you should display
 		
-		
 		if rising_edge(clk) then
 			
 			if reset = '1' then
+			
 				top_string <= the_top_string;
 				bot_string <= the_bot_string;
+				
 			elsif game_state = st_play then
+				
+					--pulsing utput on beat
+				if(pulse_beat = '1') then
+					
+					btn_hit <= '0';
+					
+					
+					if top_hit = '1' or bot_hit = '1' then -- pressed and hit a button
+							hit <= '1';
+							miss <= '0';
+					else
+							--didn't press a button because they were all spaces
+							if top_string(159 downto 152) = x"20" and bot_string(159 downto 152) = x"20" then
+								hit <= '0';
+								miss <= '0';
+							else
+								hit <= '0';
+								miss <= '1';
+							end if;
+					end if;
+					
+					top_string <= top_string(151 downto 0) & top_string(159 downto 152);
+					bot_string <= bot_string(151 downto 0) & bot_string(159 downto 152);
+					
+					
+					top_hit <= '0';
+					bot_hit <= '0';
+					
+				else
+					if top_hit = '1' or bot_hit = '1'  then
+						btn_hit <= '1';
+						
+						if top_hit = '1' then
+							if top_string(159 downto 152) = x"20" then
+								LCD(1) <= x"58";
+							else
+								LCD(1) <= x"4f";
+							end if;
+						else
+							
+								LCD(1) <= x"20";
+						
+						end if;
+						
+						if bot_hit = '1' then
+							if bot_string(159 downto 152) = x"20" then
+								LCD(41) <= x"58";
+							else
+								LCD(41) <= x"4f";
+							end if;
+						else
+							
+								LCD(41) <= x"20";
+						end if;
+					else
+						LCD(1) <=top_string(159 downto 152);
+						LCD(41) <=bot_string(159 downto 152);
+					end if;
+					
+					hit <= '0';
+					miss <= '0';
+					
+						-- hiting
 			
+
+			if hit_top_btn = '1' then
+				if btn_hit = '0' then
+					if top_string(159 downto 152) = x"6f" then
+						top_hit <= '1';
+					else
+						top_hit <= '0';
+					end if;
+				end if;
+			end if;
+		
+			if hit_bot_btn = '1' then
+				if btn_hit = '0' then
+					if bot_string(159 downto 152) = x"6f" then
+						bot_hit <= '1';
+					else
+						bot_hit <= '0';
+					end if;
+				end if;
+			end if;
+		
+					
+				end if;
+				
 				LCD(0)  <= "00111010";  -- colon
 				-- LCD 1 is the light that changes on input
 				LCD(2) <= top_string(151 downto 144 );
-				LCD(3) <= top_string(143 downto 137 );
-				LCD(4) <= top_string(136 downto 129 );
-				LCD(5) <= top_string(128 downto 121);
-				LCD(6) <= top_string(120 downto 113 );
+				LCD(3) <= top_string(143 downto 136 );
+				LCD(4) <= top_string(135 downto 128 );
+				LCD(5) <= top_string(127 downto 120);
+				LCD(6) <= top_string(119 downto 112 );
 				LCD(7)  <= "00111100"; -- "<"
 				
 				LCD(40) <= "00111010";	-- colon	
-				LCD(42) <= top_string(151 downto 144 );
-				LCD(43) <= top_string(143 downto 137 );
-				LCD(44) <= top_string(136 downto 129 );
-				LCD(45) <= top_string(128 downto 121);
-				LCD(46) <= top_string(120 downto 113 );
+				LCD(42) <= bot_string(151 downto 144 );
+				LCD(43) <= bot_string(143 downto 136 );
+				LCD(44) <= bot_string(135 downto 128 );
+				LCD(45) <= bot_string(127 downto 120);
+				LCD(46) <= bot_string(119 downto 112 );
 				LCD(47) <= "00111100"; -- "<"
 				
 				--Level--
 				LCD(9) <= x"4c"; -- "L"
 				case(level) is
-					when "00001" => LCD(49) <= x"31";
-					when "00010" => LCD(49) <= x"32";
-					when "00100" => LCD(49) <= x"33";
-					when "01000" => LCD(49) <= x"34";
-					when "10000" => LCD(49) <= x"35";
-					when others => LCD(49) <= x"31";
+					when "00001" => LCD(49) <= x"30";
+					when "00010" => LCD(49) <= x"31";
+					when "00100" => LCD(49) <= x"32";
+					when "01000" => LCD(49) <= x"33";
+					when "10000" => LCD(49) <= x"34";
+					when others => LCD(49) <= x"30";
 				end case;
 			elsif game_state = st_win then
 				
@@ -176,7 +238,7 @@ begin
 				LCD(44) <= x"6c"; -- l
 				LCD(45) <= x"6f"; -- o
 				LCD(46) <= x"73"; -- s
-				LCD(46) <= x"65"; -- e
+				LCD(47) <= x"65"; -- e
 				
 				
 				LCD(48) <= x"2d"; -- dash sign
@@ -186,35 +248,9 @@ begin
 				
 			end if;
 			
-			--pulsing utput on beat
-			if(rising_edge(pulse_beat)) then
+			
 		
-				if press = '1' then
-					if top_hit = '1' or bot_hit = '1' then
-						hit <= '1';
-						miss <= '0';
-					else
-						hit <= '0';
-						miss <= '1';
-					end if;
-				else
-					hit <= '0';
-					miss <= '1';
-				end if;
-				
-				press <= '0';
-				top_string <= top_string(158 downto 0) & '0';
-				bot_string <= bot_string(158 downto 0) & '0';
-				
-				LCD(1) <= top_string(159 downto 152);
-				LCD(41) <= bot_string(159 downto 152);
-				
-			elsif(pulse_beat = '0') then
-				hit <= '0';
-				miss <= '0';
-			end if;
-
-			end if;
+		end if;
 	   -- always display the score
            LCD(11)<= x"73";	-- s
            LCD(12)<= x"63";  	-- c
@@ -228,13 +264,7 @@ begin
 			
 	end process;	
 
-	process(pulse_beat)
-	begin
 	
-		
-
-		
-	end process;
 
 end Behavioral;
 

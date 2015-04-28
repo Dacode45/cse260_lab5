@@ -1,5 +1,5 @@
 ISim log file
-Running: H:\Desktop\cse260\lab5\topDDR_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb H:/Desktop/cse260/lab5/topDDR_isim_beh.wdb 
+Running: H:\Desktop\cse260\lab5\ULCD_test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb H:/Desktop/cse260/lab5/ULCD_test_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 This is a Full version of ISim.
 Time resolution is 1 ps
@@ -7,29 +7,34 @@ Time resolution is 1 ps
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
-at 0 ps, Instance /topddr/beatM/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 Finished circuit initialization process.
-# isim force add /topddr/mclk 1 -radix bin -value 0 -radix bin -time 5 ns -repeat 10 ns
-# isim force add /topddr/mclk 1 -radix bin -value 0 -radix bin -time 5 ns -repeat 10 ns
-# restart
-# run 1.00us
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# isim force add /topddr/mclk 1 -radix bin -value 0 -radix bin -time 5 ns -repeat 10 ns
-# isim force add /topddr/mclk 1 -radix bin -value 0 -radix bin -time 5 ns -repeat 10 ns
-# isim force add /topddr/mclk 1 -radix bin -value 0 -radix bin -time 5 ns -repeat 10 ns
-# isim force add /topddr/mclk 1 -radix bin -value 0 -radix bin -time 5 ns -repeat 10 ns
-# run all
-Stopped at time : 65876270 ns : File "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/scoreKeeper.vhd" Line 69
-ISim P.20131013 (signature 0x7708f090)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /topddr/beatM/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-Finished circuit initialization process.
-# isim force add /topddr/mclk 1 -radix bin -value 0 -radix bin -time 5 ns -repeat 10 ns
-# isim force add /topddr/mclk 1 -radix bin -value 0 -radix bin -time 5 ns -repeat 10 ns
-# run 1.00us
-# run 1.00us
-# run all
-Stopped at time : 62003235 ns : File "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd" Line 226
+# isim run 200ns
+Incorrect usage of command 'isim'
+Usage: isim <  < <ptrace|ltrace> <on|off> > | < set <userunit|arraydisplaylength|maxtraceablesize|radix> <value> > | < get <userunit|arraydisplaylength|maxtraceablesize|radix> > | < condition <list | <add <options>> | <remove <options>> > | < force < <add <options>> | <remove <options>> > >
+for detailed help use 'help isim'
+# isim run 200 ns
+Incorrect usage of command 'isim'
+Usage: isim <  < <ptrace|ltrace> <on|off> > | < set <userunit|arraydisplaylength|maxtraceablesize|radix> <value> > | < get <userunit|arraydisplaylength|maxtraceablesize|radix> > | < condition <list | <add <options>> | <remove <options>> > | < force < <add <options>> | <remove <options>> > >
+for detailed help use 'help isim'
+# run 200 ns
+# run 200 ns
+# run 200 ns
+# run 200 ns
+# isim force add hit_top_btn 1
+# run 100 ns
+# isim force add hit_top_btn 0
+# run 100 ns
+# run 100 ns
+# isim force add hit_top_btn 1
+# run 100 ns
+# isim force add hit_top_btn 0
+# run 100 ns
+# run 100 ns
+# run 100 ns
+# run 100 ns
+# run 100 ns
+# run 100 ns
+# run 100 ns
+# run 100 ns
+# run 100 ns
+# run 100 ns

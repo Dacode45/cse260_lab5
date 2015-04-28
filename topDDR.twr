@@ -1,0 +1,845 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml topDDR.twx topDDR.ncd -o topDDR.twr topDDR.pcf -ucf
+DDR.ucf
+
+Design file:              topDDR.ncd
+Physical constraint file: topDDR.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: TS_mclk = PERIOD TIMEGRP "mclk" 20 ns HIGH 40%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 71378137 paths analyzed, 2123 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  19.953ns.
+--------------------------------------------------------------------------------
+
+Paths for end point LCDC/cur_state_44 (SLICE_X46Y62.F4), 957935 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.047ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scoreK/hex_score_10_1 (FF)
+  Destination:          LCDC/cur_state_44 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.918ns (Levels of Logic = 15)
+  Clock Path Skew:      -0.035ns (0.056 - 0.091)
+  Source Clock:         mclk_BUFGP rising at 0.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: scoreK/hex_score_10_1 to LCDC/cur_state_44
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X47Y91.YQ      Tcko                  0.587   scoreK/hex_score_10_1
+                                                       scoreK/hex_score_10_1
+    SLICE_X42Y90.G2      net (fanout=13)       1.478   scoreK/hex_score_10_1
+    SLICE_X42Y90.X       Tif5x                 1.152   scoreK/Madd_bcd_3_0_add0004_cy<2>129
+                                                       scoreK/Madd_bcd_3_0_add0004_cy<2>129_F
+                                                       scoreK/Madd_bcd_3_0_add0004_cy<2>129
+    SLICE_X42Y88.G3      net (fanout=2)        0.359   scoreK/Madd_bcd_3_0_add0004_cy<2>129
+    SLICE_X42Y88.Y       Tilo                  0.759   N273
+                                                       scoreK/bcd_2_mux0003
+    SLICE_X43Y89.G1      net (fanout=15)       0.310   scoreK/Madd_bcd_3_0_add0004_lut<3>
+    SLICE_X43Y89.Y       Tilo                  0.704   N318
+                                                       scoreK/bcd_3_cmp_gt00041_SW4
+    SLICE_X45Y89.G2      net (fanout=1)        0.357   N285
+    SLICE_X45Y89.F5      Tif5                  0.875   scoreK/bcd_3_mux0005_f5
+                                                       scoreK/bcd_3_mux00057
+                                                       scoreK/bcd_3_mux0005_f5
+    SLICE_X45Y88.FXINB   net (fanout=1)        0.000   scoreK/bcd_3_mux0005_f5
+    SLICE_X45Y88.Y       Tif6y                 0.521   scoreK/bcd_3_cmp_gt0004
+                                                       scoreK/bcd_3_mux0005_f6/MUXF6
+    SLICE_X44Y85.BX      net (fanout=10)       0.649   scoreK/Madd_bcd_7_4_add0003_cy<0>
+    SLICE_X44Y85.X       Tbxx                  0.806   scoreK/Madd_bcd_7_4_add0003_cy<2>
+                                                       scoreK/Madd_bcd_7_4_add0003_cy<2>1
+    SLICE_X44Y83.F4      net (fanout=1)        0.271   scoreK/Madd_bcd_7_4_add0003_cy<2>
+    SLICE_X44Y83.X       Tilo                  0.759   scoreK/Madd_bcd_11_8_add0001_Madd_cy<0>
+                                                       scoreK/bcd_7_mux000344
+    SLICE_X43Y83.BX      net (fanout=4)        0.469   scoreK/Madd_bcd_11_8_add0001_Madd_cy<0>
+    SLICE_X43Y83.X       Tbxx                  0.739   scoreK/Madd_bcd_11_8_add0002_Madd_lut<2>
+                                                       scoreK/bcd_9_mux0001101
+    SLICE_X42Y80.BX      net (fanout=2)        0.372   scoreK/Madd_bcd_11_8_add0002_Madd_lut<2>
+    SLICE_X42Y80.X       Tbxx                  0.806   scoreK/bcd_10_cmp_gt0002
+                                                       scoreK/bcd_10_cmp_gt000237
+    SLICE_X43Y81.G4      net (fanout=4)        0.064   scoreK/bcd_10_cmp_gt0002
+    SLICE_X43Y81.Y       Tilo                  0.704   N235
+                                                       scoreK/bcd_8_mux00021
+    SLICE_X42Y77.F2      net (fanout=7)        0.663   score<9>
+    SLICE_X42Y77.X       Tilo                  0.759   N351
+                                                       ULCD/LCD<52><1>1_SW0_SW0
+    SLICE_X42Y74.G3      net (fanout=1)        0.268   N351
+    SLICE_X42Y74.X       Tif5x                 1.152   LCDC/Mmux_Code_13_f56
+                                                       LCDC/Mmux_Code_13_f5_5_F
+                                                       LCDC/Mmux_Code_13_f5_5
+    SLICE_X40Y65.G3      net (fanout=2)        0.856   LCDC/Mmux_Code_13_f56
+    SLICE_X40Y65.Y       Tilo                  0.759   N65
+                                                       LCDC/Mmux_Code_2_f5_0_1
+    SLICE_X46Y62.G3      net (fanout=19)       1.046   LCDC/Mmux_Code_2_f5_0
+    SLICE_X46Y62.Y       Tilo                  0.759   LCDC/cur_state<44>
+                                                       LCDC/cur_state_mux0003<14>11_SW0
+    SLICE_X46Y62.F4      net (fanout=1)        0.023   LCDC/cur_state_mux0003<14>11_SW0/O
+    SLICE_X46Y62.CLK     Tfck                  0.892   LCDC/cur_state<44>
+                                                       LCDC/cur_state_mux0003<16>1
+                                                       LCDC/cur_state_44
+    -------------------------------------------------  ---------------------------
+    Total                                     19.918ns (12.733ns logic, 7.185ns route)
+                                                       (63.9% logic, 36.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.082ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scoreK/hex_score_10_1 (FF)
+  Destination:          LCDC/cur_state_44 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.883ns (Levels of Logic = 15)
+  Clock Path Skew:      -0.035ns (0.056 - 0.091)
+  Source Clock:         mclk_BUFGP rising at 0.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: scoreK/hex_score_10_1 to LCDC/cur_state_44
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X47Y91.YQ      Tcko                  0.587   scoreK/hex_score_10_1
+                                                       scoreK/hex_score_10_1
+    SLICE_X42Y90.G2      net (fanout=13)       1.478   scoreK/hex_score_10_1
+    SLICE_X42Y90.X       Tif5x                 1.152   scoreK/Madd_bcd_3_0_add0004_cy<2>129
+                                                       scoreK/Madd_bcd_3_0_add0004_cy<2>129_F
+                                                       scoreK/Madd_bcd_3_0_add0004_cy<2>129
+    SLICE_X42Y88.G3      net (fanout=2)        0.359   scoreK/Madd_bcd_3_0_add0004_cy<2>129
+    SLICE_X42Y88.Y       Tilo                  0.759   N273
+                                                       scoreK/bcd_2_mux0003
+    SLICE_X43Y89.G1      net (fanout=15)       0.310   scoreK/Madd_bcd_3_0_add0004_lut<3>
+    SLICE_X43Y89.Y       Tilo                  0.704   N318
+                                                       scoreK/bcd_3_cmp_gt00041_SW4
+    SLICE_X45Y89.G2      net (fanout=1)        0.357   N285
+    SLICE_X45Y89.F5      Tif5                  0.875   scoreK/bcd_3_mux0005_f5
+                                                       scoreK/bcd_3_mux00057
+                                                       scoreK/bcd_3_mux0005_f5
+    SLICE_X45Y88.FXINB   net (fanout=1)        0.000   scoreK/bcd_3_mux0005_f5
+    SLICE_X45Y88.Y       Tif6y                 0.521   scoreK/bcd_3_cmp_gt0004
+                                                       scoreK/bcd_3_mux0005_f6/MUXF6
+    SLICE_X44Y85.BX      net (fanout=10)       0.649   scoreK/Madd_bcd_7_4_add0003_cy<0>
+    SLICE_X44Y85.X       Tbxx                  0.806   scoreK/Madd_bcd_7_4_add0003_cy<2>
+                                                       scoreK/Madd_bcd_7_4_add0003_cy<2>1
+    SLICE_X44Y83.F4      net (fanout=1)        0.271   scoreK/Madd_bcd_7_4_add0003_cy<2>
+    SLICE_X44Y83.X       Tilo                  0.759   scoreK/Madd_bcd_11_8_add0001_Madd_cy<0>
+                                                       scoreK/bcd_7_mux000344
+    SLICE_X43Y83.BX      net (fanout=4)        0.469   scoreK/Madd_bcd_11_8_add0001_Madd_cy<0>
+    SLICE_X43Y83.X       Tbxx                  0.739   scoreK/Madd_bcd_11_8_add0002_Madd_lut<2>
+                                                       scoreK/bcd_9_mux0001101
+    SLICE_X42Y80.BX      net (fanout=2)        0.372   scoreK/Madd_bcd_11_8_add0002_Madd_lut<2>
+    SLICE_X42Y80.X       Tbxx                  0.806   scoreK/bcd_10_cmp_gt0002
+                                                       scoreK/bcd_10_cmp_gt000237
+    SLICE_X42Y77.G1      net (fanout=4)        0.425   scoreK/bcd_10_cmp_gt0002
+    SLICE_X42Y77.Y       Tilo                  0.759   N351
+                                                       scoreK/bcd_9_mux0002
+    SLICE_X43Y81.F4      net (fanout=5)        0.345   score<10>
+    SLICE_X43Y81.X       Tilo                  0.704   N235
+                                                       ULCD/LCD<52><0>1_SW0
+    SLICE_X42Y68.G4      net (fanout=1)        0.709   N235
+    SLICE_X42Y68.X       Tif5x                 1.152   LCDC/Mmux_Code_13_f52
+                                                       LCDC/Mmux_Code_13_f5_1_F
+                                                       LCDC/Mmux_Code_13_f5_1
+    SLICE_X42Y64.G3      net (fanout=2)        0.571   LCDC/Mmux_Code_13_f52
+    SLICE_X42Y64.Y       Tilo                  0.759   N73
+                                                       LCDC/Mmux_Code_2_f5_7
+    SLICE_X46Y62.G2      net (fanout=19)       0.812   LCDC/Mmux_Code_2_f5
+    SLICE_X46Y62.Y       Tilo                  0.759   LCDC/cur_state<44>
+                                                       LCDC/cur_state_mux0003<14>11_SW0
+    SLICE_X46Y62.F4      net (fanout=1)        0.023   LCDC/cur_state_mux0003<14>11_SW0/O
+    SLICE_X46Y62.CLK     Tfck                  0.892   LCDC/cur_state<44>
+                                                       LCDC/cur_state_mux0003<16>1
+                                                       LCDC/cur_state_44
+    -------------------------------------------------  ---------------------------
+    Total                                     19.883ns (12.733ns logic, 7.150ns route)
+                                                       (64.0% logic, 36.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.083ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scoreK/hex_score_7_1 (FF)
+  Destination:          LCDC/cur_state_44 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.888ns (Levels of Logic = 15)
+  Clock Path Skew:      -0.029ns (0.056 - 0.085)
+  Source Clock:         mclk_BUFGP rising at 0.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: scoreK/hex_score_7_1 to LCDC/cur_state_44
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y90.YQ      Tcko                  0.587   scoreK/hex_score_7_1
+                                                       scoreK/hex_score_7_1
+    SLICE_X47Y89.G3      net (fanout=10)       0.856   scoreK/hex_score_7_1
+    SLICE_X47Y89.X       Tif5x                 1.025   scoreK/Madd_bcd_3_0_add0003_lut<3>
+                                                       scoreK/bcd_2_mux0002_F
+                                                       scoreK/bcd_2_mux0002
+    SLICE_X48Y91.F3      net (fanout=9)        0.642   scoreK/Madd_bcd_3_0_add0003_lut<3>
+    SLICE_X48Y91.X       Tilo                  0.759   N366
+                                                       scoreK/Madd_bcd_3_0_add0004_cy<2>167_SW0
+    SLICE_X45Y90.F1      net (fanout=1)        0.442   N366
+    SLICE_X45Y90.X       Tilo                  0.704   scoreK/Madd_bcd_3_0_add0004_cy<2>
+                                                       scoreK/Madd_bcd_3_0_add0004_cy<2>167
+    SLICE_X44Y84.G3      net (fanout=1)        0.521   scoreK/Madd_bcd_3_0_add0004_cy<2>
+    SLICE_X44Y84.Y       Tilo                  0.759   N357
+                                                       scoreK/bcd_3_mux00041
+    SLICE_X46Y84.F4      net (fanout=17)       0.617   scoreK/Madd_bcd_7_4_add0002_cy<0>
+    SLICE_X46Y84.X       Tilo                  0.759   N358
+                                                       scoreK/bcd_7_mux000314_SW1
+    SLICE_X44Y83.G3      net (fanout=1)        0.345   N358
+    SLICE_X44Y83.Y       Tilo                  0.759   scoreK/Madd_bcd_11_8_add0001_Madd_cy<0>
+                                                       scoreK/bcd_7_mux000314
+    SLICE_X44Y83.F3      net (fanout=1)        0.023   scoreK/bcd_7_mux000314/O
+    SLICE_X44Y83.X       Tilo                  0.759   scoreK/Madd_bcd_11_8_add0001_Madd_cy<0>
+                                                       scoreK/bcd_7_mux000344
+    SLICE_X43Y83.BX      net (fanout=4)        0.469   scoreK/Madd_bcd_11_8_add0001_Madd_cy<0>
+    SLICE_X43Y83.X       Tbxx                  0.739   scoreK/Madd_bcd_11_8_add0002_Madd_lut<2>
+                                                       scoreK/bcd_9_mux0001101
+    SLICE_X42Y80.BX      net (fanout=2)        0.372   scoreK/Madd_bcd_11_8_add0002_Madd_lut<2>
+    SLICE_X42Y80.X       Tbxx                  0.806   scoreK/bcd_10_cmp_gt0002
+                                                       scoreK/bcd_10_cmp_gt000237
+    SLICE_X43Y81.G4      net (fanout=4)        0.064   scoreK/bcd_10_cmp_gt0002
+    SLICE_X43Y81.Y       Tilo                  0.704   N235
+                                                       scoreK/bcd_8_mux00021
+    SLICE_X42Y77.F2      net (fanout=7)        0.663   score<9>
+    SLICE_X42Y77.X       Tilo                  0.759   N351
+                                                       ULCD/LCD<52><1>1_SW0_SW0
+    SLICE_X42Y74.G3      net (fanout=1)        0.268   N351
+    SLICE_X42Y74.X       Tif5x                 1.152   LCDC/Mmux_Code_13_f56
+                                                       LCDC/Mmux_Code_13_f5_5_F
+                                                       LCDC/Mmux_Code_13_f5_5
+    SLICE_X40Y65.G3      net (fanout=2)        0.856   LCDC/Mmux_Code_13_f56
+    SLICE_X40Y65.Y       Tilo                  0.759   N65
+                                                       LCDC/Mmux_Code_2_f5_0_1
+    SLICE_X46Y62.G3      net (fanout=19)       1.046   LCDC/Mmux_Code_2_f5_0
+    SLICE_X46Y62.Y       Tilo                  0.759   LCDC/cur_state<44>
+                                                       LCDC/cur_state_mux0003<14>11_SW0
+    SLICE_X46Y62.F4      net (fanout=1)        0.023   LCDC/cur_state_mux0003<14>11_SW0/O
+    SLICE_X46Y62.CLK     Tfck                  0.892   LCDC/cur_state<44>
+                                                       LCDC/cur_state_mux0003<16>1
+                                                       LCDC/cur_state_44
+    -------------------------------------------------  ---------------------------
+    Total                                     19.888ns (12.681ns logic, 7.207ns route)
+                                                       (63.8% logic, 36.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point LCDC/cur_state_24 (SLICE_X46Y63.F3), 957935 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.047ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scoreK/hex_score_10_1 (FF)
+  Destination:          LCDC/cur_state_24 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.918ns (Levels of Logic = 15)
+  Clock Path Skew:      -0.035ns (0.056 - 0.091)
+  Source Clock:         mclk_BUFGP rising at 0.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: scoreK/hex_score_10_1 to LCDC/cur_state_24
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X47Y91.YQ      Tcko                  0.587   scoreK/hex_score_10_1
+                                                       scoreK/hex_score_10_1
+    SLICE_X42Y90.G2      net (fanout=13)       1.478   scoreK/hex_score_10_1
+    SLICE_X42Y90.X       Tif5x                 1.152   scoreK/Madd_bcd_3_0_add0004_cy<2>129
+                                                       scoreK/Madd_bcd_3_0_add0004_cy<2>129_F
+                                                       scoreK/Madd_bcd_3_0_add0004_cy<2>129
+    SLICE_X42Y88.G3      net (fanout=2)        0.359   scoreK/Madd_bcd_3_0_add0004_cy<2>129
+    SLICE_X42Y88.Y       Tilo                  0.759   N273
+                                                       scoreK/bcd_2_mux0003
+    SLICE_X43Y89.G1      net (fanout=15)       0.310   scoreK/Madd_bcd_3_0_add0004_lut<3>
+    SLICE_X43Y89.Y       Tilo                  0.704   N318
+                                                       scoreK/bcd_3_cmp_gt00041_SW4
+    SLICE_X45Y89.G2      net (fanout=1)        0.357   N285
+    SLICE_X45Y89.F5      Tif5                  0.875   scoreK/bcd_3_mux0005_f5
+                                                       scoreK/bcd_3_mux00057
+                                                       scoreK/bcd_3_mux0005_f5
+    SLICE_X45Y88.FXINB   net (fanout=1)        0.000   scoreK/bcd_3_mux0005_f5
+    SLICE_X45Y88.Y       Tif6y                 0.521   scoreK/bcd_3_cmp_gt0004
+                                                       scoreK/bcd_3_mux0005_f6/MUXF6
+    SLICE_X44Y85.BX      net (fanout=10)       0.649   scoreK/Madd_bcd_7_4_add0003_cy<0>
+    SLICE_X44Y85.X       Tbxx                  0.806   scoreK/Madd_bcd_7_4_add0003_cy<2>
+                                                       scoreK/Madd_bcd_7_4_add0003_cy<2>1
+    SLICE_X44Y83.F4      net (fanout=1)        0.271   scoreK/Madd_bcd_7_4_add0003_cy<2>
+    SLICE_X44Y83.X       Tilo                  0.759   scoreK/Madd_bcd_11_8_add0001_Madd_cy<0>
+                                                       scoreK/bcd_7_mux000344
+    SLICE_X43Y83.BX      net (fanout=4)        0.469   scoreK/Madd_bcd_11_8_add0001_Madd_cy<0>
+    SLICE_X43Y83.X       Tbxx                  0.739   scoreK/Madd_bcd_11_8_add0002_Madd_lut<2>
+                                                       scoreK/bcd_9_mux0001101
+    SLICE_X42Y80.BX      net (fanout=2)        0.372   scoreK/Madd_bcd_11_8_add0002_Madd_lut<2>
+    SLICE_X42Y80.X       Tbxx                  0.806   scoreK/bcd_10_cmp_gt0002
+                                                       scoreK/bcd_10_cmp_gt000237
+    SLICE_X43Y81.G4      net (fanout=4)        0.064   scoreK/bcd_10_cmp_gt0002
+    SLICE_X43Y81.Y       Tilo                  0.704   N235
+                                                       scoreK/bcd_8_mux00021
+    SLICE_X42Y77.F2      net (fanout=7)        0.663   score<9>
+    SLICE_X42Y77.X       Tilo                  0.759   N351
+                                                       ULCD/LCD<52><1>1_SW0_SW0
+    SLICE_X42Y74.G3      net (fanout=1)        0.268   N351
+    SLICE_X42Y74.X       Tif5x                 1.152   LCDC/Mmux_Code_13_f56
+                                                       LCDC/Mmux_Code_13_f5_5_F
+                                                       LCDC/Mmux_Code_13_f5_5
+    SLICE_X40Y65.G3      net (fanout=2)        0.856   LCDC/Mmux_Code_13_f56
+    SLICE_X40Y65.Y       Tilo                  0.759   N65
+                                                       LCDC/Mmux_Code_2_f5_0_1
+    SLICE_X46Y63.G3      net (fanout=19)       1.046   LCDC/Mmux_Code_2_f5_0
+    SLICE_X46Y63.Y       Tilo                  0.759   LCDC/cur_state<24>
+                                                       LCDC/cur_state_mux0003<34>11_SW0
+    SLICE_X46Y63.F3      net (fanout=1)        0.023   LCDC/cur_state_mux0003<34>11_SW0/O
+    SLICE_X46Y63.CLK     Tfck                  0.892   LCDC/cur_state<24>
+                                                       LCDC/cur_state_mux0003<36>1
+                                                       LCDC/cur_state_24
+    -------------------------------------------------  ---------------------------
+    Total                                     19.918ns (12.733ns logic, 7.185ns route)
+                                                       (63.9% logic, 36.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.082ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scoreK/hex_score_10_1 (FF)
+  Destination:          LCDC/cur_state_24 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.883ns (Levels of Logic = 15)
+  Clock Path Skew:      -0.035ns (0.056 - 0.091)
+  Source Clock:         mclk_BUFGP rising at 0.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: scoreK/hex_score_10_1 to LCDC/cur_state_24
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X47Y91.YQ      Tcko                  0.587   scoreK/hex_score_10_1
+                                                       scoreK/hex_score_10_1
+    SLICE_X42Y90.G2      net (fanout=13)       1.478   scoreK/hex_score_10_1
+    SLICE_X42Y90.X       Tif5x                 1.152   scoreK/Madd_bcd_3_0_add0004_cy<2>129
+                                                       scoreK/Madd_bcd_3_0_add0004_cy<2>129_F
+                                                       scoreK/Madd_bcd_3_0_add0004_cy<2>129
+    SLICE_X42Y88.G3      net (fanout=2)        0.359   scoreK/Madd_bcd_3_0_add0004_cy<2>129
+    SLICE_X42Y88.Y       Tilo                  0.759   N273
+                                                       scoreK/bcd_2_mux0003
+    SLICE_X43Y89.G1      net (fanout=15)       0.310   scoreK/Madd_bcd_3_0_add0004_lut<3>
+    SLICE_X43Y89.Y       Tilo                  0.704   N318
+                                                       scoreK/bcd_3_cmp_gt00041_SW4
+    SLICE_X45Y89.G2      net (fanout=1)        0.357   N285
+    SLICE_X45Y89.F5      Tif5                  0.875   scoreK/bcd_3_mux0005_f5
+                                                       scoreK/bcd_3_mux00057
+                                                       scoreK/bcd_3_mux0005_f5
+    SLICE_X45Y88.FXINB   net (fanout=1)        0.000   scoreK/bcd_3_mux0005_f5
+    SLICE_X45Y88.Y       Tif6y                 0.521   scoreK/bcd_3_cmp_gt0004
+                                                       scoreK/bcd_3_mux0005_f6/MUXF6
+    SLICE_X44Y85.BX      net (fanout=10)       0.649   scoreK/Madd_bcd_7_4_add0003_cy<0>
+    SLICE_X44Y85.X       Tbxx                  0.806   scoreK/Madd_bcd_7_4_add0003_cy<2>
+                                                       scoreK/Madd_bcd_7_4_add0003_cy<2>1
+    SLICE_X44Y83.F4      net (fanout=1)        0.271   scoreK/Madd_bcd_7_4_add0003_cy<2>
+    SLICE_X44Y83.X       Tilo                  0.759   scoreK/Madd_bcd_11_8_add0001_Madd_cy<0>
+                                                       scoreK/bcd_7_mux000344
+    SLICE_X43Y83.BX      net (fanout=4)        0.469   scoreK/Madd_bcd_11_8_add0001_Madd_cy<0>
+    SLICE_X43Y83.X       Tbxx                  0.739   scoreK/Madd_bcd_11_8_add0002_Madd_lut<2>
+                                                       scoreK/bcd_9_mux0001101
+    SLICE_X42Y80.BX      net (fanout=2)        0.372   scoreK/Madd_bcd_11_8_add0002_Madd_lut<2>
+    SLICE_X42Y80.X       Tbxx                  0.806   scoreK/bcd_10_cmp_gt0002
+                                                       scoreK/bcd_10_cmp_gt000237
+    SLICE_X42Y77.G1      net (fanout=4)        0.425   scoreK/bcd_10_cmp_gt0002
+    SLICE_X42Y77.Y       Tilo                  0.759   N351
+                                                       scoreK/bcd_9_mux0002
+    SLICE_X43Y81.F4      net (fanout=5)        0.345   score<10>
+    SLICE_X43Y81.X       Tilo                  0.704   N235
+                                                       ULCD/LCD<52><0>1_SW0
+    SLICE_X42Y68.G4      net (fanout=1)        0.709   N235
+    SLICE_X42Y68.X       Tif5x                 1.152   LCDC/Mmux_Code_13_f52
+                                                       LCDC/Mmux_Code_13_f5_1_F
+                                                       LCDC/Mmux_Code_13_f5_1
+    SLICE_X42Y64.G3      net (fanout=2)        0.571   LCDC/Mmux_Code_13_f52
+    SLICE_X42Y64.Y       Tilo                  0.759   N73
+                                                       LCDC/Mmux_Code_2_f5_7
+    SLICE_X46Y63.G2      net (fanout=19)       0.812   LCDC/Mmux_Code_2_f5
+    SLICE_X46Y63.Y       Tilo                  0.759   LCDC/cur_state<24>
+                                                       LCDC/cur_state_mux0003<34>11_SW0
+    SLICE_X46Y63.F3      net (fanout=1)        0.023   LCDC/cur_state_mux0003<34>11_SW0/O
+    SLICE_X46Y63.CLK     Tfck                  0.892   LCDC/cur_state<24>
+                                                       LCDC/cur_state_mux0003<36>1
+                                                       LCDC/cur_state_24
+    -------------------------------------------------  ---------------------------
+    Total                                     19.883ns (12.733ns logic, 7.150ns route)
+                                                       (64.0% logic, 36.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.083ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scoreK/hex_score_7_1 (FF)
+  Destination:          LCDC/cur_state_24 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.888ns (Levels of Logic = 15)
+  Clock Path Skew:      -0.029ns (0.056 - 0.085)
+  Source Clock:         mclk_BUFGP rising at 0.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: scoreK/hex_score_7_1 to LCDC/cur_state_24
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y90.YQ      Tcko                  0.587   scoreK/hex_score_7_1
+                                                       scoreK/hex_score_7_1
+    SLICE_X47Y89.G3      net (fanout=10)       0.856   scoreK/hex_score_7_1
+    SLICE_X47Y89.X       Tif5x                 1.025   scoreK/Madd_bcd_3_0_add0003_lut<3>
+                                                       scoreK/bcd_2_mux0002_F
+                                                       scoreK/bcd_2_mux0002
+    SLICE_X48Y91.F3      net (fanout=9)        0.642   scoreK/Madd_bcd_3_0_add0003_lut<3>
+    SLICE_X48Y91.X       Tilo                  0.759   N366
+                                                       scoreK/Madd_bcd_3_0_add0004_cy<2>167_SW0
+    SLICE_X45Y90.F1      net (fanout=1)        0.442   N366
+    SLICE_X45Y90.X       Tilo                  0.704   scoreK/Madd_bcd_3_0_add0004_cy<2>
+                                                       scoreK/Madd_bcd_3_0_add0004_cy<2>167
+    SLICE_X44Y84.G3      net (fanout=1)        0.521   scoreK/Madd_bcd_3_0_add0004_cy<2>
+    SLICE_X44Y84.Y       Tilo                  0.759   N357
+                                                       scoreK/bcd_3_mux00041
+    SLICE_X46Y84.F4      net (fanout=17)       0.617   scoreK/Madd_bcd_7_4_add0002_cy<0>
+    SLICE_X46Y84.X       Tilo                  0.759   N358
+                                                       scoreK/bcd_7_mux000314_SW1
+    SLICE_X44Y83.G3      net (fanout=1)        0.345   N358
+    SLICE_X44Y83.Y       Tilo                  0.759   scoreK/Madd_bcd_11_8_add0001_Madd_cy<0>
+                                                       scoreK/bcd_7_mux000314
+    SLICE_X44Y83.F3      net (fanout=1)        0.023   scoreK/bcd_7_mux000314/O
+    SLICE_X44Y83.X       Tilo                  0.759   scoreK/Madd_bcd_11_8_add0001_Madd_cy<0>
+                                                       scoreK/bcd_7_mux000344
+    SLICE_X43Y83.BX      net (fanout=4)        0.469   scoreK/Madd_bcd_11_8_add0001_Madd_cy<0>
+    SLICE_X43Y83.X       Tbxx                  0.739   scoreK/Madd_bcd_11_8_add0002_Madd_lut<2>
+                                                       scoreK/bcd_9_mux0001101
+    SLICE_X42Y80.BX      net (fanout=2)        0.372   scoreK/Madd_bcd_11_8_add0002_Madd_lut<2>
+    SLICE_X42Y80.X       Tbxx                  0.806   scoreK/bcd_10_cmp_gt0002
+                                                       scoreK/bcd_10_cmp_gt000237
+    SLICE_X43Y81.G4      net (fanout=4)        0.064   scoreK/bcd_10_cmp_gt0002
+    SLICE_X43Y81.Y       Tilo                  0.704   N235
+                                                       scoreK/bcd_8_mux00021
+    SLICE_X42Y77.F2      net (fanout=7)        0.663   score<9>
+    SLICE_X42Y77.X       Tilo                  0.759   N351
+                                                       ULCD/LCD<52><1>1_SW0_SW0
+    SLICE_X42Y74.G3      net (fanout=1)        0.268   N351
+    SLICE_X42Y74.X       Tif5x                 1.152   LCDC/Mmux_Code_13_f56
+                                                       LCDC/Mmux_Code_13_f5_5_F
+                                                       LCDC/Mmux_Code_13_f5_5
+    SLICE_X40Y65.G3      net (fanout=2)        0.856   LCDC/Mmux_Code_13_f56
+    SLICE_X40Y65.Y       Tilo                  0.759   N65
+                                                       LCDC/Mmux_Code_2_f5_0_1
+    SLICE_X46Y63.G3      net (fanout=19)       1.046   LCDC/Mmux_Code_2_f5_0
+    SLICE_X46Y63.Y       Tilo                  0.759   LCDC/cur_state<24>
+                                                       LCDC/cur_state_mux0003<34>11_SW0
+    SLICE_X46Y63.F3      net (fanout=1)        0.023   LCDC/cur_state_mux0003<34>11_SW0/O
+    SLICE_X46Y63.CLK     Tfck                  0.892   LCDC/cur_state<24>
+                                                       LCDC/cur_state_mux0003<36>1
+                                                       LCDC/cur_state_24
+    -------------------------------------------------  ---------------------------
+    Total                                     19.888ns (12.681ns logic, 7.207ns route)
+                                                       (63.8% logic, 36.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point LCDC/cur_state_41 (SLICE_X40Y70.F2), 1329426 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.070ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scoreK/hex_score_10_1 (FF)
+  Destination:          LCDC/cur_state_41 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.930ns (Levels of Logic = 16)
+  Clock Path Skew:      0.000ns
+  Source Clock:         mclk_BUFGP rising at 0.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: scoreK/hex_score_10_1 to LCDC/cur_state_41
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X47Y91.YQ      Tcko                  0.587   scoreK/hex_score_10_1
+                                                       scoreK/hex_score_10_1
+    SLICE_X42Y90.G2      net (fanout=13)       1.478   scoreK/hex_score_10_1
+    SLICE_X42Y90.X       Tif5x                 1.152   scoreK/Madd_bcd_3_0_add0004_cy<2>129
+                                                       scoreK/Madd_bcd_3_0_add0004_cy<2>129_F
+                                                       scoreK/Madd_bcd_3_0_add0004_cy<2>129
+    SLICE_X42Y88.G3      net (fanout=2)        0.359   scoreK/Madd_bcd_3_0_add0004_cy<2>129
+    SLICE_X42Y88.Y       Tilo                  0.759   N273
+                                                       scoreK/bcd_2_mux0003
+    SLICE_X43Y89.G1      net (fanout=15)       0.310   scoreK/Madd_bcd_3_0_add0004_lut<3>
+    SLICE_X43Y89.Y       Tilo                  0.704   N318
+                                                       scoreK/bcd_3_cmp_gt00041_SW4
+    SLICE_X45Y89.G2      net (fanout=1)        0.357   N285
+    SLICE_X45Y89.F5      Tif5                  0.875   scoreK/bcd_3_mux0005_f5
+                                                       scoreK/bcd_3_mux00057
+                                                       scoreK/bcd_3_mux0005_f5
+    SLICE_X45Y88.FXINB   net (fanout=1)        0.000   scoreK/bcd_3_mux0005_f5
+    SLICE_X45Y88.Y       Tif6y                 0.521   scoreK/bcd_3_cmp_gt0004
+                                                       scoreK/bcd_3_mux0005_f6/MUXF6
+    SLICE_X44Y85.BX      net (fanout=10)       0.649   scoreK/Madd_bcd_7_4_add0003_cy<0>
+    SLICE_X44Y85.X       Tbxx                  0.806   scoreK/Madd_bcd_7_4_add0003_cy<2>
+                                                       scoreK/Madd_bcd_7_4_add0003_cy<2>1
+    SLICE_X44Y83.F4      net (fanout=1)        0.271   scoreK/Madd_bcd_7_4_add0003_cy<2>
+    SLICE_X44Y83.X       Tilo                  0.759   scoreK/Madd_bcd_11_8_add0001_Madd_cy<0>
+                                                       scoreK/bcd_7_mux000344
+    SLICE_X43Y83.BX      net (fanout=4)        0.469   scoreK/Madd_bcd_11_8_add0001_Madd_cy<0>
+    SLICE_X43Y83.X       Tbxx                  0.739   scoreK/Madd_bcd_11_8_add0002_Madd_lut<2>
+                                                       scoreK/bcd_9_mux0001101
+    SLICE_X42Y80.BX      net (fanout=2)        0.372   scoreK/Madd_bcd_11_8_add0002_Madd_lut<2>
+    SLICE_X42Y80.X       Tbxx                  0.806   scoreK/bcd_10_cmp_gt0002
+                                                       scoreK/bcd_10_cmp_gt000237
+    SLICE_X42Y77.G1      net (fanout=4)        0.425   scoreK/bcd_10_cmp_gt0002
+    SLICE_X42Y77.Y       Tilo                  0.759   N351
+                                                       scoreK/bcd_9_mux0002
+    SLICE_X43Y81.F4      net (fanout=5)        0.345   score<10>
+    SLICE_X43Y81.X       Tilo                  0.704   N235
+                                                       ULCD/LCD<52><0>1_SW0
+    SLICE_X42Y68.G4      net (fanout=1)        0.709   N235
+    SLICE_X42Y68.X       Tif5x                 1.152   LCDC/Mmux_Code_13_f52
+                                                       LCDC/Mmux_Code_13_f5_1_F
+                                                       LCDC/Mmux_Code_13_f5_1
+    SLICE_X43Y68.F4      net (fanout=2)        0.038   LCDC/Mmux_Code_13_f52
+    SLICE_X43Y68.X       Tilo                  0.704   LCDC/Code<0>
+                                                       LCDC/Mmux_Code_2_f5
+    SLICE_X43Y71.G4      net (fanout=18)       0.444   LCDC/Code<0>
+    SLICE_X43Y71.Y       Tilo                  0.704   N333
+                                                       LCDC/cur_state_mux0003<19>58
+    SLICE_X43Y71.F4      net (fanout=1)        0.023   LCDC/cur_state_mux0003<19>58/O
+    SLICE_X43Y71.X       Tilo                  0.704   N333
+                                                       LCDC/cur_state_mux0003<19>73_SW0
+    SLICE_X40Y70.F2      net (fanout=1)        0.354   N333
+    SLICE_X40Y70.CLK     Tfck                  0.892   LCDC/cur_state<41>
+                                                       LCDC/cur_state_mux0003<19>191
+                                                       LCDC/cur_state_41
+    -------------------------------------------------  ---------------------------
+    Total                                     19.930ns (13.327ns logic, 6.603ns route)
+                                                       (66.9% logic, 33.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.100ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scoreK/hex_score_7_1 (FF)
+  Destination:          LCDC/cur_state_41 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.900ns (Levels of Logic = 16)
+  Clock Path Skew:      0.000ns
+  Source Clock:         mclk_BUFGP rising at 0.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: scoreK/hex_score_7_1 to LCDC/cur_state_41
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y90.YQ      Tcko                  0.587   scoreK/hex_score_7_1
+                                                       scoreK/hex_score_7_1
+    SLICE_X47Y89.G3      net (fanout=10)       0.856   scoreK/hex_score_7_1
+    SLICE_X47Y89.X       Tif5x                 1.025   scoreK/Madd_bcd_3_0_add0003_lut<3>
+                                                       scoreK/bcd_2_mux0002_F
+                                                       scoreK/bcd_2_mux0002
+    SLICE_X48Y91.F3      net (fanout=9)        0.642   scoreK/Madd_bcd_3_0_add0003_lut<3>
+    SLICE_X48Y91.X       Tilo                  0.759   N366
+                                                       scoreK/Madd_bcd_3_0_add0004_cy<2>167_SW0
+    SLICE_X45Y90.F1      net (fanout=1)        0.442   N366
+    SLICE_X45Y90.X       Tilo                  0.704   scoreK/Madd_bcd_3_0_add0004_cy<2>
+                                                       scoreK/Madd_bcd_3_0_add0004_cy<2>167
+    SLICE_X44Y84.G3      net (fanout=1)        0.521   scoreK/Madd_bcd_3_0_add0004_cy<2>
+    SLICE_X44Y84.Y       Tilo                  0.759   N357
+                                                       scoreK/bcd_3_mux00041
+    SLICE_X46Y84.F4      net (fanout=17)       0.617   scoreK/Madd_bcd_7_4_add0002_cy<0>
+    SLICE_X46Y84.X       Tilo                  0.759   N358
+                                                       scoreK/bcd_7_mux000314_SW1
+    SLICE_X44Y83.G3      net (fanout=1)        0.345   N358
+    SLICE_X44Y83.Y       Tilo                  0.759   scoreK/Madd_bcd_11_8_add0001_Madd_cy<0>
+                                                       scoreK/bcd_7_mux000314
+    SLICE_X44Y83.F3      net (fanout=1)        0.023   scoreK/bcd_7_mux000314/O
+    SLICE_X44Y83.X       Tilo                  0.759   scoreK/Madd_bcd_11_8_add0001_Madd_cy<0>
+                                                       scoreK/bcd_7_mux000344
+    SLICE_X43Y83.BX      net (fanout=4)        0.469   scoreK/Madd_bcd_11_8_add0001_Madd_cy<0>
+    SLICE_X43Y83.X       Tbxx                  0.739   scoreK/Madd_bcd_11_8_add0002_Madd_lut<2>
+                                                       scoreK/bcd_9_mux0001101
+    SLICE_X42Y80.BX      net (fanout=2)        0.372   scoreK/Madd_bcd_11_8_add0002_Madd_lut<2>
+    SLICE_X42Y80.X       Tbxx                  0.806   scoreK/bcd_10_cmp_gt0002
+                                                       scoreK/bcd_10_cmp_gt000237
+    SLICE_X42Y77.G1      net (fanout=4)        0.425   scoreK/bcd_10_cmp_gt0002
+    SLICE_X42Y77.Y       Tilo                  0.759   N351
+                                                       scoreK/bcd_9_mux0002
+    SLICE_X43Y81.F4      net (fanout=5)        0.345   score<10>
+    SLICE_X43Y81.X       Tilo                  0.704   N235
+                                                       ULCD/LCD<52><0>1_SW0
+    SLICE_X42Y68.G4      net (fanout=1)        0.709   N235
+    SLICE_X42Y68.X       Tif5x                 1.152   LCDC/Mmux_Code_13_f52
+                                                       LCDC/Mmux_Code_13_f5_1_F
+                                                       LCDC/Mmux_Code_13_f5_1
+    SLICE_X43Y68.F4      net (fanout=2)        0.038   LCDC/Mmux_Code_13_f52
+    SLICE_X43Y68.X       Tilo                  0.704   LCDC/Code<0>
+                                                       LCDC/Mmux_Code_2_f5
+    SLICE_X43Y71.G4      net (fanout=18)       0.444   LCDC/Code<0>
+    SLICE_X43Y71.Y       Tilo                  0.704   N333
+                                                       LCDC/cur_state_mux0003<19>58
+    SLICE_X43Y71.F4      net (fanout=1)        0.023   LCDC/cur_state_mux0003<19>58/O
+    SLICE_X43Y71.X       Tilo                  0.704   N333
+                                                       LCDC/cur_state_mux0003<19>73_SW0
+    SLICE_X40Y70.F2      net (fanout=1)        0.354   N333
+    SLICE_X40Y70.CLK     Tfck                  0.892   LCDC/cur_state<41>
+                                                       LCDC/cur_state_mux0003<19>191
+                                                       LCDC/cur_state_41
+    -------------------------------------------------  ---------------------------
+    Total                                     19.900ns (13.275ns logic, 6.625ns route)
+                                                       (66.7% logic, 33.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.110ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scoreK/hex_score_10_1 (FF)
+  Destination:          LCDC/cur_state_41 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.890ns (Levels of Logic = 16)
+  Clock Path Skew:      0.000ns
+  Source Clock:         mclk_BUFGP rising at 0.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: scoreK/hex_score_10_1 to LCDC/cur_state_41
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X47Y91.YQ      Tcko                  0.587   scoreK/hex_score_10_1
+                                                       scoreK/hex_score_10_1
+    SLICE_X42Y90.F2      net (fanout=13)       1.438   scoreK/hex_score_10_1
+    SLICE_X42Y90.X       Tif5x                 1.152   scoreK/Madd_bcd_3_0_add0004_cy<2>129
+                                                       scoreK/Madd_bcd_3_0_add0004_cy<2>129_G
+                                                       scoreK/Madd_bcd_3_0_add0004_cy<2>129
+    SLICE_X42Y88.G3      net (fanout=2)        0.359   scoreK/Madd_bcd_3_0_add0004_cy<2>129
+    SLICE_X42Y88.Y       Tilo                  0.759   N273
+                                                       scoreK/bcd_2_mux0003
+    SLICE_X43Y89.G1      net (fanout=15)       0.310   scoreK/Madd_bcd_3_0_add0004_lut<3>
+    SLICE_X43Y89.Y       Tilo                  0.704   N318
+                                                       scoreK/bcd_3_cmp_gt00041_SW4
+    SLICE_X45Y89.G2      net (fanout=1)        0.357   N285
+    SLICE_X45Y89.F5      Tif5                  0.875   scoreK/bcd_3_mux0005_f5
+                                                       scoreK/bcd_3_mux00057
+                                                       scoreK/bcd_3_mux0005_f5
+    SLICE_X45Y88.FXINB   net (fanout=1)        0.000   scoreK/bcd_3_mux0005_f5
+    SLICE_X45Y88.Y       Tif6y                 0.521   scoreK/bcd_3_cmp_gt0004
+                                                       scoreK/bcd_3_mux0005_f6/MUXF6
+    SLICE_X44Y85.BX      net (fanout=10)       0.649   scoreK/Madd_bcd_7_4_add0003_cy<0>
+    SLICE_X44Y85.X       Tbxx                  0.806   scoreK/Madd_bcd_7_4_add0003_cy<2>
+                                                       scoreK/Madd_bcd_7_4_add0003_cy<2>1
+    SLICE_X44Y83.F4      net (fanout=1)        0.271   scoreK/Madd_bcd_7_4_add0003_cy<2>
+    SLICE_X44Y83.X       Tilo                  0.759   scoreK/Madd_bcd_11_8_add0001_Madd_cy<0>
+                                                       scoreK/bcd_7_mux000344
+    SLICE_X43Y83.BX      net (fanout=4)        0.469   scoreK/Madd_bcd_11_8_add0001_Madd_cy<0>
+    SLICE_X43Y83.X       Tbxx                  0.739   scoreK/Madd_bcd_11_8_add0002_Madd_lut<2>
+                                                       scoreK/bcd_9_mux0001101
+    SLICE_X42Y80.BX      net (fanout=2)        0.372   scoreK/Madd_bcd_11_8_add0002_Madd_lut<2>
+    SLICE_X42Y80.X       Tbxx                  0.806   scoreK/bcd_10_cmp_gt0002
+                                                       scoreK/bcd_10_cmp_gt000237
+    SLICE_X42Y77.G1      net (fanout=4)        0.425   scoreK/bcd_10_cmp_gt0002
+    SLICE_X42Y77.Y       Tilo                  0.759   N351
+                                                       scoreK/bcd_9_mux0002
+    SLICE_X43Y81.F4      net (fanout=5)        0.345   score<10>
+    SLICE_X43Y81.X       Tilo                  0.704   N235
+                                                       ULCD/LCD<52><0>1_SW0
+    SLICE_X42Y68.G4      net (fanout=1)        0.709   N235
+    SLICE_X42Y68.X       Tif5x                 1.152   LCDC/Mmux_Code_13_f52
+                                                       LCDC/Mmux_Code_13_f5_1_F
+                                                       LCDC/Mmux_Code_13_f5_1
+    SLICE_X43Y68.F4      net (fanout=2)        0.038   LCDC/Mmux_Code_13_f52
+    SLICE_X43Y68.X       Tilo                  0.704   LCDC/Code<0>
+                                                       LCDC/Mmux_Code_2_f5
+    SLICE_X43Y71.G4      net (fanout=18)       0.444   LCDC/Code<0>
+    SLICE_X43Y71.Y       Tilo                  0.704   N333
+                                                       LCDC/cur_state_mux0003<19>58
+    SLICE_X43Y71.F4      net (fanout=1)        0.023   LCDC/cur_state_mux0003<19>58/O
+    SLICE_X43Y71.X       Tilo                  0.704   N333
+                                                       LCDC/cur_state_mux0003<19>73_SW0
+    SLICE_X40Y70.F2      net (fanout=1)        0.354   N333
+    SLICE_X40Y70.CLK     Tfck                  0.892   LCDC/cur_state<41>
+                                                       LCDC/cur_state_mux0003<19>191
+                                                       LCDC/cur_state_41
+    -------------------------------------------------  ---------------------------
+    Total                                     19.890ns (13.327ns logic, 6.563ns route)
+                                                       (67.0% logic, 33.0% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_mclk = PERIOD TIMEGRP "mclk" 20 ns HIGH 40%;
+--------------------------------------------------------------------------------
+
+Paths for end point ULCD/Mshreg_top_string_117 (SLICE_X22Y49.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.723ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               ULCD/top_string_157 (FF)
+  Destination:          ULCD/Mshreg_top_string_117 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.730ns (Levels of Logic = 1)
+  Clock Path Skew:      0.007ns (0.036 - 0.029)
+  Source Clock:         mclk_BUFGP rising at 20.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: ULCD/top_string_157 to ULCD/Mshreg_top_string_117
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y49.XQ      Tcko                  0.474   ULCD/top_string<157>
+                                                       ULCD/top_string_157
+    SLICE_X22Y49.BX      net (fanout=4)        0.405   ULCD/top_string<157>
+    SLICE_X22Y49.CLK     Tdh         (-Th)     0.149   ULCD/top_string_1171
+                                                       ULCD/Mshreg_top_string_117
+    -------------------------------------------------  ---------------------------
+    Total                                      0.730ns (0.325ns logic, 0.405ns route)
+                                                       (44.5% logic, 55.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ULCD/Mshreg_bot_string_117 (SLICE_X22Y48.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.758ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               ULCD/bot_string_157 (FF)
+  Destination:          ULCD/Mshreg_bot_string_117 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.758ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         mclk_BUFGP rising at 20.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: ULCD/bot_string_157 to ULCD/Mshreg_bot_string_117
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y46.XQ      Tcko                  0.474   ULCD/bot_string<157>
+                                                       ULCD/bot_string_157
+    SLICE_X22Y48.BX      net (fanout=4)        0.433   ULCD/bot_string<157>
+    SLICE_X22Y48.CLK     Tdh         (-Th)     0.149   ULCD/bot_string_1171
+                                                       ULCD/Mshreg_bot_string_117
+    -------------------------------------------------  ---------------------------
+    Total                                      0.758ns (0.325ns logic, 0.433ns route)
+                                                       (42.9% logic, 57.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ULCD/Mshreg_top_string_116 (SLICE_X22Y49.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.814ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               ULCD/top_string_156 (FF)
+  Destination:          ULCD/Mshreg_top_string_116 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.821ns (Levels of Logic = 1)
+  Clock Path Skew:      0.007ns (0.036 - 0.029)
+  Source Clock:         mclk_BUFGP rising at 20.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: ULCD/top_string_156 to ULCD/Mshreg_top_string_116
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y49.YQ      Tcko                  0.522   ULCD/top_string<157>
+                                                       ULCD/top_string_156
+    SLICE_X22Y49.BY      net (fanout=4)        0.426   ULCD/top_string<156>
+    SLICE_X22Y49.CLK     Tdh         (-Th)     0.127   ULCD/top_string_1171
+                                                       ULCD/Mshreg_top_string_116
+    -------------------------------------------------  ---------------------------
+    Total                                      0.821ns (0.395ns logic, 0.426ns route)
+                                                       (48.1% logic, 51.9% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_mclk = PERIOD TIMEGRP "mclk" 20 ns HIGH 40%;
+--------------------------------------------------------------------------------
+Slack: 16.010ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 8.000ns
+  High pulse limit: 1.596ns (Trpw)
+  Physical resource: LCDC/place<2>/SR
+  Logical resource: LCDC/place_2/SR
+  Location pin: SLICE_X33Y59.SR
+  Clock network: swt_IBUF
+--------------------------------------------------------------------------------
+Slack: 16.010ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 8.000ns
+  High pulse limit: 1.596ns (Trpw)
+  Physical resource: LCDC/place<3>/SR
+  Logical resource: LCDC/place_3/SR
+  Location pin: SLICE_X35Y58.SR
+  Clock network: swt_IBUF
+--------------------------------------------------------------------------------
+Slack: 16.010ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 8.000ns
+  High pulse limit: 1.596ns (Trpw)
+  Physical resource: LCDC/place<5>/SR
+  Logical resource: LCDC/place_5/SR
+  Location pin: SLICE_X32Y58.SR
+  Clock network: swt_IBUF
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock mclk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+mclk           |   19.953|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 71378137 paths, 0 nets, and 4953 connections
+
+Design statistics:
+   Minimum period:  19.953ns{1}   (Maximum frequency:  50.118MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Mon Apr 27 23:31:27 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 185 MB
+
+
+

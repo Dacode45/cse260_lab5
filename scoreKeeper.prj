@@ -1,0 +1,2 @@
+vhdl work "CommonDefs.vhd"
+vhdl work "scoreKeeper.vhd"

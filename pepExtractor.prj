@@ -1,6 +1,2 @@
 work	"CommonDefs.vhd"
-work	"Lcd.vhd"
-work	"SupportDDR.vhd"
-work	"beatMaker.vhd"
 work	"scoreKeeper.vhd"
-work	"topDDR.vhd"

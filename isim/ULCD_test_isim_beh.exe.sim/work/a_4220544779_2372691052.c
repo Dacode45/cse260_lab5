@@ -196,9 +196,12 @@ LAB4:    xsi_set_current_line(118, ng0);
     *((unsigned char *)t7) = (unsigned char)3;
     xsi_driver_first_trans_fast(t2);
     xsi_set_current_line(119, ng0);
-    t3 = (100 * 1000LL);
+    t2 = (t0 + 2928U);
+    t4 = *((char **)t2);
+    t3 = *((int64 *)t4);
+    t8 = (t3 * 5);
     t2 = (t0 + 4216);
-    xsi_process_wait(t2, t3);
+    xsi_process_wait(t2, t8);
 
 LAB10:    *((char **)t1) = &&LAB11;
     goto LAB1;

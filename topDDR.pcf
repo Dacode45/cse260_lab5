@@ -1,0 +1,288 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Apr 27 23:38:30 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "swt" LOCATE = SITE "L13" LEVEL 1;
+COMP "mclk" LOCATE = SITE "C9" LEVEL 1;
+COMP "sf_d<0>" LOCATE = SITE "R15" LEVEL 1;
+COMP "sf_d<1>" LOCATE = SITE "R16" LEVEL 1;
+COMP "sf_d<2>" LOCATE = SITE "P17" LEVEL 1;
+COMP "sf_d<3>" LOCATE = SITE "M15" LEVEL 1;
+COMP "led<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "btn<0>" LOCATE = SITE "V4" LEVEL 1;
+COMP "led<1>" LOCATE = SITE "E12" LEVEL 1;
+COMP "btn<1>" LOCATE = SITE "K17" LEVEL 1;
+COMP "led<2>" LOCATE = SITE "E11" LEVEL 1;
+COMP "led<3>" LOCATE = SITE "F11" LEVEL 1;
+COMP "led<4>" LOCATE = SITE "C11" LEVEL 1;
+COMP "lcd_en" LOCATE = SITE "M18" LEVEL 1;
+COMP "lcd_rs" LOCATE = SITE "L18" LEVEL 1;
+COMP "lcd_rw" LOCATE = SITE "L17" LEVEL 1;
+COMP "sf_ce0" LOCATE = SITE "D16" LEVEL 1;
+NET "mclk_BUFGP/IBUFG" BEL "mclk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP mclk = BEL "prevDB_0" BEL "prevDB_1" BEL "dbnc/count_19" BEL
+        "dbnc/count_18" BEL "dbnc/count_17" BEL "dbnc/count_16" BEL
+        "dbnc/count_15" BEL "dbnc/count_14" BEL "dbnc/count_13" BEL
+        "dbnc/count_12" BEL "dbnc/count_11" BEL "dbnc/count_10" BEL
+        "dbnc/count_9" BEL "dbnc/count_8" BEL "dbnc/count_7" BEL
+        "dbnc/count_6" BEL "dbnc/count_5" BEL "dbnc/count_4" BEL
+        "dbnc/count_3" BEL "dbnc/count_2" BEL "dbnc/count_1" BEL
+        "dbnc/count_0" BEL "dbnc/dBtn_1" BEL "dbnc/dBtn_0" BEL
+        "dbnc/prevBtn_1" BEL "dbnc/prevBtn_0" BEL "beatM/counter_27" BEL
+        "beatM/counter_26" BEL "beatM/counter_25" BEL "beatM/counter_24" BEL
+        "beatM/counter_23" BEL "beatM/counter_22" BEL "beatM/counter_21" BEL
+        "beatM/counter_20" BEL "beatM/counter_19" BEL "beatM/counter_18" BEL
+        "beatM/counter_17" BEL "beatM/counter_16" BEL "beatM/counter_15" BEL
+        "beatM/counter_14" BEL "beatM/counter_13" BEL "beatM/counter_12" BEL
+        "beatM/counter_11" BEL "beatM/counter_10" BEL "beatM/counter_9" BEL
+        "beatM/counter_8" BEL "beatM/counter_7" BEL "beatM/counter_6" BEL
+        "beatM/counter_5" BEL "beatM/counter_4" BEL "beatM/counter_3" BEL
+        "beatM/counter_2" BEL "beatM/counter_1" BEL "beatM/counter_0" BEL
+        "beatM/level_length_25" BEL "beatM/level_length_24" BEL
+        "beatM/level_length_23" BEL "beatM/level_length_22" BEL
+        "beatM/level_length_21" BEL "beatM/level_length_20" BEL "ULCD/LCD_2_7"
+        BEL "ULCD/LCD_2_6" BEL "ULCD/LCD_2_5" BEL "ULCD/LCD_2_4" BEL
+        "ULCD/LCD_2_3" BEL "ULCD/LCD_2_2" BEL "ULCD/LCD_2_1" BEL
+        "ULCD/LCD_2_0" BEL "ULCD/LCD_3_7" BEL "ULCD/LCD_3_6" BEL
+        "ULCD/LCD_3_5" BEL "ULCD/LCD_3_4" BEL "ULCD/LCD_3_3" BEL
+        "ULCD/LCD_3_2" BEL "ULCD/LCD_3_1" BEL "ULCD/LCD_3_0" BEL
+        "ULCD/LCD_46_7" BEL "ULCD/LCD_46_6" BEL "ULCD/LCD_46_5" BEL
+        "ULCD/LCD_46_4" BEL "ULCD/LCD_46_3" BEL "ULCD/LCD_46_2" BEL
+        "ULCD/LCD_46_1" BEL "ULCD/LCD_46_0" BEL "ULCD/LCD_45_7" BEL
+        "ULCD/LCD_45_6" BEL "ULCD/LCD_45_5" BEL "ULCD/LCD_45_4" BEL
+        "ULCD/LCD_45_3" BEL "ULCD/LCD_45_2" BEL "ULCD/LCD_45_1" BEL
+        "ULCD/LCD_45_0" BEL "ULCD/LCD_44_7" BEL "ULCD/LCD_44_6" BEL
+        "ULCD/LCD_44_5" BEL "ULCD/LCD_44_4" BEL "ULCD/LCD_44_3" BEL
+        "ULCD/LCD_44_2" BEL "ULCD/LCD_44_1" BEL "ULCD/LCD_44_0" BEL
+        "ULCD/LCD_42_7" BEL "ULCD/LCD_42_6" BEL "ULCD/LCD_42_5" BEL
+        "ULCD/LCD_42_4" BEL "ULCD/LCD_42_3" BEL "ULCD/LCD_42_2" BEL
+        "ULCD/LCD_42_1" BEL "ULCD/LCD_42_0" BEL "ULCD/LCD_43_7" BEL
+        "ULCD/LCD_43_6" BEL "ULCD/LCD_43_5" BEL "ULCD/LCD_43_4" BEL
+        "ULCD/LCD_43_3" BEL "ULCD/LCD_43_2" BEL "ULCD/LCD_43_1" BEL
+        "ULCD/LCD_43_0" BEL "ULCD/LCD_6_7" BEL "ULCD/LCD_6_6" BEL
+        "ULCD/LCD_6_5" BEL "ULCD/LCD_6_4" BEL "ULCD/LCD_6_3" BEL
+        "ULCD/LCD_6_2" BEL "ULCD/LCD_6_1" BEL "ULCD/LCD_6_0" BEL
+        "ULCD/LCD_5_7" BEL "ULCD/LCD_5_6" BEL "ULCD/LCD_5_5" BEL
+        "ULCD/LCD_5_4" BEL "ULCD/LCD_5_3" BEL "ULCD/LCD_5_2" BEL
+        "ULCD/LCD_5_1" BEL "ULCD/LCD_5_0" BEL "ULCD/LCD_4_7" BEL
+        "ULCD/LCD_4_6" BEL "ULCD/LCD_4_5" BEL "ULCD/LCD_4_4" BEL
+        "ULCD/LCD_4_3" BEL "ULCD/LCD_4_2" BEL "ULCD/LCD_4_1" BEL
+        "ULCD/LCD_4_0" BEL "ULCD/LCD_1_7" BEL "ULCD/LCD_1_6" BEL
+        "ULCD/LCD_1_5" BEL "ULCD/LCD_1_4" BEL "ULCD/LCD_1_3" BEL
+        "ULCD/LCD_1_2" BEL "ULCD/LCD_1_1" BEL "ULCD/LCD_1_0" BEL
+        "ULCD/LCD_0_4" BEL "ULCD/LCD_0_2" BEL "ULCD/LCD_0_1" BEL
+        "ULCD/LCD_0_0" BEL "ULCD/LCD_49_4" BEL "ULCD/LCD_49_3" BEL
+        "ULCD/LCD_49_2" BEL "ULCD/LCD_49_1" BEL "ULCD/LCD_49_0" BEL
+        "ULCD/LCD_48_4" BEL "ULCD/LCD_47_6" BEL "ULCD/LCD_47_4" BEL
+        "ULCD/LCD_47_3" BEL "ULCD/LCD_47_0" BEL "ULCD/LCD_9_6" BEL
+        "ULCD/LCD_9_5" BEL "ULCD/LCD_9_4" BEL "ULCD/LCD_9_0" BEL
+        "ULCD/LCD_7_4" BEL "ULCD/LCD_7_0" BEL "ULCD/LCD_41_7" BEL
+        "ULCD/LCD_41_6" BEL "ULCD/LCD_41_5" BEL "ULCD/LCD_41_4" BEL
+        "ULCD/LCD_41_3" BEL "ULCD/LCD_41_2" BEL "ULCD/LCD_41_1" BEL
+        "ULCD/LCD_41_0" BEL "ULCD/hit" BEL "ULCD/miss" BEL "ULCD/btn_hit" BEL
+        "ULCD/top_hit" BEL "ULCD/bot_string_159" BEL "ULCD/bot_string_158" BEL
+        "ULCD/bot_string_157" BEL "ULCD/bot_string_156" BEL
+        "ULCD/bot_string_155" BEL "ULCD/bot_string_154" BEL
+        "ULCD/bot_string_153" BEL "ULCD/bot_string_152" BEL
+        "ULCD/bot_string_151" BEL "ULCD/bot_string_150" BEL
+        "ULCD/bot_string_149" BEL "ULCD/bot_string_148" BEL
+        "ULCD/bot_string_147" BEL "ULCD/bot_string_146" BEL
+        "ULCD/bot_string_145" BEL "ULCD/bot_string_144" BEL
+        "ULCD/bot_string_143" BEL "ULCD/bot_string_142" BEL
+        "ULCD/bot_string_141" BEL "ULCD/bot_string_140" BEL
+        "ULCD/bot_string_139" BEL "ULCD/bot_string_138" BEL
+        "ULCD/bot_string_137" BEL "ULCD/bot_string_136" BEL
+        "ULCD/bot_string_135" BEL "ULCD/bot_string_134" BEL
+        "ULCD/bot_string_133" BEL "ULCD/bot_string_132" BEL
+        "ULCD/bot_string_131" BEL "ULCD/bot_string_130" BEL
+        "ULCD/bot_string_129" BEL "ULCD/bot_string_128" BEL
+        "ULCD/bot_string_127" BEL "ULCD/bot_string_126" BEL
+        "ULCD/bot_string_125" BEL "ULCD/bot_string_124" BEL
+        "ULCD/bot_string_123" BEL "ULCD/bot_string_122" BEL
+        "ULCD/bot_string_121" BEL "ULCD/bot_string_120" BEL
+        "ULCD/bot_string_118" BEL "ULCD/bot_string_115" BEL
+        "ULCD/bot_string_114" BEL "ULCD/bot_string_113" BEL
+        "ULCD/bot_string_112" BEL "ULCD/bot_string_110" BEL
+        "ULCD/bot_string_107" BEL "ULCD/bot_string_106" BEL
+        "ULCD/bot_string_105" BEL "ULCD/bot_string_104" BEL
+        "ULCD/bot_string_102" BEL "ULCD/bot_string_99" BEL
+        "ULCD/bot_string_98" BEL "ULCD/bot_string_97" BEL "ULCD/bot_string_96"
+        BEL "ULCD/bot_string_94" BEL "ULCD/bot_string_91" BEL
+        "ULCD/bot_string_90" BEL "ULCD/bot_string_89" BEL "ULCD/bot_string_88"
+        BEL "ULCD/bot_string_86" BEL "ULCD/bot_string_83" BEL
+        "ULCD/bot_string_82" BEL "ULCD/bot_string_81" BEL "ULCD/bot_string_80"
+        BEL "ULCD/bot_string_78" BEL "ULCD/bot_string_75" BEL
+        "ULCD/bot_string_74" BEL "ULCD/bot_string_73" BEL "ULCD/bot_string_72"
+        BEL "ULCD/bot_string_70" BEL "ULCD/bot_string_67" BEL
+        "ULCD/bot_string_66" BEL "ULCD/bot_string_65" BEL "ULCD/bot_string_64"
+        BEL "ULCD/bot_string_62" BEL "ULCD/bot_string_59" BEL
+        "ULCD/bot_string_58" BEL "ULCD/bot_string_57" BEL "ULCD/bot_string_56"
+        BEL "ULCD/bot_string_54" BEL "ULCD/bot_string_51" BEL
+        "ULCD/bot_string_50" BEL "ULCD/bot_string_49" BEL "ULCD/bot_string_48"
+        BEL "ULCD/bot_string_46" BEL "ULCD/bot_string_43" BEL
+        "ULCD/bot_string_42" BEL "ULCD/bot_string_41" BEL "ULCD/bot_string_40"
+        BEL "ULCD/bot_string_38" BEL "ULCD/bot_string_35" BEL
+        "ULCD/bot_string_34" BEL "ULCD/bot_string_33" BEL "ULCD/bot_string_32"
+        BEL "ULCD/bot_string_30" BEL "ULCD/bot_string_27" BEL
+        "ULCD/bot_string_26" BEL "ULCD/bot_string_25" BEL "ULCD/bot_string_24"
+        BEL "ULCD/bot_string_22" BEL "ULCD/bot_string_19" BEL
+        "ULCD/bot_string_18" BEL "ULCD/bot_string_17" BEL "ULCD/bot_string_16"
+        BEL "ULCD/bot_string_14" BEL "ULCD/bot_string_11" BEL
+        "ULCD/bot_string_10" BEL "ULCD/bot_string_9" BEL "ULCD/bot_string_8"
+        BEL "ULCD/bot_string_6" BEL "ULCD/bot_string_3" BEL
+        "ULCD/bot_string_2" BEL "ULCD/bot_string_1" BEL "ULCD/bot_string_0"
+        BEL "ULCD/top_string_159" BEL "ULCD/top_string_158" BEL
+        "ULCD/top_string_157" BEL "ULCD/top_string_156" BEL
+        "ULCD/top_string_155" BEL "ULCD/top_string_154" BEL
+        "ULCD/top_string_153" BEL "ULCD/top_string_152" BEL
+        "ULCD/top_string_151" BEL "ULCD/top_string_150" BEL
+        "ULCD/top_string_149" BEL "ULCD/top_string_148" BEL
+        "ULCD/top_string_147" BEL "ULCD/top_string_146" BEL
+        "ULCD/top_string_145" BEL "ULCD/top_string_144" BEL
+        "ULCD/top_string_143" BEL "ULCD/top_string_142" BEL
+        "ULCD/top_string_141" BEL "ULCD/top_string_140" BEL
+        "ULCD/top_string_139" BEL "ULCD/top_string_138" BEL
+        "ULCD/top_string_137" BEL "ULCD/top_string_136" BEL
+        "ULCD/top_string_135" BEL "ULCD/top_string_134" BEL
+        "ULCD/top_string_133" BEL "ULCD/top_string_132" BEL
+        "ULCD/top_string_131" BEL "ULCD/top_string_130" BEL
+        "ULCD/top_string_129" BEL "ULCD/top_string_128" BEL
+        "ULCD/top_string_127" BEL "ULCD/top_string_126" BEL
+        "ULCD/top_string_125" BEL "ULCD/top_string_124" BEL
+        "ULCD/top_string_123" BEL "ULCD/top_string_122" BEL
+        "ULCD/top_string_121" BEL "ULCD/top_string_120" BEL
+        "ULCD/top_string_118" BEL "ULCD/top_string_115" BEL
+        "ULCD/top_string_114" BEL "ULCD/top_string_113" BEL
+        "ULCD/top_string_112" BEL "ULCD/top_string_110" BEL
+        "ULCD/top_string_107" BEL "ULCD/top_string_106" BEL
+        "ULCD/top_string_105" BEL "ULCD/top_string_104" BEL
+        "ULCD/top_string_102" BEL "ULCD/top_string_99" BEL
+        "ULCD/top_string_98" BEL "ULCD/top_string_97" BEL "ULCD/top_string_96"
+        BEL "ULCD/top_string_94" BEL "ULCD/top_string_91" BEL
+        "ULCD/top_string_90" BEL "ULCD/top_string_89" BEL "ULCD/top_string_88"
+        BEL "ULCD/top_string_86" BEL "ULCD/top_string_83" BEL
+        "ULCD/top_string_82" BEL "ULCD/top_string_81" BEL "ULCD/top_string_80"
+        BEL "ULCD/top_string_78" BEL "ULCD/top_string_75" BEL
+        "ULCD/top_string_74" BEL "ULCD/top_string_73" BEL "ULCD/top_string_72"
+        BEL "ULCD/top_string_70" BEL "ULCD/top_string_67" BEL
+        "ULCD/top_string_66" BEL "ULCD/top_string_65" BEL "ULCD/top_string_64"
+        BEL "ULCD/top_string_62" BEL "ULCD/top_string_59" BEL
+        "ULCD/top_string_58" BEL "ULCD/top_string_57" BEL "ULCD/top_string_56"
+        BEL "ULCD/top_string_54" BEL "ULCD/top_string_51" BEL
+        "ULCD/top_string_50" BEL "ULCD/top_string_49" BEL "ULCD/top_string_48"
+        BEL "ULCD/top_string_46" BEL "ULCD/top_string_43" BEL
+        "ULCD/top_string_42" BEL "ULCD/top_string_41" BEL "ULCD/top_string_40"
+        BEL "ULCD/top_string_38" BEL "ULCD/top_string_35" BEL
+        "ULCD/top_string_34" BEL "ULCD/top_string_33" BEL "ULCD/top_string_32"
+        BEL "ULCD/top_string_30" BEL "ULCD/top_string_27" BEL
+        "ULCD/top_string_26" BEL "ULCD/top_string_25" BEL "ULCD/top_string_24"
+        BEL "ULCD/top_string_22" BEL "ULCD/top_string_19" BEL
+        "ULCD/top_string_18" BEL "ULCD/top_string_17" BEL "ULCD/top_string_16"
+        BEL "ULCD/top_string_14" BEL "ULCD/top_string_11" BEL
+        "ULCD/top_string_10" BEL "ULCD/top_string_9" BEL "ULCD/top_string_8"
+        BEL "ULCD/top_string_6" BEL "ULCD/top_string_3" BEL
+        "ULCD/top_string_2" BEL "ULCD/top_string_1" BEL "ULCD/top_string_0"
+        BEL "ULCD/bot_hit" BEL "scoreK/hex_score_11" BEL "scoreK/hex_score_10"
+        BEL "scoreK/hex_score_9" BEL "scoreK/hex_score_8" BEL
+        "scoreK/hex_score_7" BEL "scoreK/hex_score_6" BEL "scoreK/hex_score_5"
+        BEL "scoreK/hex_score_4" BEL "scoreK/hex_score_3" BEL
+        "scoreK/hex_score_2" BEL "scoreK/hex_score_1" BEL "scoreK/hex_score_0"
+        BEL "scoreK/miss_count_3" BEL "scoreK/miss_count_2" BEL
+        "scoreK/miss_count_1" BEL "scoreK/miss_count_0" BEL
+        "scoreK/hit_count_3" BEL "scoreK/hit_count_2" BEL "scoreK/hit_count_1"
+        BEL "scoreK/hit_count_0" BEL "LCDC/cur_state_0" BEL "LCDC/cur_state_1"
+        BEL "LCDC/cur_state_5" BEL "LCDC/cur_state_6" BEL "LCDC/cur_state_7"
+        BEL "LCDC/cur_state_8" BEL "LCDC/cur_state_9" BEL "LCDC/cur_state_10"
+        BEL "LCDC/cur_state_11" BEL "LCDC/cur_state_12" BEL
+        "LCDC/cur_state_13" BEL "LCDC/cur_state_14" BEL "LCDC/cur_state_15"
+        BEL "LCDC/cur_state_16" BEL "LCDC/cur_state_17" BEL
+        "LCDC/cur_state_18" BEL "LCDC/cur_state_19" BEL "LCDC/cur_state_20"
+        BEL "LCDC/cur_state_21" BEL "LCDC/cur_state_22" BEL
+        "LCDC/cur_state_23" BEL "LCDC/cur_state_24" BEL "LCDC/cur_state_25"
+        BEL "LCDC/cur_state_26" BEL "LCDC/cur_state_27" BEL
+        "LCDC/cur_state_30" BEL "LCDC/cur_state_28" BEL "LCDC/cur_state_29"
+        BEL "LCDC/cur_state_31" BEL "LCDC/cur_state_32" BEL
+        "LCDC/cur_state_33" BEL "LCDC/cur_state_34" BEL "LCDC/cur_state_35"
+        BEL "LCDC/cur_state_36" BEL "LCDC/cur_state_37" BEL
+        "LCDC/cur_state_38" BEL "LCDC/cur_state_39" BEL "LCDC/cur_state_40"
+        BEL "LCDC/cur_state_41" BEL "LCDC/cur_state_42" BEL
+        "LCDC/cur_state_45" BEL "LCDC/cur_state_43" BEL "LCDC/cur_state_44"
+        BEL "LCDC/cur_state_46" BEL "LCDC/cur_state_47" BEL
+        "LCDC/cur_state_48" BEL "LCDC/cur_state_49" BEL "LCDC/cur_state_50"
+        BEL "LCDC/cur_state_51" BEL "LCDC/cur_state_52" BEL
+        "LCDC/cur_state_53" BEL "LCDC/cur_state_54" BEL "LCDC/cur_state_60"
+        BEL "LCDC/cur_state_59" BEL "LCDC/init_state_FSM_FFd10" BEL
+        "LCDC/init_state_FSM_FFd8" BEL "LCDC/init_state_FSM_FFd7" BEL
+        "LCDC/init_state_FSM_FFd9" BEL "LCDC/init_state_FSM_FFd5" BEL
+        "LCDC/init_state_FSM_FFd4" BEL "LCDC/init_state_FSM_FFd6" BEL
+        "LCDC/init_state_FSM_FFd2" BEL "LCDC/init_state_FSM_FFd1" BEL
+        "LCDC/init_state_FSM_FFd3" BEL "LCDC/tx_state_FSM_FFd6" BEL
+        "LCDC/tx_state_FSM_FFd5" BEL "LCDC/tx_state_FSM_FFd7" BEL
+        "LCDC/tx_state_FSM_FFd4" BEL "LCDC/tx_state_FSM_FFd3" BEL
+        "LCDC/tx_state_FSM_FFd2" BEL "LCDC/tx_state_FSM_FFd1" BEL
+        "LCDC/offsetCounter_31" BEL "LCDC/offsetCounter_30" BEL
+        "LCDC/offsetCounter_29" BEL "LCDC/offsetCounter_28" BEL
+        "LCDC/offsetCounter_27" BEL "LCDC/offsetCounter_26" BEL
+        "LCDC/offsetCounter_25" BEL "LCDC/offsetCounter_24" BEL
+        "LCDC/offsetCounter_23" BEL "LCDC/offsetCounter_22" BEL
+        "LCDC/offsetCounter_21" BEL "LCDC/offsetCounter_20" BEL
+        "LCDC/offsetCounter_19" BEL "LCDC/offsetCounter_18" BEL
+        "LCDC/offsetCounter_17" BEL "LCDC/offsetCounter_16" BEL
+        "LCDC/offsetCounter_15" BEL "LCDC/offsetCounter_14" BEL
+        "LCDC/offsetCounter_13" BEL "LCDC/offsetCounter_12" BEL
+        "LCDC/offsetCounter_11" BEL "LCDC/offsetCounter_10" BEL
+        "LCDC/offsetCounter_9" BEL "LCDC/offsetCounter_8" BEL
+        "LCDC/offsetCounter_7" BEL "LCDC/offsetCounter_6" BEL
+        "LCDC/offsetCounter_5" BEL "LCDC/offsetCounter_4" BEL
+        "LCDC/offsetCounter_3" BEL "LCDC/offsetCounter_2" BEL
+        "LCDC/offsetCounter_1" BEL "LCDC/offsetCounter_0" BEL "LCDC/prev_58"
+        BEL "LCDC/prev_56" BEL "LCDC/init_done" BEL "LCDC/LCD_E0" BEL
+        "LCDC/i3_16" BEL "LCDC/i3_15" BEL "LCDC/i3_14" BEL "LCDC/i3_13" BEL
+        "LCDC/i3_12" BEL "LCDC/i3_11" BEL "LCDC/i3_10" BEL "LCDC/i3_9" BEL
+        "LCDC/i3_8" BEL "LCDC/i3_7" BEL "LCDC/i3_6" BEL "LCDC/i3_5" BEL
+        "LCDC/i3_4" BEL "LCDC/i3_3" BEL "LCDC/i3_2" BEL "LCDC/i3_1" BEL
+        "LCDC/i3_0" BEL "LCDC/i2_10" BEL "LCDC/i2_9" BEL "LCDC/i2_8" BEL
+        "LCDC/i2_7" BEL "LCDC/i2_6" BEL "LCDC/i2_5" BEL "LCDC/i2_4" BEL
+        "LCDC/i2_3" BEL "LCDC/i2_2" BEL "LCDC/i2_1" BEL "LCDC/i2_0" BEL
+        "LCDC/i_19" BEL "LCDC/i_18" BEL "LCDC/i_17" BEL "LCDC/i_16" BEL
+        "LCDC/i_15" BEL "LCDC/i_14" BEL "LCDC/i_13" BEL "LCDC/i_12" BEL
+        "LCDC/i_11" BEL "LCDC/i_10" BEL "LCDC/i_9" BEL "LCDC/i_8" BEL
+        "LCDC/i_7" BEL "LCDC/i_6" BEL "LCDC/i_5" BEL "LCDC/i_4" BEL "LCDC/i_3"
+        BEL "LCDC/i_2" BEL "LCDC/i_1" BEL "LCDC/i_0" BEL "LCDC/LCD_E1" BEL
+        "LCDC/deleted" BEL "LCDC/SF_D1_1" BEL "LCDC/SF_D1_0" BEL
+        "LCDC/SF_D0_3" BEL "LCDC/SF_D0_2" BEL "LCDC/SF_D0_1" BEL
+        "LCDC/SF_D0_0" BEL "LCDC/advance" BEL "LCDC/place_6" BEL
+        "LCDC/place_5" BEL "LCDC/place_4" BEL "LCDC/place_3" BEL
+        "LCDC/place_2" BEL "LCDC/place_1" BEL "LCDC/place_0" BEL
+        "LCDC/offsetAdvance" BEL "scoreK/state_6" BEL "scoreK/state_5" BEL
+        "scoreK/state_4" BEL "scoreK/state_3" BEL "scoreK/state_2" BEL
+        "scoreK/state_1" BEL "scoreK/state_0" BEL "LCDC/cur_state_2" BEL
+        "LCDC/cur_state_3" BEL "LCDC/cur_state_4" BEL "LCDC/cur_state_55" BEL
+        "LCDC/cur_state_56" BEL "LCDC/cur_state_58" BEL
+        "LCDC/init_state_FSM_FFd11" BEL "scoreK/hex_score_11_1" BEL
+        "scoreK/hex_score_8_1" BEL "scoreK/hex_score_9_1" BEL
+        "scoreK/hex_score_10_1" BEL "scoreK/hex_score_7_1" BEL
+        "ULCD/Mshreg_bot_string_116" BEL "ULCD/bot_string_1161" BEL
+        "ULCD/Mshreg_bot_string_119" BEL "ULCD/bot_string_1191" BEL
+        "ULCD/Mshreg_bot_string_117" BEL "ULCD/bot_string_1171" BEL
+        "ULCD/Mshreg_top_string_116" BEL "ULCD/top_string_1161" BEL
+        "ULCD/Mshreg_top_string_119" BEL "ULCD/top_string_1191" BEL
+        "ULCD/Mshreg_top_string_117" BEL "ULCD/top_string_1171" BEL
+        "swt_IBUF_shift1" BEL "swt_IBUF_shift2" BEL "swt_IBUF_shift3" BEL
+        "swt_IBUF_shift4" BEL "swt_IBUF_shift5" BEL "swt_IBUF_shift6" BEL
+        "swt_IBUF_shift7" BEL "swt_IBUF_shift8" BEL "swt_IBUF_shift9" BEL
+        "swt_IBUF_shift10" BEL "swt_IBUF_shift11" BEL "swt_IBUF_shift12" BEL
+        "swt_IBUF_shift13" BEL "swt_IBUF_shift14" BEL "ULCD/bot_string_116"
+        BEL "ULCD/bot_string_119" BEL "ULCD/top_string_116" BEL
+        "ULCD/top_string_119" BEL "swt_IBUF_shift15" BEL "swt_IBUF_shift21"
+        BEL "swt_IBUF_shift31" BEL "swt_IBUF_shift41" BEL "swt_IBUF_shift51"
+        BEL "swt_IBUF_shift61" BEL "swt_IBUF_shift71" BEL "swt_IBUF_shift81"
+        BEL "swt_IBUF_shift91" BEL "swt_IBUF_shift101" BEL "swt_IBUF_shift111"
+        BEL "swt_IBUF_shift121" BEL "swt_IBUF_shift131" BEL
+        "swt_IBUF_shift141" BEL "ULCD/bot_string_117" BEL
+        "ULCD/top_string_117" BEL "mclk_BUFGP/BUFG.GCLKMUX" BEL
+        "mclk_BUFGP/BUFG";
+TS_mclk = PERIOD TIMEGRP "mclk" 20 ns HIGH 40%;
+SCHEMATIC END;
+
