@@ -31,9 +31,8 @@ entity scoreKeeper is port (
 end scoreKeeper;
 
 architecture scoreK of scoreKeeper is
-	TYPE levels IS (lose,l0,l1,l2,l3, l4, win);
+	TYPE levels IS (lose, l0, l1, l2, l3, l4, win);
 	signal state: levels := l0;
-	signal next_state: levels := l0;
 	signal hit_count: std_logic_vector(3 downto 0) := x"0";
 	signal miss_count: std_logic_vector(3 downto 0) := x"0";
 	signal hex_score: std_logic_vector(11 downto 0) := x"000";
@@ -69,11 +68,15 @@ begin
 			if(rising_edge(clk)) then
 				if (reset = '1') then
 					state <= l0;
-					hex_score <= hex_score - hex_score;
-					hit_count <= hit_count - hit_count;
-					miss_count <= miss_count - miss_count;
+					hex_score <= x"000";
+					hit_count <= x"0";
+					miss_count <= x"0";
 				else
+				--Update counters appropriately
 					if(hit = '1') then
+						--Increment the number of hits--
+						hit_count <= hit_count + 1;
+						--Assign Points--
 						case state is 
 							when l0 => hex_score <= hex_score + 1;
 							when l1 => hex_score <= hex_score + 2;
@@ -82,55 +85,75 @@ begin
 							when l4 => hex_score <= hex_score + 5;
 							when others => hex_score <= hex_score;
 						end case;
-						
-						if(state = next_state) then
-							hit_count <= hit_count + 1;
-						else
-							hit_count <= hit_count - hit_count;
-						end if;
-						
-						hex_score <= hex_score + 1;
 					elsif(miss = '1') then
+					--Increment the number of misses and zero the hit count.--
 						miss_count <= miss_count +1;
+						hit_count <=  x"0";
+					else
+						--Stay put if neither a hit nor a miss.
+						miss_count <= miss_count;
+						hit_count <= hit_count;
 					end if;
-					state <= next_state;
-					
 				end if;
-			end if;
-		end process clkd;
-		
-		state_trans: process(state, hit_count, miss_count)
-		begin
-			next_state <= state;
-			if (miss_count >= x"8") then
-				next_state <= lose;
-			elsif (hit_count >= x"8") then
-			
+				--Check for win, loss and level-up.
+				if (miss_count > x"0") then
+					if(miss_count >= x"8") then
+						--FATALITY--
+						state <= lose;
+					else
+						--Back to level 1--
+						state <= l0;
+					end if;
+				elsif (hit_count >= x"8") then
+						--LEVEL UP--
+						case state is 
+							when l0 => 
+								state <= l1;
+							when l1 => 
+								state <= l2;
+							when l2 => 
+								state <= l3;
+							when l3 =>
+								state <= l4;
+							when l4 => 
+								state <= win;
+							when others => 
+								state <= state;
+						end case;
+						--Restart your hit counting--
+						hit_count <= x"0";
+				end if;
+				--Assign output state--
 				case state is 
-					when l0 => next_state <= l1;
-					when l1 => next_state <= l2;
-					when l2 => next_state <= l3;
-					when l3 => next_state <= l4;
-					when l4 => next_state <= win;
-					when others => next_state <= state;
-				end case;
-			end if;
-		end process state_trans;
-				
-      -- YOUR SCORE-KEEPER CODE GOES HERE
-		output: process(state)
-		begin
-			game_state <= st_play;
-			case state is 
-					when l0 => level <= "00001";
-					when l1 => level <= "00010";
-					when l2 => level <= "00100";
-					when l3 => level <= "01000";
-					when l4 => level <= "10000";
-					when lose => game_state <= st_lose;
 					when win => game_state <= st_win;
-			end case;
-		end process output;
+					when lose => game_state <= st_lose;
+					when others => game_state <= st_play;
+				end case;
+				
+				--Assign output level--
+				case state is 
+					when l0 => 
+						level <= "00001";
+					when l1 => 
+						level <= "00010";
+					when l2 => 
+						level <= "00100";
+					when l3 =>
+						level <= "01000";
+					when l4 => 
+						level <= "10000";
+					when others => 
+						level <= "00000";
+				end case;
+			else
+				--Stay put if not on rising edge--
+				state <= state;
+				hex_score <= hex_score;
+				hit_count <= hit_count;
+				miss_count <= miss_count;
+			end if;
+		end process clkd;		
 		
+		--Assign outputs--
 		score <= HexToBCD(hex_score);
 end scoreK;

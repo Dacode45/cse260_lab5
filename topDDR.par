@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-CONSULTALLINONE::  Tue Apr 28 09:27:05 2015
+BRY316-11::  Tue Apr 28 12:24:17 2015
 
 par -w -intstyle ise -ol high -t 1 topDDR_map.ncd topDDR.ncd topDDR.pcf 
 
@@ -37,8 +37,8 @@ Design Summary Report:
 
 
    Number of BUFGMUXs                        1 out of 24      4%
-   Number of Slices                        788 out of 4656   16%
-      Number of SLICEMs                     39 out of 2328    1%
+   Number of Slices                        799 out of 4656   17%
+      Number of SLICEMs                     41 out of 2328    1%
 
 
 
@@ -56,44 +56,44 @@ Total REAL time at the beginning of Placer: 4 secs
 Total CPU  time at the beginning of Placer: 3 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:ae53a69f) REAL time: 4 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:1446c4b8) REAL time: 4 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:ae53a69f) REAL time: 4 secs 
+Phase 2.7  Design Feasibility Check (Checksum:1446c4b8) REAL time: 4 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:ae53a69f) REAL time: 4 secs 
+Phase 3.31  Local Placement Optimization (Checksum:1446c4b8) REAL time: 4 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:7211bfe7) REAL time: 6 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:da0c2490) REAL time: 6 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:7211bfe7) REAL time: 6 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:da0c2490) REAL time: 6 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:7211bfe7) REAL time: 6 secs 
+Phase 6.36  Local Placement Optimization (Checksum:da0c2490) REAL time: 6 secs 
 
 Phase 7.8  Global Placement
-........................................................................................................
-................
-........................................................................................
-.......................................................................
-..................................................................................................
-...........................................................................
-Phase 7.8  Global Placement (Checksum:a640f32e) REAL time: 8 secs 
+............................................................
+..........
+...................................................................................................
+..............................................
+...............................................................................................
+.........................................................
+Phase 7.8  Global Placement (Checksum:530f44ec) REAL time: 8 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:a640f32e) REAL time: 8 secs 
+Phase 8.5  Local Placement Optimization (Checksum:530f44ec) REAL time: 8 secs 
 
 Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:fc458943) REAL time: 10 secs 
+Phase 9.18  Placement Optimization (Checksum:4cba57c7) REAL time: 11 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:fc458943) REAL time: 10 secs 
+Phase 10.5  Local Placement Optimization (Checksum:4cba57c7) REAL time: 11 secs 
 
-Total REAL time to Placer completion: 10 secs 
-Total CPU  time to Placer completion: 9 secs 
+Total REAL time to Placer completion: 11 secs 
+Total CPU  time to Placer completion: 10 secs 
 Writing design to file topDDR.ncd
 
 
@@ -101,36 +101,28 @@ Writing design to file topDDR.ncd
 Starting Router
 
 
-Phase  1  : 5417 unrouted;      REAL time: 14 secs 
+Phase  1  : 5517 unrouted;      REAL time: 15 secs 
 
-Phase  2  : 4977 unrouted;      REAL time: 14 secs 
+Phase  2  : 5075 unrouted;      REAL time: 15 secs 
 
-Phase  3  : 1016 unrouted;      REAL time: 14 secs 
+Phase  3  : 1220 unrouted;      REAL time: 15 secs 
 
-Phase  4  : 1628 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 15 secs 
+Phase  4  : 1459 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 16 secs 
 
-Phase  5  : 0 unrouted; (Setup:66425, Hold:0, Component Switching Limit:0)     REAL time: 17 secs 
-
-Updating file: topDDR.ncd with current fully routed design.
-
-Phase  6  : 0 unrouted; (Setup:66425, Hold:0, Component Switching Limit:0)     REAL time: 17 secs 
-
-Phase  7  : 0 unrouted; (Setup:66425, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 54 secs 
-
-Phase  8  : 0 unrouted; (Setup:18327, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 58 secs 
+Phase  5  : 0 unrouted; (Setup:608, Hold:0, Component Switching Limit:0)     REAL time: 17 secs 
 
 Updating file: topDDR.ncd with current fully routed design.
 
-Phase  9  : 0 unrouted; (Setup:18327, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 10 secs 
+Phase  6  : 0 unrouted; (Setup:608, Hold:0, Component Switching Limit:0)     REAL time: 17 secs 
 
-Phase 10  : 0 unrouted; (Setup:18327, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 10 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 20 secs 
 
-Phase 11  : 0 unrouted; (Setup:17453, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 10 secs 
-WARNING:Route:455 - CLK Net:scoreK/level_or0000 may have excessive skew because 
-      3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 20 secs 
 
-Total REAL time to Router completion: 3 mins 10 secs 
-Total CPU time to Router completion: 3 mins 6 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 20 secs 
+
+Total REAL time to Router completion: 20 secs 
+Total CPU time to Router completion: 18 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -148,9 +140,7 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|          mclk_BUFGP | BUFGMUX_X1Y11| No   |  389 |  0.077     |  0.194      |
-+---------------------+--------------+------+------+------------+-------------+
-| scoreK/level_or0000 |         Local|      |    3 |  0.539     |  1.145      |
+|          mclk_BUFGP | BUFGMUX_X1Y11| No   |  391 |  0.085     |  0.202      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -161,24 +151,7 @@ the minimum and maximum path delays which includes logic delays.
 * The fanout is the number of component pins not the individual BEL loads,
 for example SLICE loads not FF loads.
 
-Timing Score: 17453 (Setup: 17453, Hold: 0, Component Switching Limit: 0)
-
-WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in
-   your design.
-
-   Review the timing report using Timing Analyzer (In ISE select "Post-Place &
-   Route Static Timing Report"). Go to the failing constraint(s) and evaluate the failing paths for each constraint.
-
-   Try the Design Goal and Strategies for Timing Performance(In ISE select Project -> Design Goals & Strategies) to
-   ensure the best options are set in the tools for timing closure.
-
-   Use the Xilinx "SmartXplorer" script to try special combinations of
-   options known to produce very good results.
-
-   Visit the Xilinx technical support web at http://support.xilinx.com and go to
-   either "Troubleshoot->Tech Tips->Timing & Constraints" or "
-   TechXclusives->Timing Closure" for tips and suggestions for meeting timing
-   in your design.
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
 
 Asterisk (*) preceding a constraint indicates it was not met.
    This may be due to a setup or hold violation.
@@ -187,29 +160,29 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-* TS_mclk = PERIOD TIMEGRP "mclk" 20 ns HIG | SETUP       |    -0.663ns|    20.663ns|      68|       17453
+  TS_mclk = PERIOD TIMEGRP "mclk" 20 ns HIG | SETUP       |     0.061ns|    19.939ns|       0|           0
   H 40%                                     | HOLD        |     0.718ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
-1 constraint not met.
+All constraints were met.
 
 
 Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 3 mins 25 secs 
-Total CPU time to PAR completion: 3 mins 7 secs 
+Total REAL time to PAR completion: 34 secs 
+Total CPU time to PAR completion: 20 secs 
 
-Peak Memory Usage:  338 MB
+Peak Memory Usage:  483 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
-Timing: Completed - 68 errors found.
+Timing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 2
+Number of warning messages: 0
 Number of info messages: 0
 
 Writing design to file topDDR.ncd

@@ -186,12 +186,12 @@ begin
 				--Level--
 				LCD(9) <= x"4c"; -- "L"
 				case(level) is
-					when "00001" => LCD(49) <= x"30";
-					when "00010" => LCD(49) <= x"31";
-					when "00100" => LCD(49) <= x"32";
-					when "01000" => LCD(49) <= x"33";
-					when "10000" => LCD(49) <= x"34";
-					when others => LCD(49) <= x"30";
+					when "00001" => LCD(49) <= x"31";
+					when "00010" => LCD(49) <= x"32";
+					when "00100" => LCD(49) <= x"33";
+					when "01000" => LCD(49) <= x"34";
+					when "10000" => LCD(49) <= x"35";
+					when others => LCD(49) <= x"36";
 				end case;
 			elsif game_state = st_win then
 				

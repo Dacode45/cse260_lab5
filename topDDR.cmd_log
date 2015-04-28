@@ -157,3 +157,76 @@ xst -intstyle ise -ifn "H:/Desktop/cse260/lab5/topDDR.xst" -ofn "H:/Desktop/cse2
 ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DDR.ucf -p xc3s500e-fg320-4 topDDR.ngc topDDR.ngd  
 map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topDDR_map.ncd topDDR.ngd topDDR.pcf 
 par -w -intstyle ise -ol high -t 1 topDDR_map.ncd topDDR.ncd topDDR.pcf 
+xst -intstyle ise -ifn "H:/Desktop/cse260/lab5/topDDR.xst" -ofn "H:/Desktop/cse260/lab5/topDDR.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DDR.ucf -p xc3s500e-fg320-4 topDDR.ngc topDDR.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topDDR_map.ncd topDDR.ngd topDDR.pcf 
+par -w -intstyle ise -ol high -t 1 topDDR_map.ncd topDDR.ncd topDDR.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml topDDR.twx topDDR.ncd -o topDDR.twr topDDR.pcf -ucf DDR.ucf 
+bitgen -intstyle ise -f topDDR.ut topDDR.ncd 
+xst -intstyle ise -ifn "H:/Desktop/cse260/lab5/topDDR.xst" -ofn "H:/Desktop/cse260/lab5/topDDR.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DDR.ucf -p xc3s500e-fg320-4 topDDR.ngc topDDR.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topDDR_map.ncd topDDR.ngd topDDR.pcf 
+par -w -intstyle ise -ol high -t 1 topDDR_map.ncd topDDR.ncd topDDR.pcf 
+xst -intstyle ise -ifn "H:/Desktop/cse260/lab5/topDDR.xst" -ofn "H:/Desktop/cse260/lab5/topDDR.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DDR.ucf -p xc3s500e-fg320-4 topDDR.ngc topDDR.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topDDR_map.ncd topDDR.ngd topDDR.pcf 
+par -w -intstyle ise -ol high -t 1 topDDR_map.ncd topDDR.ncd topDDR.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml topDDR.twx topDDR.ncd -o topDDR.twr topDDR.pcf -ucf DDR.ucf 
+bitgen -intstyle ise -f topDDR.ut topDDR.ncd 
+xst -intstyle ise -ifn "H:/Desktop/cse260/lab5/topDDR.xst" -ofn "H:/Desktop/cse260/lab5/topDDR.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DDR.ucf -p xc3s500e-fg320-4 topDDR.ngc topDDR.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topDDR_map.ncd topDDR.ngd topDDR.pcf 
+par -w -intstyle ise -ol high -t 1 topDDR_map.ncd topDDR.ncd topDDR.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml topDDR.twx topDDR.ncd -o topDDR.twr topDDR.pcf -ucf DDR.ucf 
+bitgen -intstyle ise -f topDDR.ut topDDR.ncd 
+xst -intstyle ise -ifn "H:/Desktop/cse260/lab5/topDDR.xst" -ofn "H:/Desktop/cse260/lab5/topDDR.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DDR.ucf -p xc3s500e-fg320-4 topDDR.ngc topDDR.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topDDR_map.ncd topDDR.ngd topDDR.pcf 
+par -w -intstyle ise -ol high -t 1 topDDR_map.ncd topDDR.ncd topDDR.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml topDDR.twx topDDR.ncd -o topDDR.twr topDDR.pcf -ucf DDR.ucf 
+bitgen -intstyle ise -f topDDR.ut topDDR.ncd 
+xst -intstyle ise -ifn "H:/Desktop/cse260/lab5/topDDR.xst" -ofn "H:/Desktop/cse260/lab5/topDDR.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DDR.ucf -p xc3s500e-fg320-4 topDDR.ngc topDDR.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topDDR_map.ncd topDDR.ngd topDDR.pcf 
+par -w -intstyle ise -ol high -t 1 topDDR_map.ncd topDDR.ncd topDDR.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml topDDR.twx topDDR.ncd -o topDDR.twr topDDR.pcf -ucf DDR.ucf 
+bitgen -intstyle ise -f topDDR.ut topDDR.ncd 
+xst -intstyle ise -ifn "H:/Desktop/cse260/lab5/topDDR.xst" -ofn "H:/Desktop/cse260/lab5/topDDR.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DDR.ucf -p xc3s500e-fg320-4 topDDR.ngc topDDR.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topDDR_map.ncd topDDR.ngd topDDR.pcf 
+par -w -intstyle ise -ol high -t 1 topDDR_map.ncd topDDR.ncd topDDR.pcf 
+bitgen -intstyle ise -f topDDR.ut topDDR.ncd 
+xst -intstyle ise -ifn "H:/Desktop/cse260/lab5/topDDR.xst" -ofn "H:/Desktop/cse260/lab5/topDDR.syr" 
+xst -intstyle ise -ifn "H:/Desktop/cse260/lab5/topDDR.xst" -ofn "H:/Desktop/cse260/lab5/topDDR.syr" 
+xst -intstyle ise -ifn "H:/Desktop/cse260/lab5/topDDR.xst" -ofn "H:/Desktop/cse260/lab5/topDDR.syr" 
+xst -intstyle ise -ifn "H:/Desktop/cse260/lab5/topDDR.xst" -ofn "H:/Desktop/cse260/lab5/topDDR.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DDR.ucf -p xc3s500e-fg320-4 topDDR.ngc topDDR.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topDDR_map.ncd topDDR.ngd topDDR.pcf 
+par -w -intstyle ise -ol high -t 1 topDDR_map.ncd topDDR.ncd topDDR.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml topDDR.twx topDDR.ncd -o topDDR.twr topDDR.pcf -ucf DDR.ucf 
+bitgen -intstyle ise -f topDDR.ut topDDR.ncd 
+xst -intstyle ise -ifn "H:/Desktop/cse260/lab5/topDDR.xst" -ofn "H:/Desktop/cse260/lab5/topDDR.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DDR.ucf -p xc3s500e-fg320-4 topDDR.ngc topDDR.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topDDR_map.ncd topDDR.ngd topDDR.pcf 
+par -w -intstyle ise -ol high -t 1 topDDR_map.ncd topDDR.ncd topDDR.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml topDDR.twx topDDR.ncd -o topDDR.twr topDDR.pcf -ucf DDR.ucf 
+bitgen -intstyle ise -f topDDR.ut topDDR.ncd 
+xst -intstyle ise -ifn "H:/Desktop/cse260/lab5/topDDR.xst" -ofn "H:/Desktop/cse260/lab5/topDDR.syr" 
+xst -intstyle ise -ifn "H:/Desktop/cse260/lab5/topDDR.xst" -ofn "H:/Desktop/cse260/lab5/topDDR.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DDR.ucf -p xc3s500e-fg320-4 topDDR.ngc topDDR.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topDDR_map.ncd topDDR.ngd topDDR.pcf 
+par -w -intstyle ise -ol high -t 1 topDDR_map.ncd topDDR.ncd topDDR.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml topDDR.twx topDDR.ncd -o topDDR.twr topDDR.pcf -ucf DDR.ucf 
+bitgen -intstyle ise -f topDDR.ut topDDR.ncd 
+xst -intstyle ise -ifn "H:/Desktop/cse260/lab5/topDDR.xst" -ofn "H:/Desktop/cse260/lab5/topDDR.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DDR.ucf -p xc3s500e-fg320-4 topDDR.ngc topDDR.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topDDR_map.ncd topDDR.ngd topDDR.pcf 
+par -w -intstyle ise -ol high -t 1 topDDR_map.ncd topDDR.ncd topDDR.pcf 
+bitgen -intstyle ise -f topDDR.ut topDDR.ncd 
+xst -intstyle ise -ifn "H:/Desktop/cse260/lab5/topDDR.xst" -ofn "H:/Desktop/cse260/lab5/topDDR.syr" 
+xst -intstyle ise -ifn "H:/Desktop/cse260/lab5/topDDR.xst" -ofn "H:/Desktop/cse260/lab5/topDDR.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DDR.ucf -p xc3s500e-fg320-4 topDDR.ngc topDDR.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topDDR_map.ncd topDDR.ngd topDDR.pcf 
+par -w -intstyle ise -ol high -t 1 topDDR_map.ncd topDDR.ncd topDDR.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml topDDR.twx topDDR.ncd -o topDDR.twr topDDR.pcf -ucf DDR.ucf 
+bitgen -intstyle ise -f topDDR.ut topDDR.ncd 
