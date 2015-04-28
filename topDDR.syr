@@ -166,7 +166,7 @@ Synthesizing Unit <debouncer>.
     Related source file is "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd".
     Found 2-bit register for signal <dBtn>.
     Found 20-bit down counter for signal <count>.
-    Found 2-bit comparator not equal for signal <count$cmp_ne0001> created at line 315.
+    Found 2-bit comparator not equal for signal <count$cmp_ne0001> created at line 320.
     Found 2-bit register for signal <prevBtn>.
     Summary:
 	inferred   1 Counter(s).
@@ -726,14 +726,14 @@ Cell Usage :
 #      LUT2                        : 62
 #      LUT2_D                      : 12
 #      LUT2_L                      : 5
-#      LUT3                        : 257
+#      LUT3                        : 258
 #      LUT3_D                      : 4
 #      LUT3_L                      : 12
 #      LUT4                        : 624
 #      LUT4_D                      : 37
 #      LUT4_L                      : 48
 #      MUXCY                       : 177
-#      MUXF5                       : 142
+#      MUXF5                       : 141
 #      MUXF6                       : 39
 #      MUXF7                       : 17
 #      MUXF8                       : 9
@@ -768,8 +768,8 @@ Selected Device : 3s500efg320-4
 
  Number of Slices:                      741  out of   4656    15%  
  Number of Slice Flip Flops:            663  out of   9312     7%  
- Number of 4 input LUTs:               1201  out of   9312    12%  
-    Number used as logic:              1195
+ Number of 4 input LUTs:               1202  out of   9312    12%  
+    Number used as logic:              1196
     Number used as Shift registers:       6
  Number of IOs:                          17
  Number of bonded IOBs:                  17  out of    232     7%  
@@ -816,8 +816,8 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 24.267ns (Maximum Frequency: 41.208MHz)
-   Minimum input arrival time before clock: 5.575ns
+   Minimum period: 24.284ns (Maximum Frequency: 41.179MHz)
+   Minimum input arrival time before clock: 5.644ns
    Maximum output required time after clock: 7.489ns
    Maximum combinational path delay: No path found
 
@@ -827,10 +827,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mclk'
-  Clock period: 24.267ns (frequency: 41.208MHz)
-  Total number of paths / destination ports: 108717375 / 1084
+  Clock period: 24.284ns (frequency: 41.179MHz)
+  Total number of paths / destination ports: 108717376 / 1084
 -------------------------------------------------------------------------
-Delay:               24.267ns (Levels of Logic = 18)
+Delay:               24.284ns (Levels of Logic = 18)
   Source:            scoreK/hex_score_8 (FF)
   Destination:       LCDC/cur_state_41 (FF)
   Source Clock:      mclk rising
@@ -855,35 +855,34 @@ Delay:               24.267ns (Levels of Logic = 18)
      LUT4:I3->O            4   0.704   0.591  scoreK/bcd_6_mux0005 (score<7>)
      LUT4:I3->O            1   0.704   0.000  LCDC/Mmux_Code_13_f5_17_G (N740)
      MUXF5:I1->O           2   0.321   0.451  LCDC/Mmux_Code_13_f5_17 (LCDC/Mmux_Code_13_f518)
-     LUT4_D:I3->O         16   0.704   1.209  LCDC/Mmux_Code_2_f5_3_1 (LCDC/Mmux_Code_2_f5_3)
+     LUT4_D:I3->O         17   0.704   1.226  LCDC/Mmux_Code_2_f5_3_1 (LCDC/Mmux_Code_2_f5_3)
      LUT2:I0->O            1   0.704   0.420  LCDC/cur_state_mux0003<19>61 (LCDC/cur_state_mux0003<19>61)
      MUXF5:S->O            1   0.739   0.424  LCDC/cur_state_mux0003<19>73_SW0 (N523)
      LUT4:I3->O            1   0.704   0.000  LCDC/cur_state_mux0003<19>191 (LCDC/cur_state_mux0003<19>)
      FDC:D                     0.308          LCDC/cur_state_41
     ----------------------------------------
-    Total                     24.267ns (12.457ns logic, 11.810ns route)
+    Total                     24.284ns (12.457ns logic, 11.827ns route)
                                        (51.3% logic, 48.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'mclk'
   Total number of paths / destination ports: 588 / 566
 -------------------------------------------------------------------------
-Offset:              5.575ns (Levels of Logic = 3)
+Offset:              5.644ns (Levels of Logic = 2)
   Source:            swt (PAD)
-  Destination:       ULCD/btn_hit (FF)
+  Destination:       beatM/counter_27 (FF)
   Destination Clock: mclk rising
 
-  Data Path: swt to ULCD/btn_hit
+  Data Path: swt to beatM/counter_27
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           384   1.218   1.408  swt_IBUF (swt_IBUF)
-     LUT3:I2->O            3   0.704   0.566  ULCD/bot_hit_not000121 (ULCD/miss_or0000_inv)
-     LUT4:I2->O            1   0.704   0.420  ULCD/btn_hit_not0001 (ULCD/btn_hit_not0001)
-     FDE:CE                    0.555          ULCD/btn_hit
+     IBUF:I->O           384   1.218   1.548  swt_IBUF (swt_IBUF)
+     LUT2:I0->O           34   0.704   1.263  beatM/counter_or00001 (beatM/counter_or0000)
+     FDR:R                     0.911          beatM/counter_0
     ----------------------------------------
-    Total                      5.575ns (3.181ns logic, 2.394ns route)
-                                       (57.1% logic, 42.9% route)
+    Total                      5.644ns (2.833ns logic, 2.811ns route)
+                                       (50.2% logic, 49.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'mclk'
@@ -910,12 +909,12 @@ Offset:              7.489ns (Levels of Logic = 4)
 =========================================================================
 
 
-Total REAL time to Xst completion: 18.00 secs
-Total CPU time to Xst completion: 17.76 secs
+Total REAL time to Xst completion: 19.00 secs
+Total CPU time to Xst completion: 18.75 secs
  
 --> 
 
-Total memory usage is 302288 kilobytes
+Total memory usage is 303312 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  121 (   0 filtered)

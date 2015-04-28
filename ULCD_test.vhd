@@ -73,7 +73,7 @@ ARCHITECTURE behavior OF ULCD_test IS
    signal LCD : lcdData;
 
    -- Clock period definitions
-   constant clk_period : time := 50 ns;
+   constant clk_period : time := 100 ns;
  
 BEGIN
  

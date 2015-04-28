@@ -73,6 +73,10 @@ begin
 							hit <= '1';
 							miss <= '0';
 					else
+						if btn_hit = '1' then
+							hit <= '0';
+							miss <= '1';
+						else
 							--didn't press a button because they were all spaces
 							if top_string(159 downto 152) = x"20" and bot_string(159 downto 152) = x"20" then
 								hit <= '0';
@@ -81,6 +85,7 @@ begin
 								hit <= '0';
 								miss <= '1';
 							end if;
+						end if;
 					end if;
 					
 					top_string <= top_string(151 downto 0) & top_string(159 downto 152);
