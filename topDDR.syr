@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
@@ -166,7 +166,7 @@ Synthesizing Unit <debouncer>.
     Related source file is "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/SupportDDR.vhd".
     Found 2-bit register for signal <dBtn>.
     Found 20-bit down counter for signal <count>.
-    Found 2-bit comparator not equal for signal <count$cmp_ne0001> created at line 305.
+    Found 2-bit comparator not equal for signal <count$cmp_ne0001> created at line 315.
     Found 2-bit register for signal <prevBtn>.
     Summary:
 	inferred   1 Counter(s).
@@ -177,25 +177,34 @@ Unit <debouncer> synthesized.
 
 Synthesizing Unit <scoreKeeper>.
     Related source file is "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/scoreKeeper.vhd".
-WARNING:Xst:737 - Found 7-bit latch for signal <next_state>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Using one-hot encoding for signal <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 18                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 14                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | l0                                             |
+    | Power Up State     | l0                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
 WARNING:Xst:737 - Found 5-bit latch for signal <level>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Found 5-bit comparator greater for signal <bcd_10$cmp_gt0000> created at line 55.
-    Found 5-bit comparator greater for signal <bcd_10$cmp_gt0001> created at line 55.
-    Found 5-bit comparator greater for signal <bcd_10$cmp_gt0002> created at line 55.
+    Found 5-bit comparator greater for signal <bcd_0$cmp_gt0000> created at line 49.
+    Found 5-bit comparator greater for signal <bcd_0$cmp_gt0001> created at line 49.
+    Found 5-bit comparator greater for signal <bcd_0$cmp_gt0002> created at line 49.
+    Found 5-bit comparator greater for signal <bcd_0$cmp_gt0003> created at line 49.
+    Found 5-bit comparator greater for signal <bcd_0$cmp_gt0004> created at line 49.
+    Found 5-bit comparator greater for signal <bcd_0$cmp_gt0005> created at line 49.
+    Found 5-bit comparator greater for signal <bcd_0$cmp_gt0006> created at line 49.
+    Found 5-bit comparator greater for signal <bcd_0$cmp_gt0007> created at line 49.
+    Found 5-bit comparator greater for signal <bcd_0$cmp_gt0008> created at line 49.
     Found 4-bit adder for signal <bcd_11_8$add0000> created at line 56.
     Found 4-bit adder for signal <bcd_11_8$add0001> created at line 56.
     Found 4-bit adder for signal <bcd_11_8$add0002> created at line 56.
-    Found 5-bit comparator greater for signal <bcd_3$cmp_gt0000> created at line 49.
-    Found 5-bit comparator greater for signal <bcd_3$cmp_gt0001> created at line 49.
-    Found 5-bit comparator greater for signal <bcd_3$cmp_gt0002> created at line 49.
-    Found 5-bit comparator greater for signal <bcd_3$cmp_gt0003> created at line 49.
-    Found 5-bit comparator greater for signal <bcd_3$cmp_gt0004> created at line 49.
-    Found 5-bit comparator greater for signal <bcd_3$cmp_gt0005> created at line 49.
-    Found 5-bit comparator greater for signal <bcd_3$cmp_gt0006> created at line 49.
-    Found 5-bit comparator greater for signal <bcd_3$cmp_gt0007> created at line 49.
-    Found 5-bit comparator greater for signal <bcd_3$cmp_gt0008> created at line 49.
     Found 4-bit adder for signal <bcd_3_0$add0000> created at line 50.
     Found 4-bit adder for signal <bcd_3_0$add0001> created at line 50.
     Found 4-bit adder for signal <bcd_3_0$add0002> created at line 50.
@@ -205,28 +214,30 @@ INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and 
     Found 4-bit adder for signal <bcd_3_0$add0006> created at line 50.
     Found 4-bit adder for signal <bcd_3_0$add0007> created at line 50.
     Found 4-bit adder for signal <bcd_3_0$add0008> created at line 50.
-    Found 5-bit comparator greater for signal <bcd_7$cmp_gt0000> created at line 52.
-    Found 5-bit comparator greater for signal <bcd_7$cmp_gt0001> created at line 52.
-    Found 5-bit comparator greater for signal <bcd_7$cmp_gt0002> created at line 52.
-    Found 5-bit comparator greater for signal <bcd_7$cmp_gt0003> created at line 52.
-    Found 5-bit comparator greater for signal <bcd_7$cmp_gt0004> created at line 52.
-    Found 5-bit comparator greater for signal <bcd_7$cmp_gt0005> created at line 52.
+    Found 5-bit comparator greater for signal <bcd_4$cmp_gt0000> created at line 52.
+    Found 5-bit comparator greater for signal <bcd_4$cmp_gt0001> created at line 52.
+    Found 5-bit comparator greater for signal <bcd_4$cmp_gt0002> created at line 52.
+    Found 5-bit comparator greater for signal <bcd_4$cmp_gt0003> created at line 52.
+    Found 5-bit comparator greater for signal <bcd_4$cmp_gt0004> created at line 52.
+    Found 5-bit comparator greater for signal <bcd_4$cmp_gt0005> created at line 52.
     Found 4-bit adder for signal <bcd_7_4$add0000> created at line 53.
     Found 4-bit adder for signal <bcd_7_4$add0001> created at line 53.
     Found 4-bit adder for signal <bcd_7_4$add0002> created at line 53.
     Found 4-bit adder for signal <bcd_7_4$add0003> created at line 53.
     Found 4-bit adder for signal <bcd_7_4$add0004> created at line 53.
     Found 4-bit adder for signal <bcd_7_4$add0005> created at line 53.
+    Found 5-bit comparator greater for signal <bcd_8$cmp_gt0000> created at line 55.
+    Found 5-bit comparator greater for signal <bcd_8$cmp_gt0001> created at line 55.
+    Found 5-bit comparator greater for signal <bcd_8$cmp_gt0002> created at line 55.
     Found 12-bit up counter for signal <hex_score>.
     Found 4-bit up counter for signal <hit_count>.
-    Found 7-bit comparator not equal for signal <hit_count$cmp_ne0000> created at line 85.
+    Found 7-bit comparator not equal for signal <hit_count$cmp_ne0000> created at line 86.
     Found 4-bit up counter for signal <miss_count>.
-    Found 4-bit comparator greatequal for signal <next_state$cmp_ge0000> created at line 103.
-    Found 4-bit comparator greatequal for signal <next_state$cmp_ge0001> created at line 102.
-    Found 7-bit register for signal <state>.
+    Found 4-bit comparator greatequal for signal <state$cmp_ge0000> created at line 105.
+    Found 4-bit comparator greatequal for signal <state$cmp_ge0001> created at line 106.
     Summary:
+	inferred   1 Finite State Machine(s).
 	inferred   3 Counter(s).
-	inferred   7 D-type flip-flop(s).
 	inferred  18 Adder/Subtractor(s).
 	inferred  21 Comparator(s).
 Unit <scoreKeeper> synthesized.
@@ -248,7 +259,7 @@ Unit <beatMaker> synthesized.
 Synthesizing Unit <LCDvhdl>.
     Related source file is "//warehouse2.seasad.wustl.edu/home/ayekedavidr/Desktop/cse260/lab5/Lcd.vhd".
 WARNING:Xst:647 - Input <lcdReg<85:81>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found finite state machine <FSM_0> for signal <init_state>.
+    Found finite state machine <FSM_1> for signal <init_state>.
     -----------------------------------------------------------------------
     | States             | 11                                             |
     | Transitions        | 21                                             |
@@ -262,7 +273,7 @@ WARNING:Xst:647 - Input <lcdReg<85:81>> is never used. This port will be preserv
     | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found finite state machine <FSM_1> for signal <tx_state>.
+    Found finite state machine <FSM_2> for signal <tx_state>.
     -----------------------------------------------------------------------
     | States             | 7                                              |
     | Transitions        | 14                                             |
@@ -335,11 +346,11 @@ WARNING:Xst:1305 - Output <LCD<10>> is never assigned. Tied to value 00000000.
     Found 160-bit register for signal <bot_string>.
     Found 1-bit register for signal <btn_hit>.
     Found 8-bit 4-to-1 multiplexer for signal <LCD_0$mux0000>.
-    Found 8-bit 4-to-1 multiplexer for signal <LCD_1$mux0003>.
+    Found 8-bit 4-to-1 multiplexer for signal <LCD_1$mux0004>.
     Found 8-bit 4-to-1 multiplexer for signal <LCD_2$mux0000>.
     Found 8-bit 4-to-1 multiplexer for signal <LCD_3$mux0000>.
     Found 8-bit 4-to-1 multiplexer for signal <LCD_4$mux0000>.
-    Found 8-bit 4-to-1 multiplexer for signal <LCD_41$mux0003>.
+    Found 8-bit 4-to-1 multiplexer for signal <LCD_41$mux0004>.
     Found 8-bit 4-to-1 multiplexer for signal <LCD_42$mux0000>.
     Found 8-bit 4-to-1 multiplexer for signal <LCD_43$mux0000>.
     Found 8-bit 4-to-1 multiplexer for signal <LCD_44$mux0000>.
@@ -394,7 +405,7 @@ Macro Statistics
  28-bit up counter                                     : 1
  32-bit up counter                                     : 1
  4-bit up counter                                      : 2
-# Registers                                            : 44
+# Registers                                            : 43
  1-bit register                                        : 11
  11-bit register                                       : 1
  160-bit register                                      : 2
@@ -404,11 +415,10 @@ Macro Statistics
  28-bit register                                       : 1
  4-bit register                                        : 2
  61-bit register                                       : 2
- 7-bit register                                        : 2
+ 7-bit register                                        : 1
  8-bit register                                        : 18
-# Latches                                              : 2
+# Latches                                              : 1
  5-bit latch                                           : 1
- 7-bit latch                                           : 1
 # Comparators                                          : 32
  2-bit comparator not equal                            : 1
  28-bit comparator greatequal                          : 1
@@ -432,7 +442,7 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-Analyzing FSM <FSM_1> for best encoding.
+Analyzing FSM <FSM_2> for best encoding.
 Optimizing FSM <LCDC/tx_state/FSM> on signal <tx_state[1:7]> with one-hot encoding.
 ------------------------
  State      | Encoding
@@ -445,7 +455,7 @@ Optimizing FSM <LCDC/tx_state/FSM> on signal <tx_state[1:7]> with one-hot encodi
  fortyus    | 1000000
  done       | 0000001
 ------------------------
-Analyzing FSM <FSM_0> for best encoding.
+Analyzing FSM <FSM_1> for best encoding.
 Optimizing FSM <LCDC/init_state/FSM> on signal <init_state[1:11]> with one-hot encoding.
 --------------------------
  State     | Encoding
@@ -462,6 +472,19 @@ Optimizing FSM <LCDC/init_state/FSM> on signal <init_state[1:11]> with one-hot e
  eight     | 01000000000
  done      | 10000000000
 --------------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <scoreK/state/FSM> on signal <state[1:7]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ lose  | 0000010
+ l0    | 0000001
+ l1    | 0000100
+ l2    | 0001000
+ l3    | 0010000
+ l4    | 0100000
+ win   | 1000000
+-------------------
 INFO:Xst:2261 - The FF/Latch <level_length_0> in Unit <beatM> is equivalent to the following 21 FFs/Latches, which will be removed : <level_length_1> <level_length_2> <level_length_3> <level_length_4> <level_length_5> <level_length_6> <level_length_7> <level_length_8> <level_length_9> <level_length_10> <level_length_11> <level_length_12> <level_length_13> <level_length_14> <level_length_15> <level_length_16> <level_length_17> <level_length_18> <level_length_19> <level_length_26> <level_length_27> 
 WARNING:Xst:1710 - FF/Latch <level_length_0> (without init value) has a constant value of 0 in block <beatM>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <SF_D1_2> (without init value) has a constant value of 0 in block <LCDC>. This FF/Latch will be trimmed during the optimization process.
@@ -476,7 +499,7 @@ Unit <LCDvhdl> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# FSMs                                                 : 2
+# FSMs                                                 : 3
 # ROMs                                                 : 1
  4x61-bit ROM                                          : 1
 # Adders/Subtractors                                   : 26
@@ -494,11 +517,10 @@ Macro Statistics
  28-bit up counter                                     : 1
  32-bit up counter                                     : 1
  4-bit up counter                                      : 2
-# Registers                                            : 699
- Flip-Flops                                            : 699
-# Latches                                              : 2
+# Registers                                            : 692
+ Flip-Flops                                            : 692
+# Latches                                              : 1
  5-bit latch                                           : 1
- 7-bit latch                                           : 1
 # Comparators                                          : 32
  2-bit comparator not equal                            : 1
  28-bit comparator greatequal                          : 1
@@ -642,25 +664,13 @@ WARNING:Xst:1710 - FF/Latch <LCD_49_5> (without init value) has a constant value
 WARNING:Xst:1710 - FF/Latch <LCD_49_5> (without init value) has a constant value of 1 in block <updateLCD>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <scoreKeeper> ...
-WARNING:Xst:1426 - The value init of the FF/Latch next_state_1 hinder the constant cleaning in the block scoreKeeper.
-   You should achieve better results by setting this init to 0.
-WARNING:Xst:1426 - The value init of the FF/Latch next_state_1 hinder the constant cleaning in the block scoreKeeper.
-   You should achieve better results by setting this init to 0.
-WARNING:Xst:1426 - The value init of the FF/Latch next_state_1 hinder the constant cleaning in the block scoreKeeper.
-   You should achieve better results by setting this init to 0.
-WARNING:Xst:1426 - The value init of the FF/Latch next_state_1 hinder the constant cleaning in the block scoreKeeper.
-   You should achieve better results by setting this init to 0.
 
 Optimizing unit <LCDvhdl> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block topDDR, actual ratio is 15.
-FlipFlop scoreK/hex_score_10 has been replicated 1 time(s)
-FlipFlop scoreK/hex_score_11 has been replicated 1 time(s)
 FlipFlop scoreK/hex_score_7 has been replicated 1 time(s)
-FlipFlop scoreK/hex_score_8 has been replicated 1 time(s)
-FlipFlop scoreK/hex_score_9 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -677,8 +687,8 @@ Unit <topDDR> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 622
- Flip-Flops                                            : 622
+# Registers                                            : 618
+ Flip-Flops                                            : 618
 # Shift Registers                                      : 6
  15-bit shift register                                 : 6
 
@@ -709,39 +719,39 @@ Design Statistics
 # IOs                              : 17
 
 Cell Usage :
-# BELS                             : 1690
+# BELS                             : 1721
 #      GND                         : 1
-#      INV                         : 38
+#      INV                         : 40
 #      LUT1                        : 94
 #      LUT2                        : 62
-#      LUT2_D                      : 4
-#      LUT3                        : 253
+#      LUT2_D                      : 12
+#      LUT2_L                      : 5
+#      LUT3                        : 257
 #      LUT3_D                      : 4
-#      LUT3_L                      : 3
-#      LUT4                        : 602
-#      LUT4_D                      : 33
-#      LUT4_L                      : 46
+#      LUT3_L                      : 12
+#      LUT4                        : 624
+#      LUT4_D                      : 37
+#      LUT4_L                      : 48
 #      MUXCY                       : 177
-#      MUXF5                       : 163
-#      MUXF6                       : 43
+#      MUXF5                       : 142
+#      MUXF6                       : 39
 #      MUXF7                       : 17
 #      MUXF8                       : 9
 #      VCC                         : 1
 #      XORCY                       : 140
-# FlipFlops/Latches                : 674
+# FlipFlops/Latches                : 663
 #      FD                          : 4
 #      FDC                         : 70
 #      FDCE                        : 13
 #      FDE                         : 228
 #      FDP                         : 2
 #      FDPE                        : 1
-#      FDR                         : 34
-#      FDRE                        : 188
+#      FDR                         : 33
+#      FDRE                        : 184
+#      FDRS                        : 1
 #      FDS                         : 1
 #      FDSE                        : 121
 #      LD_1                        : 5
-#      LDC                         : 6
-#      LDP                         : 1
 # Shift Registers                  : 6
 #      SRL16E                      : 6
 # Clock Buffers                    : 1
@@ -757,9 +767,9 @@ Device utilization summary:
 Selected Device : 3s500efg320-4 
 
  Number of Slices:                      741  out of   4656    15%  
- Number of Slice Flip Flops:            674  out of   9312     7%  
- Number of 4 input LUTs:               1145  out of   9312    12%  
-    Number used as logic:              1139
+ Number of Slice Flip Flops:            663  out of   9312     7%  
+ Number of 4 input LUTs:               1201  out of   9312    12%  
+    Number used as logic:              1195
     Number used as Shift registers:       6
  Number of IOs:                          17
  Number of bonded IOBs:                  17  out of    232     7%  
@@ -783,13 +793,12 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
--------------------------------------------+--------------------------+-------+
-Clock Signal                               | Clock buffer(FF name)    | Load  |
--------------------------------------------+--------------------------+-------+
-mclk                                       | BUFGP                    | 668   |
-scoreK/hit_count_3                         | NONE(scoreK/next_state_6)| 7     |
-scoreK/level_or0000(scoreK/level_or00001:O)| NONE(*)(scoreK/level_4)  | 5     |
--------------------------------------------+--------------------------+-------+
+-------------------------------------------+------------------------+-------+
+Clock Signal                               | Clock buffer(FF name)  | Load  |
+-------------------------------------------+------------------------+-------+
+mclk                                       | BUFGP                  | 664   |
+scoreK/level_or0000(scoreK/level_or00001:O)| NONE(*)(scoreK/level_4)| 5     |
+-------------------------------------------+------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -797,19 +806,18 @@ INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered
 
 Asynchronous Control Signals Information:
 ----------------------------------------
-------------------------------------------+--------------------------+-------+
-Control Signal                            | Buffer(FF name)          | Load  |
-------------------------------------------+--------------------------+-------+
-swt                                       | IBUF                     | 86    |
-scoreK/miss_count_3(scoreK/miss_count_3:Q)| NONE(scoreK/next_state_0)| 7     |
-------------------------------------------+--------------------------+-------+
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+swt                                | IBUF                   | 86    |
+-----------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 22.814ns (Maximum Frequency: 43.832MHz)
-   Minimum input arrival time before clock: 5.717ns
+   Minimum period: 24.267ns (Maximum Frequency: 41.208MHz)
+   Minimum input arrival time before clock: 5.575ns
    Maximum output required time after clock: 7.489ns
    Maximum combinational path delay: No path found
 
@@ -819,50 +827,48 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mclk'
-  Clock period: 22.814ns (frequency: 43.832MHz)
-  Total number of paths / destination ports: 71378084 / 1084
+  Clock period: 24.267ns (frequency: 41.208MHz)
+  Total number of paths / destination ports: 108717375 / 1084
 -------------------------------------------------------------------------
-Delay:               22.814ns (Levels of Logic = 20)
-  Source:            scoreK/hex_score_10_1 (FF)
+Delay:               24.267ns (Levels of Logic = 18)
+  Source:            scoreK/hex_score_8 (FF)
   Destination:       LCDC/cur_state_41 (FF)
   Source Clock:      mclk rising
   Destination Clock: mclk rising
 
-  Data Path: scoreK/hex_score_10_1 to LCDC/cur_state_41
+  Data Path: scoreK/hex_score_8 to LCDC/cur_state_41
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            13   0.591   1.158  scoreK/hex_score_10_1 (scoreK/hex_score_10_1)
-     LUT4:I0->O            1   0.704   0.000  scoreK/bcd_1_mux0002_F (N686)
-     MUXF5:I0->O           8   0.321   0.761  scoreK/bcd_1_mux0002 (scoreK/Madd_bcd_3_0_add0003_lut<2>)
-     LUT4_D:I3->O         11   0.704   0.968  scoreK/bcd_3_mux00051 (scoreK/N01)
-     LUT3:I2->O            2   0.704   0.482  scoreK/bcd_3_cmp_gt00041_SW1 (N296)
-     LUT4:I2->O            1   0.704   0.000  scoreK/bcd_3_mux00056 (scoreK/bcd_3_mux00053)
-     MUXF5:I1->O           1   0.321   0.000  scoreK/bcd_3_mux0005_f5 (scoreK/bcd_3_mux0005_f5)
-     MUXF6:I0->O          10   0.521   0.882  scoreK/bcd_3_mux0005_f6 (scoreK/Madd_bcd_7_4_add0003_cy<0>)
-     MUXF5:S->O            1   0.739   0.424  scoreK/bcd_6_mux00041_SW2 (N210)
-     LUT4_D:I3->O          9   0.704   0.824  scoreK/bcd_6_mux00041 (scoreK/N21)
-     LUT4:I3->O            5   0.704   0.712  scoreK/bcd_6_mux0004 (scoreK/Madd_bcd_7_4_add0005_lut<3>)
-     LUT2:I1->O            1   0.704   0.424  scoreK/bcd_5_mux0005_SW1_SW2 (N493)
-     LUT4:I3->O            6   0.704   0.673  scoreK/bcd_5_mux0005 (score<6>)
-     LUT4:I3->O            1   0.704   0.000  LCDC/Mmux_Code_1468 (LCDC/Mmux_Code_1468)
-     MUXF5:I1->O           1   0.321   0.000  LCDC/Mmux_Code_13_f5_25 (LCDC/Mmux_Code_13_f526)
-     MUXF6:I0->O           1   0.521   0.424  LCDC/Mmux_Code_11_f6_19 (LCDC/Mmux_Code_11_f620)
-     LUT4:I3->O            1   0.704   0.000  LCDC/Mmux_Code_46 (LCDC/Mmux_Code_46)
-     MUXF5:I0->O          35   0.321   1.438  LCDC/Mmux_Code_2_f5_5 (LCDC/Code<6>)
-     LUT4_L:I0->LO         1   0.704   0.104  LCDC/cur_state_mux0003<19>58 (LCDC/cur_state_mux0003<19>58)
-     LUT4:I3->O            1   0.704   0.424  LCDC/cur_state_mux0003<19>73_SW0 (N355)
+     FDRE:C->Q            19   0.591   1.260  scoreK/hex_score_8 (scoreK/hex_score_8)
+     LUT4:I0->O            1   0.704   0.000  scoreK/bcd_3_mux000211_G (N814)
+     MUXF5:I1->O          14   0.321   1.035  scoreK/bcd_3_mux000211 (scoreK/N311)
+     LUT3:I2->O            1   0.704   0.424  scoreK/bcd_1_mux000221 (scoreK/N141)
+     LUT4:I3->O           15   0.704   1.192  scoreK/bcd_2_mux0003 (scoreK/Madd_bcd_3_0_add0004_lut<3>)
+     LUT4:I0->O           19   0.704   1.089  scoreK/bcd_3_mux000511 (scoreK/N28)
+     LUT4:I3->O           15   0.704   1.021  scoreK/bcd_3_mux000611 (scoreK/N27)
+     LUT4:I3->O            1   0.704   0.000  scoreK/Madd_bcd_7_4_add0004_cy<1>11_SW0_SW0_F (N733)
+     MUXF5:I0->O           1   0.321   0.424  scoreK/Madd_bcd_7_4_add0004_cy<1>11_SW0_SW0 (N604)
+     LUT4_D:I3->O          9   0.704   0.824  scoreK/Madd_bcd_7_4_add0004_cy<1>11 (scoreK/Madd_bcd_7_4_add0004_cy<1>)
+     LUT4_D:I3->O          4   0.704   0.622  scoreK/bcd_7_mux000411 (scoreK/N33)
+     LUT4:I2->O            9   0.704   0.824  scoreK/Madd_bcd_7_4_add0005_cy<1>1 (scoreK/Madd_bcd_7_4_add0005_cy<1>)
+     LUT4:I3->O            4   0.704   0.591  scoreK/bcd_6_mux0005 (score<7>)
+     LUT4:I3->O            1   0.704   0.000  LCDC/Mmux_Code_13_f5_17_G (N740)
+     MUXF5:I1->O           2   0.321   0.451  LCDC/Mmux_Code_13_f5_17 (LCDC/Mmux_Code_13_f518)
+     LUT4_D:I3->O         16   0.704   1.209  LCDC/Mmux_Code_2_f5_3_1 (LCDC/Mmux_Code_2_f5_3)
+     LUT2:I0->O            1   0.704   0.420  LCDC/cur_state_mux0003<19>61 (LCDC/cur_state_mux0003<19>61)
+     MUXF5:S->O            1   0.739   0.424  LCDC/cur_state_mux0003<19>73_SW0 (N523)
      LUT4:I3->O            1   0.704   0.000  LCDC/cur_state_mux0003<19>191 (LCDC/cur_state_mux0003<19>)
      FDC:D                     0.308          LCDC/cur_state_41
     ----------------------------------------
-    Total                     22.814ns (13.116ns logic, 9.698ns route)
-                                       (57.5% logic, 42.5% route)
+    Total                     24.267ns (12.457ns logic, 11.810ns route)
+                                       (51.3% logic, 48.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'mclk'
-  Total number of paths / destination ports: 592 / 570
+  Total number of paths / destination ports: 588 / 566
 -------------------------------------------------------------------------
-Offset:              5.717ns (Levels of Logic = 3)
+Offset:              5.575ns (Levels of Logic = 3)
   Source:            swt (PAD)
   Destination:       ULCD/btn_hit (FF)
   Destination Clock: mclk rising
@@ -871,13 +877,13 @@ Offset:              5.717ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           388   1.218   1.410  swt_IBUF (swt_IBUF)
-     LUT3:I2->O            3   0.704   0.706  ULCD/bot_hit_not000121 (ULCD/miss_or0000_inv)
-     LUT4:I0->O            1   0.704   0.420  ULCD/btn_hit_not00011 (ULCD/btn_hit_not0001)
+     IBUF:I->O           384   1.218   1.408  swt_IBUF (swt_IBUF)
+     LUT3:I2->O            3   0.704   0.566  ULCD/bot_hit_not000121 (ULCD/miss_or0000_inv)
+     LUT4:I2->O            1   0.704   0.420  ULCD/btn_hit_not0001 (ULCD/btn_hit_not0001)
      FDE:CE                    0.555          ULCD/btn_hit
     ----------------------------------------
-    Total                      5.717ns (3.181ns logic, 2.536ns route)
-                                       (55.6% logic, 44.4% route)
+    Total                      5.575ns (3.181ns logic, 2.394ns route)
+                                       (57.1% logic, 42.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'mclk'
@@ -904,14 +910,14 @@ Offset:              7.489ns (Levels of Logic = 4)
 =========================================================================
 
 
-Total REAL time to Xst completion: 16.00 secs
-Total CPU time to Xst completion: 16.44 secs
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 17.76 secs
  
 --> 
 
-Total memory usage is 304912 kilobytes
+Total memory usage is 302288 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  126 (   0 filtered)
+Number of warnings :  121 (   0 filtered)
 Number of infos    :    5 (   0 filtered)
 

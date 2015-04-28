@@ -8,26 +8,14 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# isim run 200ns
-Incorrect usage of command 'isim'
-Usage: isim <  < <ptrace|ltrace> <on|off> > | < set <userunit|arraydisplaylength|maxtraceablesize|radix> <value> > | < get <userunit|arraydisplaylength|maxtraceablesize|radix> > | < condition <list | <add <options>> | <remove <options>> > | < force < <add <options>> | <remove <options>> > >
-for detailed help use 'help isim'
-# isim run 200 ns
-Incorrect usage of command 'isim'
-Usage: isim <  < <ptrace|ltrace> <on|off> > | < set <userunit|arraydisplaylength|maxtraceablesize|radix> <value> > | < get <userunit|arraydisplaylength|maxtraceablesize|radix> > | < condition <list | <add <options>> | <remove <options>> > | < force < <add <options>> | <remove <options>> > >
-for detailed help use 'help isim'
-# run 200 ns
-# run 200 ns
-# run 200 ns
-# run 200 ns
-# isim force add hit_top_btn 1
-# run 100 ns
-# isim force add hit_top_btn 0
+# isim force add /ulcd_test/hit_top_btn 1 -radix bin
+# isim force add /ulcd_test/hit_top_btn 1 -radix bin
 # run 100 ns
 # run 100 ns
-# isim force add hit_top_btn 1
 # run 100 ns
-# isim force add hit_top_btn 0
+# run 100 ns
+# run 100 ns
+# run 100 ns
 # run 100 ns
 # run 100 ns
 # run 100 ns

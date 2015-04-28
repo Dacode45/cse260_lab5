@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Apr 27 23:38:30 2015
+// Written by: Map P.20131013 on Tue Apr 28 09:27:02 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -183,105 +183,104 @@ TIMEGRP mclk = BEL "prevDB_0" BEL "prevDB_1" BEL "dbnc/count_19" BEL
         "ULCD/top_string_10" BEL "ULCD/top_string_9" BEL "ULCD/top_string_8"
         BEL "ULCD/top_string_6" BEL "ULCD/top_string_3" BEL
         "ULCD/top_string_2" BEL "ULCD/top_string_1" BEL "ULCD/top_string_0"
-        BEL "ULCD/bot_hit" BEL "scoreK/hex_score_11" BEL "scoreK/hex_score_10"
-        BEL "scoreK/hex_score_9" BEL "scoreK/hex_score_8" BEL
-        "scoreK/hex_score_7" BEL "scoreK/hex_score_6" BEL "scoreK/hex_score_5"
-        BEL "scoreK/hex_score_4" BEL "scoreK/hex_score_3" BEL
-        "scoreK/hex_score_2" BEL "scoreK/hex_score_1" BEL "scoreK/hex_score_0"
+        BEL "ULCD/bot_hit" BEL "scoreK/state_FSM_FFd5" BEL
+        "scoreK/state_FSM_FFd7" BEL "scoreK/state_FSM_FFd4" BEL
+        "scoreK/state_FSM_FFd3" BEL "scoreK/state_FSM_FFd2" BEL
+        "scoreK/state_FSM_FFd1" BEL "scoreK/hit_count_3" BEL
+        "scoreK/hit_count_2" BEL "scoreK/hit_count_1" BEL "scoreK/hit_count_0"
         BEL "scoreK/miss_count_3" BEL "scoreK/miss_count_2" BEL
         "scoreK/miss_count_1" BEL "scoreK/miss_count_0" BEL
-        "scoreK/hit_count_3" BEL "scoreK/hit_count_2" BEL "scoreK/hit_count_1"
-        BEL "scoreK/hit_count_0" BEL "LCDC/cur_state_0" BEL "LCDC/cur_state_1"
-        BEL "LCDC/cur_state_5" BEL "LCDC/cur_state_6" BEL "LCDC/cur_state_7"
-        BEL "LCDC/cur_state_8" BEL "LCDC/cur_state_9" BEL "LCDC/cur_state_10"
-        BEL "LCDC/cur_state_11" BEL "LCDC/cur_state_12" BEL
-        "LCDC/cur_state_13" BEL "LCDC/cur_state_14" BEL "LCDC/cur_state_15"
-        BEL "LCDC/cur_state_16" BEL "LCDC/cur_state_17" BEL
-        "LCDC/cur_state_18" BEL "LCDC/cur_state_19" BEL "LCDC/cur_state_20"
-        BEL "LCDC/cur_state_21" BEL "LCDC/cur_state_22" BEL
-        "LCDC/cur_state_23" BEL "LCDC/cur_state_24" BEL "LCDC/cur_state_25"
-        BEL "LCDC/cur_state_26" BEL "LCDC/cur_state_27" BEL
-        "LCDC/cur_state_30" BEL "LCDC/cur_state_28" BEL "LCDC/cur_state_29"
-        BEL "LCDC/cur_state_31" BEL "LCDC/cur_state_32" BEL
-        "LCDC/cur_state_33" BEL "LCDC/cur_state_34" BEL "LCDC/cur_state_35"
-        BEL "LCDC/cur_state_36" BEL "LCDC/cur_state_37" BEL
-        "LCDC/cur_state_38" BEL "LCDC/cur_state_39" BEL "LCDC/cur_state_40"
-        BEL "LCDC/cur_state_41" BEL "LCDC/cur_state_42" BEL
-        "LCDC/cur_state_45" BEL "LCDC/cur_state_43" BEL "LCDC/cur_state_44"
-        BEL "LCDC/cur_state_46" BEL "LCDC/cur_state_47" BEL
-        "LCDC/cur_state_48" BEL "LCDC/cur_state_49" BEL "LCDC/cur_state_50"
-        BEL "LCDC/cur_state_51" BEL "LCDC/cur_state_52" BEL
-        "LCDC/cur_state_53" BEL "LCDC/cur_state_54" BEL "LCDC/cur_state_60"
-        BEL "LCDC/cur_state_59" BEL "LCDC/init_state_FSM_FFd10" BEL
-        "LCDC/init_state_FSM_FFd8" BEL "LCDC/init_state_FSM_FFd7" BEL
-        "LCDC/init_state_FSM_FFd9" BEL "LCDC/init_state_FSM_FFd5" BEL
-        "LCDC/init_state_FSM_FFd4" BEL "LCDC/init_state_FSM_FFd6" BEL
-        "LCDC/init_state_FSM_FFd2" BEL "LCDC/init_state_FSM_FFd1" BEL
-        "LCDC/init_state_FSM_FFd3" BEL "LCDC/tx_state_FSM_FFd6" BEL
-        "LCDC/tx_state_FSM_FFd5" BEL "LCDC/tx_state_FSM_FFd7" BEL
-        "LCDC/tx_state_FSM_FFd4" BEL "LCDC/tx_state_FSM_FFd3" BEL
-        "LCDC/tx_state_FSM_FFd2" BEL "LCDC/tx_state_FSM_FFd1" BEL
-        "LCDC/offsetCounter_31" BEL "LCDC/offsetCounter_30" BEL
-        "LCDC/offsetCounter_29" BEL "LCDC/offsetCounter_28" BEL
-        "LCDC/offsetCounter_27" BEL "LCDC/offsetCounter_26" BEL
-        "LCDC/offsetCounter_25" BEL "LCDC/offsetCounter_24" BEL
-        "LCDC/offsetCounter_23" BEL "LCDC/offsetCounter_22" BEL
-        "LCDC/offsetCounter_21" BEL "LCDC/offsetCounter_20" BEL
-        "LCDC/offsetCounter_19" BEL "LCDC/offsetCounter_18" BEL
-        "LCDC/offsetCounter_17" BEL "LCDC/offsetCounter_16" BEL
-        "LCDC/offsetCounter_15" BEL "LCDC/offsetCounter_14" BEL
-        "LCDC/offsetCounter_13" BEL "LCDC/offsetCounter_12" BEL
-        "LCDC/offsetCounter_11" BEL "LCDC/offsetCounter_10" BEL
-        "LCDC/offsetCounter_9" BEL "LCDC/offsetCounter_8" BEL
-        "LCDC/offsetCounter_7" BEL "LCDC/offsetCounter_6" BEL
-        "LCDC/offsetCounter_5" BEL "LCDC/offsetCounter_4" BEL
-        "LCDC/offsetCounter_3" BEL "LCDC/offsetCounter_2" BEL
-        "LCDC/offsetCounter_1" BEL "LCDC/offsetCounter_0" BEL "LCDC/prev_58"
-        BEL "LCDC/prev_56" BEL "LCDC/init_done" BEL "LCDC/LCD_E0" BEL
-        "LCDC/i3_16" BEL "LCDC/i3_15" BEL "LCDC/i3_14" BEL "LCDC/i3_13" BEL
-        "LCDC/i3_12" BEL "LCDC/i3_11" BEL "LCDC/i3_10" BEL "LCDC/i3_9" BEL
-        "LCDC/i3_8" BEL "LCDC/i3_7" BEL "LCDC/i3_6" BEL "LCDC/i3_5" BEL
-        "LCDC/i3_4" BEL "LCDC/i3_3" BEL "LCDC/i3_2" BEL "LCDC/i3_1" BEL
-        "LCDC/i3_0" BEL "LCDC/i2_10" BEL "LCDC/i2_9" BEL "LCDC/i2_8" BEL
-        "LCDC/i2_7" BEL "LCDC/i2_6" BEL "LCDC/i2_5" BEL "LCDC/i2_4" BEL
-        "LCDC/i2_3" BEL "LCDC/i2_2" BEL "LCDC/i2_1" BEL "LCDC/i2_0" BEL
-        "LCDC/i_19" BEL "LCDC/i_18" BEL "LCDC/i_17" BEL "LCDC/i_16" BEL
-        "LCDC/i_15" BEL "LCDC/i_14" BEL "LCDC/i_13" BEL "LCDC/i_12" BEL
-        "LCDC/i_11" BEL "LCDC/i_10" BEL "LCDC/i_9" BEL "LCDC/i_8" BEL
-        "LCDC/i_7" BEL "LCDC/i_6" BEL "LCDC/i_5" BEL "LCDC/i_4" BEL "LCDC/i_3"
-        BEL "LCDC/i_2" BEL "LCDC/i_1" BEL "LCDC/i_0" BEL "LCDC/LCD_E1" BEL
-        "LCDC/deleted" BEL "LCDC/SF_D1_1" BEL "LCDC/SF_D1_0" BEL
-        "LCDC/SF_D0_3" BEL "LCDC/SF_D0_2" BEL "LCDC/SF_D0_1" BEL
-        "LCDC/SF_D0_0" BEL "LCDC/advance" BEL "LCDC/place_6" BEL
-        "LCDC/place_5" BEL "LCDC/place_4" BEL "LCDC/place_3" BEL
-        "LCDC/place_2" BEL "LCDC/place_1" BEL "LCDC/place_0" BEL
-        "LCDC/offsetAdvance" BEL "scoreK/state_6" BEL "scoreK/state_5" BEL
-        "scoreK/state_4" BEL "scoreK/state_3" BEL "scoreK/state_2" BEL
-        "scoreK/state_1" BEL "scoreK/state_0" BEL "LCDC/cur_state_2" BEL
-        "LCDC/cur_state_3" BEL "LCDC/cur_state_4" BEL "LCDC/cur_state_55" BEL
-        "LCDC/cur_state_56" BEL "LCDC/cur_state_58" BEL
-        "LCDC/init_state_FSM_FFd11" BEL "scoreK/hex_score_11_1" BEL
-        "scoreK/hex_score_8_1" BEL "scoreK/hex_score_9_1" BEL
-        "scoreK/hex_score_10_1" BEL "scoreK/hex_score_7_1" BEL
-        "ULCD/Mshreg_bot_string_116" BEL "ULCD/bot_string_1161" BEL
-        "ULCD/Mshreg_bot_string_119" BEL "ULCD/bot_string_1191" BEL
-        "ULCD/Mshreg_bot_string_117" BEL "ULCD/bot_string_1171" BEL
-        "ULCD/Mshreg_top_string_116" BEL "ULCD/top_string_1161" BEL
-        "ULCD/Mshreg_top_string_119" BEL "ULCD/top_string_1191" BEL
-        "ULCD/Mshreg_top_string_117" BEL "ULCD/top_string_1171" BEL
-        "swt_IBUF_shift1" BEL "swt_IBUF_shift2" BEL "swt_IBUF_shift3" BEL
-        "swt_IBUF_shift4" BEL "swt_IBUF_shift5" BEL "swt_IBUF_shift6" BEL
-        "swt_IBUF_shift7" BEL "swt_IBUF_shift8" BEL "swt_IBUF_shift9" BEL
-        "swt_IBUF_shift10" BEL "swt_IBUF_shift11" BEL "swt_IBUF_shift12" BEL
-        "swt_IBUF_shift13" BEL "swt_IBUF_shift14" BEL "ULCD/bot_string_116"
-        BEL "ULCD/bot_string_119" BEL "ULCD/top_string_116" BEL
-        "ULCD/top_string_119" BEL "swt_IBUF_shift15" BEL "swt_IBUF_shift21"
-        BEL "swt_IBUF_shift31" BEL "swt_IBUF_shift41" BEL "swt_IBUF_shift51"
-        BEL "swt_IBUF_shift61" BEL "swt_IBUF_shift71" BEL "swt_IBUF_shift81"
-        BEL "swt_IBUF_shift91" BEL "swt_IBUF_shift101" BEL "swt_IBUF_shift111"
-        BEL "swt_IBUF_shift121" BEL "swt_IBUF_shift131" BEL
-        "swt_IBUF_shift141" BEL "ULCD/bot_string_117" BEL
-        "ULCD/top_string_117" BEL "mclk_BUFGP/BUFG.GCLKMUX" BEL
+        "scoreK/hex_score_11" BEL "scoreK/hex_score_10" BEL
+        "scoreK/hex_score_9" BEL "scoreK/hex_score_8" BEL "scoreK/hex_score_7"
+        BEL "scoreK/hex_score_6" BEL "scoreK/hex_score_5" BEL
+        "scoreK/hex_score_4" BEL "scoreK/hex_score_3" BEL "scoreK/hex_score_2"
+        BEL "scoreK/hex_score_1" BEL "scoreK/hex_score_0" BEL
+        "LCDC/cur_state_0" BEL "LCDC/cur_state_1" BEL "LCDC/cur_state_5" BEL
+        "LCDC/cur_state_6" BEL "LCDC/cur_state_7" BEL "LCDC/cur_state_8" BEL
+        "LCDC/cur_state_9" BEL "LCDC/cur_state_10" BEL "LCDC/cur_state_11" BEL
+        "LCDC/cur_state_12" BEL "LCDC/cur_state_13" BEL "LCDC/cur_state_14"
+        BEL "LCDC/cur_state_15" BEL "LCDC/cur_state_16" BEL
+        "LCDC/cur_state_17" BEL "LCDC/cur_state_18" BEL "LCDC/cur_state_19"
+        BEL "LCDC/cur_state_20" BEL "LCDC/cur_state_21" BEL
+        "LCDC/cur_state_22" BEL "LCDC/cur_state_23" BEL "LCDC/cur_state_24"
+        BEL "LCDC/cur_state_25" BEL "LCDC/cur_state_26" BEL
+        "LCDC/cur_state_27" BEL "LCDC/cur_state_30" BEL "LCDC/cur_state_28"
+        BEL "LCDC/cur_state_29" BEL "LCDC/cur_state_31" BEL
+        "LCDC/cur_state_32" BEL "LCDC/cur_state_33" BEL "LCDC/cur_state_34"
+        BEL "LCDC/cur_state_35" BEL "LCDC/cur_state_36" BEL
+        "LCDC/cur_state_37" BEL "LCDC/cur_state_38" BEL "LCDC/cur_state_39"
+        BEL "LCDC/cur_state_40" BEL "LCDC/cur_state_41" BEL
+        "LCDC/cur_state_42" BEL "LCDC/cur_state_45" BEL "LCDC/cur_state_43"
+        BEL "LCDC/cur_state_44" BEL "LCDC/cur_state_46" BEL
+        "LCDC/cur_state_47" BEL "LCDC/cur_state_48" BEL "LCDC/cur_state_49"
+        BEL "LCDC/cur_state_50" BEL "LCDC/cur_state_51" BEL
+        "LCDC/cur_state_52" BEL "LCDC/cur_state_53" BEL "LCDC/cur_state_54"
+        BEL "LCDC/cur_state_60" BEL "LCDC/cur_state_59" BEL
+        "LCDC/init_state_FSM_FFd10" BEL "LCDC/init_state_FSM_FFd8" BEL
+        "LCDC/init_state_FSM_FFd7" BEL "LCDC/init_state_FSM_FFd9" BEL
+        "LCDC/init_state_FSM_FFd5" BEL "LCDC/init_state_FSM_FFd4" BEL
+        "LCDC/init_state_FSM_FFd6" BEL "LCDC/init_state_FSM_FFd2" BEL
+        "LCDC/init_state_FSM_FFd1" BEL "LCDC/init_state_FSM_FFd3" BEL
+        "LCDC/tx_state_FSM_FFd6" BEL "LCDC/tx_state_FSM_FFd5" BEL
+        "LCDC/tx_state_FSM_FFd7" BEL "LCDC/tx_state_FSM_FFd4" BEL
+        "LCDC/tx_state_FSM_FFd3" BEL "LCDC/tx_state_FSM_FFd2" BEL
+        "LCDC/tx_state_FSM_FFd1" BEL "LCDC/offsetCounter_31" BEL
+        "LCDC/offsetCounter_30" BEL "LCDC/offsetCounter_29" BEL
+        "LCDC/offsetCounter_28" BEL "LCDC/offsetCounter_27" BEL
+        "LCDC/offsetCounter_26" BEL "LCDC/offsetCounter_25" BEL
+        "LCDC/offsetCounter_24" BEL "LCDC/offsetCounter_23" BEL
+        "LCDC/offsetCounter_22" BEL "LCDC/offsetCounter_21" BEL
+        "LCDC/offsetCounter_20" BEL "LCDC/offsetCounter_19" BEL
+        "LCDC/offsetCounter_18" BEL "LCDC/offsetCounter_17" BEL
+        "LCDC/offsetCounter_16" BEL "LCDC/offsetCounter_15" BEL
+        "LCDC/offsetCounter_14" BEL "LCDC/offsetCounter_13" BEL
+        "LCDC/offsetCounter_12" BEL "LCDC/offsetCounter_11" BEL
+        "LCDC/offsetCounter_10" BEL "LCDC/offsetCounter_9" BEL
+        "LCDC/offsetCounter_8" BEL "LCDC/offsetCounter_7" BEL
+        "LCDC/offsetCounter_6" BEL "LCDC/offsetCounter_5" BEL
+        "LCDC/offsetCounter_4" BEL "LCDC/offsetCounter_3" BEL
+        "LCDC/offsetCounter_2" BEL "LCDC/offsetCounter_1" BEL
+        "LCDC/offsetCounter_0" BEL "LCDC/prev_58" BEL "LCDC/prev_56" BEL
+        "LCDC/init_done" BEL "LCDC/LCD_E0" BEL "LCDC/i3_16" BEL "LCDC/i3_15"
+        BEL "LCDC/i3_14" BEL "LCDC/i3_13" BEL "LCDC/i3_12" BEL "LCDC/i3_11"
+        BEL "LCDC/i3_10" BEL "LCDC/i3_9" BEL "LCDC/i3_8" BEL "LCDC/i3_7" BEL
+        "LCDC/i3_6" BEL "LCDC/i3_5" BEL "LCDC/i3_4" BEL "LCDC/i3_3" BEL
+        "LCDC/i3_2" BEL "LCDC/i3_1" BEL "LCDC/i3_0" BEL "LCDC/i2_10" BEL
+        "LCDC/i2_9" BEL "LCDC/i2_8" BEL "LCDC/i2_7" BEL "LCDC/i2_6" BEL
+        "LCDC/i2_5" BEL "LCDC/i2_4" BEL "LCDC/i2_3" BEL "LCDC/i2_2" BEL
+        "LCDC/i2_1" BEL "LCDC/i2_0" BEL "LCDC/i_19" BEL "LCDC/i_18" BEL
+        "LCDC/i_17" BEL "LCDC/i_16" BEL "LCDC/i_15" BEL "LCDC/i_14" BEL
+        "LCDC/i_13" BEL "LCDC/i_12" BEL "LCDC/i_11" BEL "LCDC/i_10" BEL
+        "LCDC/i_9" BEL "LCDC/i_8" BEL "LCDC/i_7" BEL "LCDC/i_6" BEL "LCDC/i_5"
+        BEL "LCDC/i_4" BEL "LCDC/i_3" BEL "LCDC/i_2" BEL "LCDC/i_1" BEL
+        "LCDC/i_0" BEL "LCDC/LCD_E1" BEL "LCDC/deleted" BEL "LCDC/SF_D1_1" BEL
+        "LCDC/SF_D1_0" BEL "LCDC/SF_D0_3" BEL "LCDC/SF_D0_2" BEL
+        "LCDC/SF_D0_1" BEL "LCDC/SF_D0_0" BEL "LCDC/advance" BEL
+        "LCDC/place_6" BEL "LCDC/place_5" BEL "LCDC/place_4" BEL
+        "LCDC/place_3" BEL "LCDC/place_2" BEL "LCDC/place_1" BEL
+        "LCDC/place_0" BEL "LCDC/offsetAdvance" BEL "scoreK/state_FSM_FFd6"
+        BEL "LCDC/cur_state_2" BEL "LCDC/cur_state_3" BEL "LCDC/cur_state_4"
+        BEL "LCDC/cur_state_55" BEL "LCDC/cur_state_56" BEL
+        "LCDC/cur_state_58" BEL "LCDC/init_state_FSM_FFd11" BEL
+        "scoreK/hex_score_7_1" BEL "ULCD/Mshreg_bot_string_116" BEL
+        "ULCD/bot_string_1161" BEL "ULCD/Mshreg_bot_string_119" BEL
+        "ULCD/bot_string_1191" BEL "ULCD/Mshreg_bot_string_117" BEL
+        "ULCD/bot_string_1171" BEL "ULCD/Mshreg_top_string_116" BEL
+        "ULCD/top_string_1161" BEL "ULCD/Mshreg_top_string_119" BEL
+        "ULCD/top_string_1191" BEL "ULCD/Mshreg_top_string_117" BEL
+        "ULCD/top_string_1171" BEL "swt_IBUF_shift1" BEL "swt_IBUF_shift2" BEL
+        "swt_IBUF_shift3" BEL "swt_IBUF_shift4" BEL "swt_IBUF_shift5" BEL
+        "swt_IBUF_shift6" BEL "swt_IBUF_shift7" BEL "swt_IBUF_shift8" BEL
+        "swt_IBUF_shift9" BEL "swt_IBUF_shift10" BEL "swt_IBUF_shift11" BEL
+        "swt_IBUF_shift12" BEL "swt_IBUF_shift13" BEL "swt_IBUF_shift14" BEL
+        "ULCD/bot_string_116" BEL "ULCD/bot_string_119" BEL
+        "ULCD/top_string_116" BEL "ULCD/top_string_119" BEL "swt_IBUF_shift15"
+        BEL "swt_IBUF_shift21" BEL "swt_IBUF_shift31" BEL "swt_IBUF_shift41"
+        BEL "swt_IBUF_shift51" BEL "swt_IBUF_shift61" BEL "swt_IBUF_shift71"
+        BEL "swt_IBUF_shift81" BEL "swt_IBUF_shift91" BEL "swt_IBUF_shift101"
+        BEL "swt_IBUF_shift111" BEL "swt_IBUF_shift121" BEL
+        "swt_IBUF_shift131" BEL "swt_IBUF_shift141" BEL "ULCD/bot_string_117"
+        BEL "ULCD/top_string_117" BEL "mclk_BUFGP/BUFG.GCLKMUX" BEL
         "mclk_BUFGP/BUFG";
 TS_mclk = PERIOD TIMEGRP "mclk" 20 ns HIGH 40%;
 SCHEMATIC END;

@@ -2,27 +2,27 @@ Command line:
    updateLCD_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  53017
+     -socket  59869
 
-Mon Apr 27 22:49:43 2015
+Tue Apr 28 09:24:07 2015
 
 
- Elaboration Time: 1.73161 sec
+ Elaboration Time: 1.90321 sec
 
- Current Memory Usage: 3056.35 Meg
+ Current Memory Usage: 1474.89 Meg
 
- Total Signals          : 15
- Total Nets             : 1035
- Total Signal Drivers   : 8
+ Total Signals          : 16
+ Total Nets             : 1036
+ Total Signal Drivers   : 9
  Total Blocks           : 6
  Total Primitive Blocks : 6
- Total Processes        : 2
+ Total Processes        : 1
  Total Traceable Variables  : 30
- Total Scalar Nets and Variables : 2004
+ Total Scalar Nets and Variables : 2005
 
- Total Simulation Time: 1.73161 sec
+ Total Simulation Time: 1.90321 sec
 
- Current Memory Usage: 3056.35 Meg
+ Current Memory Usage: 1474.89 Meg
 
-Mon Apr 27 22:49:50 2015
+Tue Apr 28 09:24:11 2015
 

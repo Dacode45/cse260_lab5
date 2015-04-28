@@ -67,7 +67,6 @@ begin
 					--pulsing utput on beat
 				if(pulse_beat = '1') then
 					
-					btn_hit <= '0';
 					
 					
 					if top_hit = '1' or bot_hit = '1' then -- pressed and hit a button
@@ -87,20 +86,17 @@ begin
 					top_string <= top_string(151 downto 0) & top_string(159 downto 152);
 					bot_string <= bot_string(151 downto 0) & bot_string(159 downto 152);
 					
-					
+					btn_hit <= '0';
 					top_hit <= '0';
 					bot_hit <= '0';
 					
 				else
 					if top_hit = '1' or bot_hit = '1'  then
-						btn_hit <= '1';
 						
 						if top_hit = '1' then
-							if top_string(159 downto 152) = x"20" then
-								LCD(1) <= x"58";
-							else
+							
 								LCD(1) <= x"4f";
-							end if;
+							
 						else
 							
 								LCD(1) <= x"20";
@@ -108,19 +104,31 @@ begin
 						end if;
 						
 						if bot_hit = '1' then
-							if bot_string(159 downto 152) = x"20" then
-								LCD(41) <= x"58";
-							else
+							
 								LCD(41) <= x"4f";
-							end if;
+							
 						else
 							
 								LCD(41) <= x"20";
 						end if;
 					else
-						LCD(1) <=top_string(159 downto 152);
-						LCD(41) <=bot_string(159 downto 152);
-					end if;
+						if btn_hit = '1' then
+							if top_string(159 downto 152) = x"20" then
+								LCD(1) <= x"78";
+							else
+								LCD(1) <=top_string(159 downto 152);
+							end if;
+							
+							if bot_string(159 downto 152) = x"20" then
+								LCD(41) <= x"78";
+							else
+								LCD(41) <=bot_string(159 downto 152);
+							end if;
+						else
+							LCD(1) <=top_string(159 downto 152);
+							LCD(41) <=bot_string(159 downto 152);
+						end if;
+				end if;
 					
 					hit <= '0';
 					miss <= '0';
@@ -128,26 +136,28 @@ begin
 						-- hiting
 			
 
-			if hit_top_btn = '1' then
-				if btn_hit = '0' then
-					if top_string(159 downto 152) = x"6f" then
-						top_hit <= '1';
-					else
-						top_hit <= '0';
+				if hit_top_btn = '1' then
+					if btn_hit = '0' then
+						btn_hit <= '1';
+						if top_string(159 downto 152) = x"6f" then
+							top_hit <= '1';
+						else
+							top_hit <= '0';
+						end if;
 					end if;
 				end if;
-			end if;
-		
-			if hit_bot_btn = '1' then
-				if btn_hit = '0' then
-					if bot_string(159 downto 152) = x"6f" then
-						bot_hit <= '1';
-					else
-						bot_hit <= '0';
+			
+				if hit_bot_btn = '1' then
+					if btn_hit = '0' then
+						btn_hit <= '1';
+						if bot_string(159 downto 152) = x"6f" then
+							bot_hit <= '1';
+						else
+							bot_hit <= '0';
+						end if;
 					end if;
 				end if;
-			end if;
-		
+			
 					
 				end if;
 				

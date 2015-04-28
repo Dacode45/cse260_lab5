@@ -5,9 +5,6 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">7</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">next_state</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
 <msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">5</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">level</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
@@ -381,22 +378,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">LCD_49_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">updateLCD</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">next_state_1</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">scoreKeeper</arg>.
-You should achieve better results by setting this init to <arg fmt="%i" index="3">0</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">next_state_1</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">scoreKeeper</arg>.
-You should achieve better results by setting this init to <arg fmt="%i" index="3">0</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">next_state_1</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">scoreKeeper</arg>.
-You should achieve better results by setting this init to <arg fmt="%i" index="3">0</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">next_state_1</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">scoreKeeper</arg>.
-You should achieve better results by setting this init to <arg fmt="%i" index="3">0</arg>.
 </msg>
 
 <msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
